@@ -1,0 +1,1117 @@
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --green: #4A7C59;
+    --green-dark: #2f5238;
+    --green-light: #e8f2eb;
+    --yellow: #F5C842;
+    --yellow-dark: #d4a820;
+    --cream: #FDF6EC;
+    --brown: #7a4f2e;
+    --text: #1a1a1a;
+    --text-muted: #555;
+    --white: #ffffff;
+    --radius: 14px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  img { max-width: 100%; height: auto; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .sf-hero {
+    background: linear-gradient(160deg, var(--cream) 0%, #fff 60%);
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sf-hero::before {
+    content: '';
+    position: absolute;
+    width: 243px;
+    height: 340px;
+    background: no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Cpath d='M42 0h16v140H42z' fill='%234A7C59'/%3E%3Cpath d='M14 38h72v16H14z' fill='%234A7C59'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .logo-badge span { font-size: 1rem; }
+  .sf-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--green-dark);
+    max-width: 820px;
+    margin: 0 auto 18px;
+  }
+  .sf-hero h1 em {
+    font-style: normal;
+    color: var(--green);
+    position: relative;
+    display: inline-block;
+  }
+  .sf-hero h1 em::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--yellow);
+    border-radius: 2px;
+  }
+  .sf-hero-sub {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+  .sf-hero-cta {
+    display: inline-block;
+    background: var(--yellow);
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 18px 44px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(245,200,66,0.45);
+    transition: transform 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.01em;
+  }
+  .sf-hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,200,66,0.55); }
+
+  .hero-mockup {
+    margin: 44px auto 0;
+    max-width: 420px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.13);
+    display: block;
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--green-dark);
+    padding: 18px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .trust-item {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .trust-item span { font-size: 1.2rem; }
+
+  /* ── SECTION BASE ── */
+  .sf-section {
+    padding: 72px 20px;
+  }
+  .sf-section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .sf-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    color: var(--green-dark);
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .sf-section-sub {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+
+  /* ── EXEMPLOS / TEMAS ── */
+  .sf-temas { background: var(--cream); }
+  .sf-tema-group { margin-bottom: 48px; }
+
+  /* ── Card com borda ao redor do tema + carrossel ── */
+  .sf-tema-card {
+    max-width: 470px;
+    margin: 0 auto 48px;
+    border: none;
+    background: var(--brown);
+    border-radius: 18px;
+    padding: 18px 14px 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  }
+  .sf-tema-card .sf-tema-label { color: var(--cream); }
+  .sf-tema-card .sf-story-carousel { margin: 10px auto 4px; }
+  .sf-tema-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--green);
+    margin-bottom: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .sf-tema-label::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: var(--yellow);
+    border-radius: 2px;
+  }
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .activity-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    border: 1.5px solid #e6ede8;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .activity-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .activity-icon { font-size: 2rem; margin-bottom: 10px; }
+  .activity-card h4 {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--green-dark);
+    margin-bottom: 6px;
+  }
+  .activity-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ── STORY CAROUSEL ── */
+  .sf-story-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin: 18px auto 40px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+    aspect-ratio: 2/3;
+    background: var(--green-dark);
+  }
+  .sf-story-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  .sf-story-slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    background: linear-gradient(150deg, var(--green) 0%, var(--green-dark) 100%);
+    position: relative;
+  }
+  .sf-story-slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .story-placeholder-icon {
+    font-size: 4.5rem;
+    margin-bottom: 14px;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+  }
+  .story-caption {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    z-index: 2;
+  }
+  .sf-story-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 1.9rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.65), 0 0 10px rgba(0,0,0,0.45);
+    transition: opacity 0.15s;
+  }
+  .sf-story-arrow:hover { opacity: 0.75; }
+  .sf-story-arrow-left { left: 0px; }
+  .sf-story-arrow-right { right: 0px; }
+  .sf-story-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    z-index: 4;
+  }
+  /* ── Bolinhas fora da imagem, na área da borda do card ── */
+  .sf-story-dots.sf-story-dots--below {
+    position: static;
+    margin-top: 12px;
+  }
+  .sf-story-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .sf-story-dot.sf-active {
+    background: var(--yellow);
+    transform: scale(1.25);
+  }
+
+  /* ── DEPOIMENTOS ── */
+  .depoimentos { background: var(--cream); }
+  .depo-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .depo-img {
+    width: 100%;
+    max-width: 440px;
+    border-radius: var(--radius);
+    display: block;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .depo-card {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 24px;
+    border-left: 4px solid var(--yellow);
+    position: relative;
+  }
+  .depo-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--yellow);
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    line-height: 1;
+    opacity: 0.5;
+  }
+  .depo-text {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    padding-top: 24px;
+  }
+  .depo-autor {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--green);
+  }
+  .depo-local {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .stars { color: var(--yellow); font-size: 1rem; margin-bottom: 4px; }
+
+  
+  .sf-recebe { background: var(--green-dark); }
+  .sf-recebe .sf-section-title { color: #fff; }
+  .sf-recebe .sf-section-sub { color: rgba(255,255,255,0.7); }
+  .sf-recebe-card {
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sf-recebe-item {
+    background: rgba(255,255,255,0.09);
+    border-radius: 14px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .sf-recebe-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .sf-recebe-item h4 { font-weight: 700; color: #fff; font-size: 0.95rem; margin: 0; }
+  .sf-recebe-checks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sf-check-pill {
+    background: rgba(245,200,66,0.12);
+    border: 1.5px solid rgba(245,200,66,0.35);
+    color: var(--yellow);
+    border-radius: 14px;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ── BÔNUS ── */
+  .sf-bonus { background: var(--cream); }
+  .sf-bonus-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .sf-bonus-card {
+    background: #241a12;
+    border: 1px solid #4a3524;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 34px rgba(0,0,0,0.22);
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    padding: 36px 26px 40px;
+  }
+  .bonus-ribbon {
+    position: absolute;
+    top: 14px;
+    right: -8px;
+    background: #e53e3e;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 14px 4px 10px;
+    border-radius: 4px 0 0 4px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .bonus-ribbon::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    border-width: 6px 8px 0 0;
+    border-style: solid;
+    border-color: #9b1c1c transparent transparent transparent;
+  }
+  .sf-bonus-emoji-area {
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    height: 300px;
+    max-width: 300px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    overflow: hidden;
+    margin: 0 auto 28px;
+  }
+  .sf-bonus-emoji-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .sf-bonus-body { padding: 0; }
+  .sf-bonus-num {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--yellow);
+    letter-spacing: 0.02em;
+    margin-bottom: 22px;
+  }
+  .sf-bonus-card h3 { font-weight: 800; font-size: 1.2rem; color: #fff; margin-bottom: 18px; line-height: 1.35; }
+  .sf-bonus-card p { font-size: 0.95rem; color: rgba(255,255,255,0.78); line-height: 1.65; margin-bottom: 0; }
+  .sf-bonus-card p strong, .sf-bonus-card p b { color: #fff; }
+  .sf-bonus-valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .sf-bonus-de {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.4);
+    text-decoration: line-through;
+    font-weight: 600;
+  }
+  .sf-bonus-gratis {
+    background: none;
+    color: #6fcf6f;
+    font-weight: 800;
+    font-size: 1rem;
+    padding: 0;
+    border-radius: 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── OFERTA / CTA BOX ── */
+  .sf-oferta { background: var(--white); }
+  .sf-oferta-box {
+    background: var(--cream);
+    border: 3px solid var(--yellow);
+    border-radius: 20px;
+    padding: 48px 36px;
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  }
+  .sf-oferta-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--green-dark);
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  .sf-oferta-box .sf-from {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .sf-price-tag {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .sf-price-tag .cur { font-size: 1.5rem; font-weight: 700; color: var(--green-dark); }
+  .sf-price-tag .sf-val { font-size: 3.8rem; font-weight: 900; color: var(--green-dark); line-height: 1; }
+  .sf-price-tag .dec { font-size: 1.5rem; font-weight: 700; color: var(--green-dark); }
+  .sf-price-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  .sf-oferta-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 32px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sf-oferta-check {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.92rem;
+    color: var(--text);
+  }
+  .sf-oferta-check .sf-ico { color: var(--green); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+  .sf-btn-cta {
+    display: inline-block;
+    background: var(--yellow);
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 1.15rem;
+    padding: 20px 52px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 8px 28px rgba(245,200,66,0.5);
+    transition: transform 0.15s, box-shadow 0.15s;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+  .sf-btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(245,200,66,0.6); }
+  .sf-secure-note {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .sf-countdown-box {
+    background: var(--green-dark);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 28px;
+  }
+  .sf-countdown-label {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .sf-countdown-urgencia {
+    color: var(--yellow);
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+  }
+
+  /* ── GARANTIA ── */
+  .sf-garantia { background: var(--green-light); }
+  .sf-garantia-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .garantia-icon {
+    display: block;
+    margin: 0 auto 16px;
+    width: 140px;
+    height: 140px;
+  }
+  .sf-garantia h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--green-dark);
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+  .sf-garantia p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── FAQ ── */
+  .sf-faq { background: var(--white); }
+  .sf-faq-list { max-width: 680px; margin: 0 auto; }
+  .sf-faq-item {
+    border-bottom: 1.5px solid #e8ede9;
+    padding: 22px 0;
+  }
+  .sf-faq-q {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .sf-faq-q .sf-arr { color: var(--yellow); font-size: 1.2rem; transition: transform 0.2s; flex-shrink: 0; }
+  .sf-faq-q.sf-open .sf-arr { transform: rotate(180deg); }
+  .sf-faq-a {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.2s;
+  }
+  .sf-faq-a.sf-open { max-height: 300px; padding-top: 12px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--green-dark);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: underline; }
+
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .sf-hero { padding: 48px 16px 40px; }
+    .sf-section { padding: 52px 16px; }
+    .sf-oferta-box { padding: 32px 20px; }
+    .trust-bar { gap: 14px; }
+    .trust-item { font-size: 0.8rem; }
+    .cards-row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 420px) {
+    .cards-row { grid-template-columns: 1fr; }
+    .sf-countdown-urgencia { font-size: 1rem; }
+  }
+
+html{scroll-behavior:smooth;background:#FDF6EC}
+body{background:#FDF6EC}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+#sf-offer{scroll-margin-top:24px}
+.sf-logros{background:var(--cream)}
+.sf-logros-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:760px;margin:0 auto}
+.sf-logro-card{background:#fff;border-radius:var(--radius);padding:22px;border-left:4px solid var(--yellow);box-shadow:0 4px 20px rgba(0,0,0,0.06)}
+.sf-logro-ico{font-size:1.6rem;margin-bottom:8px}
+.sf-logro-card p{margin:0;font-size:.95rem;line-height:1.55;color:var(--text)}
+.sf-ribbon{display:inline-block;background:var(--green-dark);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.sf-save-pill{display:inline-block;background:#e8f2eb;color:var(--green-dark);font-weight:700;font-size:.8rem;padding:3px 10px;border-radius:999px;margin-left:6px;text-decoration:none}
+.sf-oferta .sf-price-tag .sf-val{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,11vw,5rem);line-height:1.05}
+.sf-garantia-badge{width:132px;height:132px;border-radius:50%;margin:0 auto 18px;background:var(--yellow);border:6px solid var(--yellow-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--green-dark);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.sf-garantia-badge strong{font-family:'Playfair Display',serif;font-size:3rem;line-height:1}
+.sf-garantia-badge span{font-weight:700;letter-spacing:.12em;font-size:.85rem}
+.sf-oferta .sf-from{text-decoration:none}.sf-oferta .sf-from s{text-decoration:line-through}.sf-garantia-badge{gap:4px}
+@media (max-width:520px){.sf-logros-grid{grid-template-columns:1fr}}
+@media (max-width:380px){.sf-hero h1{font-size:1.55rem}.sf-oferta .sf-price-tag .sf-val{font-size:2.9rem}.sf-btn-cta,.sf-hero-cta{font-size:.95rem;padding-left:16px;padding-right:16px}}
+</style>
+<section class="sf-hero">
+<div style="display:flex;justify-content:center;margin-bottom:28px;">
+<svg height="160" role="img" viewbox="0 0 160 160" width="160" xmlns="http://www.w3.org/2000/svg">
+<title>Semillitas de Fe</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@500;700&display=swap');</style>
+<rect fill="#FDFAF5" height="152" rx="16" width="152" x="4" y="4"></rect>
+<rect fill="none" height="152" rx="16" stroke="#c8e6d0" stroke-dasharray="5 3" stroke-width="1.5" width="152" x="4" y="4"></rect>
+<ellipse cx="24" cy="22" fill="#dff0e5" opacity="0.9" rx="7" ry="4.5"></ellipse>
+<ellipse cx="31" cy="20" fill="#dff0e5" opacity="0.9" rx="6" ry="4"></ellipse>
+<ellipse cx="37" cy="22" fill="#dff0e5" opacity="0.9" rx="6" ry="4"></ellipse>
+<ellipse cx="120" cy="20" fill="#dff0e5" opacity="0.9" rx="6" ry="4"></ellipse>
+<ellipse cx="127" cy="18" fill="#dff0e5" opacity="0.9" rx="5.5" ry="3.5"></ellipse>
+<ellipse cx="133" cy="20" fill="#dff0e5" opacity="0.9" rx="5.5" ry="4"></ellipse>
+<path d="M30 68 Q24 61 27 56 Q32 57 31 63Z" fill="#F5C842" opacity="0.85"></path>
+<path d="M30 68 Q23 71 22 66 Q25 62 30 68Z" fill="#d4a820" opacity="0.75"></path>
+<path d="M33 67 Q39 60 42 63 Q39 68 33 67Z" fill="#F5C842" opacity="0.75"></path>
+<path d="M33 68 Q39 73 37 78 Q33 76 33 68Z" fill="#d4a820" opacity="0.65"></path>
+<circle cx="31" cy="67" fill="#2f5238" r="1.5"></circle>
+<path d="M130 62 Q136 55 139 58 Q137 63 130 62Z" fill="#F5C842" opacity="0.85"></path>
+<path d="M130 62 Q137 65 137 71 Q132 69 130 62Z" fill="#d4a820" opacity="0.75"></path>
+<path d="M127 61 Q120 54 117 57 Q119 62 127 61Z" fill="#F5C842" opacity="0.75"></path>
+<path d="M127 62 Q120 66 120 72 Q125 70 127 62Z" fill="#d4a820" opacity="0.65"></path>
+<circle cx="129" cy="61" fill="#2f5238" r="1.5"></circle>
+<path d="M22 95 Q22 92 24.5 92 Q27 92 27 95 Q27 98 22 101 Q17 98 17 95 Q17 92 19.5 92 Q22 92 22 95Z" fill="#f87171" opacity="0.5" transform="scale(0.6) translate(14 62)"></path>
+<path d="M138 98 Q138 95 140.5 95 Q143 95 143 98 Q143 101 138 104 Q133 101 133 98 Q133 95 135.5 95 Q138 95 138 98Z" fill="#f87171" opacity="0.45" transform="scale(0.6) translate(92 68)"></path>
+<circle cx="18" cy="108" fill="#F5C842" opacity="0.65" r="2"></circle>
+<circle cx="142" cy="105" fill="#F5C842" opacity="0.65" r="2"></circle>
+<circle cx="14" cy="40" fill="#F5C842" opacity="0.55" r="1.5"></circle>
+<circle cx="145" cy="36" fill="#F5C842" opacity="0.55" r="1.5"></circle>
+<circle cx="22" cy="120" fill="#f87171" opacity="0.4" r="1.3"></circle>
+<circle cx="138" cy="118" fill="#4A7C59" opacity="0.4" r="1.3"></circle>
+<path d="M52 97 Q52 77 53 70 Q60 68 68 69 L68 89 Q61 88 52 97Z" fill="#4A7C59"></path>
+<path d="M108 97 Q108 77 107 70 Q100 68 92 69 L92 89 Q99 88 108 97Z" fill="#3d6b4a"></path>
+<path d="M68 69 L68 89 L80 92 L80 72Z" fill="#f0ede6"></path>
+<path d="M92 69 L92 89 L80 92 L80 72Z" fill="#e8e4dc"></path>
+<path d="M80 72 L80 92" fill="none" stroke="#c8a96e" stroke-width="1"></path>
+<line stroke="#a8d4b0" stroke-linecap="round" stroke-width="1" x1="57" x2="66" y1="77" y2="76"></line>
+<line stroke="#a8d4b0" stroke-linecap="round" stroke-width="1" x1="57" x2="66" y1="82" y2="81"></line>
+<line stroke="#a8d4b0" stroke-linecap="round" stroke-width="1" x1="57" x2="66" y1="87" y2="86"></line>
+<line stroke="#c8b89a" stroke-linecap="round" stroke-width="1" x1="94" x2="103" y1="76" y2="77"></line>
+<line stroke="#c8b89a" stroke-linecap="round" stroke-width="1" x1="94" x2="103" y1="81" y2="82"></line>
+<line stroke="#c8b89a" stroke-linecap="round" stroke-width="1" x1="94" x2="103" y1="86" y2="87"></line>
+<path d="M52 97 Q80 104 108 97" fill="none" stroke="#2f5238" stroke-width="1.2"></path>
+<path d="M80 72 Q80 56 80 40" fill="none" stroke="#2f5238" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M80 60 Q63 50 59 35 Q72 32 78 46 Q79 53 80 60Z" fill="#4A7C59"></path>
+<path d="M80 54 Q97 43 102 28 Q89 26 82 40 Q80 47 80 54Z" fill="#5a9468"></path>
+<path d="M80 47 Q68 39 66 29 Q75 27 79 38 Q80 43 80 47Z" fill="#3d6b4a"></path>
+<path d="M88 40 Q93 34 97 31" fill="none" opacity="0.7" stroke="#a8d4b0" stroke-linecap="round" stroke-width="1"></path>
+<circle cx="57" cy="34" fill="#F5C842" opacity="0.9" r="1.8"></circle>
+<circle cx="104" cy="27" fill="#F5C842" opacity="0.8" r="1.6"></circle>
+<circle cx="61" cy="50" fill="#F5C842" opacity="0.6" r="1.1"></circle>
+<circle cx="101" cy="46" fill="#F5C842" opacity="0.7" r="1.2"></circle>
+<text fill="#2f5238" font-family="'Playfair Display', serif" font-size="15" font-weight="900" letter-spacing="2" text-anchor="middle" x="80" y="118">SEMILLITAS</text>
+<line stroke="#c8a96e" stroke-width="0.9" x1="24" x2="63" y1="123" y2="123"></line>
+<circle cx="80" cy="123" fill="#F5C842" r="1.8"></circle>
+<line stroke="#c8a96e" stroke-width="0.9" x1="97" x2="136" y1="123" y2="123"></line>
+<text fill="#4A7C59" font-family="'Inter', sans-serif" font-size="13" font-weight="700" letter-spacing="6" text-anchor="middle" x="80" y="141">DE FE</text>
+</svg>
+</div>
+<h1>+1.000 Historias Bíblicas para <em>Sembrar Valores</em> en el Corazón de los Más Chicos</h1>
+<p class="sf-hero-sub">Kit completo con parábolas bíblicas, devocional de 360 días de camino con Dios, juego de la memoria y actividades bíblicas para pintar. Todo para enseñarles fe y valores a los más chicos.</p>
+<a class="sf-hero-cta" href="#sf-offer">QUIERO ACCEDER AHORA ↓</a>
+<div style="margin: 36px auto 0; max-width: 860px; width: 95%;"><img alt="Fichas bíblicas infantiles" fetchpriority="high" height="598" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/hero-cards.webp" style="width:100%; border-radius:16px; box-shadow: 0 16px 48px rgba(0,0,0,0.13); display:block;" width="1400"/></div>
+</section>
+<section class="sf-section">
+<div class="sf-section-inner">
+<p class="sf-section-title">Para quienes quieren algo más que entretener: quieren educar con <em style="font-style:normal;color:var(--green)">FE</em></p>
+<p class="sf-section-sub">Seas mamá, papá, abuela, catequista o maestra de escuela bíblica, este kit está hecho para que enseñar la fe sea simple, divertido e inolvidable.</p>
+</div>
+</section>
+<section class="sf-section sf-temas">
+<div class="sf-section-inner">
+<h2 class="sf-section-title">Mirá lo que trae el kit:</h2>
+<p class="sf-section-sub">Cada tema está pensado para sembrar valores esenciales en la vida de los más chicos.</p>
+<div class="sf-tema-group sf-tema-card">
+<div class="sf-tema-label">🧘 Control Emocional y Temperamento</div>
+<div class="sf-story-carousel" id="sf-story-1" style="aspect-ratio: 750 / 1127;">
+<div class="sf-story-track">
+<div class="sf-story-slide">
+<img alt="El Leoncito Que Aprendió a Controlar el Enojo" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-01.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="La Oruguita Que Eligió Respirar y Esperar" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-02.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="El Yacaré Que Se Enojaba Fácil" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-03.webp" width="640"/>
+</div>
+</div>
+<button aria-label="Anterior" class="sf-story-arrow sf-story-arrow-left" onclick="storyNav('sf-story-1', -1)">‹</button>
+<button aria-label="Siguiente" class="sf-story-arrow sf-story-arrow-right" onclick="storyNav('sf-story-1', 1)">›</button>
+</div>
+<div class="sf-story-dots sf-story-dots--below">
+<span class="sf-story-dot" onclick="storyGo('sf-story-1', 0)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-1', 1)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-1', 2)"></span>
+</div>
+</div>
+<div class="sf-tema-group sf-tema-card">
+<div class="sf-tema-label">🙏 Fe y Confianza en Dios</div>
+<div class="sf-story-carousel" id="sf-story-2" style="aspect-ratio: 750 / 1127;">
+<div class="sf-story-track">
+<div class="sf-story-slide">
+<img alt="La Ovejita Que Se Animó a Pedir Ayuda y Confiar en el Pastor" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-04.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="El Pollito Que Salió del Nido" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-05.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="El Pececito Que Aprendió a Ser Valiente" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-06.webp" width="640"/>
+</div>
+</div>
+<button aria-label="Anterior" class="sf-story-arrow sf-story-arrow-left" onclick="storyNav('sf-story-2', -1)">‹</button>
+<button aria-label="Siguiente" class="sf-story-arrow sf-story-arrow-right" onclick="storyNav('sf-story-2', 1)">›</button>
+</div>
+<div class="sf-story-dots sf-story-dots--below">
+<span class="sf-story-dot" onclick="storyGo('sf-story-2', 0)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-2', 1)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-2', 2)"></span>
+</div>
+</div>
+<div class="sf-tema-group sf-tema-card">
+<div class="sf-tema-label">🎯 Obediencia y Buenas Decisiones</div>
+<div class="sf-story-carousel" id="sf-story-3" style="aspect-ratio: 750 / 1127;">
+<div class="sf-story-track">
+<div class="sf-story-slide">
+<img alt="El Puercoespín Que Aprendió a Obedecer" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-07.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="El Tejoncito Que Devolvió lo Que No Era Suyo" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-08.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="El Ciervo Que Eligió el Bien" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-09.webp" width="640"/>
+</div>
+</div>
+<button aria-label="Anterior" class="sf-story-arrow sf-story-arrow-left" onclick="storyNav('sf-story-3', -1)">‹</button>
+<button aria-label="Siguiente" class="sf-story-arrow sf-story-arrow-right" onclick="storyNav('sf-story-3', 1)">›</button>
+</div>
+<div class="sf-story-dots sf-story-dots--below">
+<span class="sf-story-dot" onclick="storyGo('sf-story-3', 0)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-3', 1)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-3', 2)"></span>
+</div>
+</div>
+<div class="sf-tema-group sf-tema-card">
+<div class="sf-tema-label">🤝 Amistad, Amor y Compasión</div>
+<div class="sf-story-carousel" id="sf-story-4" style="aspect-ratio: 750 / 1127;">
+<div class="sf-story-track">
+<div class="sf-story-slide">
+<img alt="El Castor Que Construyó Para el Otro" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-10.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="La Jirafita Que Bajó el Cuello" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-11.webp" width="640"/>
+</div>
+<div class="sf-story-slide">
+<img alt="El Perezoso Que Fue Despacio Pero Llegó" decoding="async" height="961" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/historia-12.webp" width="640"/>
+</div>
+</div>
+<button aria-label="Anterior" class="sf-story-arrow sf-story-arrow-left" onclick="storyNav('sf-story-4', -1)">‹</button>
+<button aria-label="Siguiente" class="sf-story-arrow sf-story-arrow-right" onclick="storyNav('sf-story-4', 1)">›</button>
+</div>
+<div class="sf-story-dots sf-story-dots--below">
+<span class="sf-story-dot" onclick="storyGo('sf-story-4', 0)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-4', 1)"></span>
+<span class="sf-story-dot" onclick="storyGo('sf-story-4', 2)"></span>
+</div>
+</div>
+<div style="text-align:center;margin-top:44px;">
+<a class="sf-hero-cta" href="#sf-offer" style="display:inline-block;">QUIERO MI KIT ↓</a>
+</div>
+</div>
+</section>
+<section class="sf-section sf-logros"><div class="sf-section-inner"><h2 class="sf-section-title" style="margin-bottom:40px;">Qué vas a lograr con el kit</h2><div class="sf-logros-grid"><div class="sf-logro-card"><div class="sf-logro-ico">🌙</div><p>Chicos que piden «una historia más» antes de dormir, en vez de la pantalla.</p></div><div class="sf-logro-card"><div class="sf-logro-ico">⏱️</div><p>Diez minutos por día de fe en familia, sin preparar nada.</p></div><div class="sf-logro-card"><div class="sf-logro-ico">💛</div><p>Valores que se notan en casa: paciencia, gratitud, obediencia y amistad.</p></div><div class="sf-logro-card"><div class="sf-logro-ico">⛪</div><p>Catequesis, escuela bíblica o aula con material listo para imprimir y usar.</p></div></div></div></section>
+<section class="sf-section sf-recebe">
+<div class="sf-section-inner">
+<h2 class="sf-section-title">Lo que recibís en el kit completo:</h2>
+<div class="sf-recebe-card">
+<div class="sf-recebe-item">
+<div class="sf-recebe-icon">📖</div>
+<h4>+1.000 Historias con Valores Bíblicos</h4>
+</div>
+<div class="sf-recebe-item">
+<div class="sf-recebe-icon">🙏</div>
+<h4>Devocional de 360 Días con Dios</h4>
+</div>
+<div class="sf-recebe-item">
+<div class="sf-recebe-icon">🎨</div>
+<h4>Kit de Actividades Bíblicas para Pintar</h4>
+</div>
+<div class="sf-recebe-item">
+<div class="sf-recebe-icon">💛</div>
+<h4>Lección del día con aplicación práctica</h4>
+</div>
+<div class="sf-recebe-item">
+<div class="sf-recebe-icon">✝️</div>
+<h4>Versículos Ilustrados para Memorizar</h4>
+</div>
+<div class="sf-recebe-item">
+<div class="sf-recebe-icon">📋</div>
+<h4>Guía de Aplicación para Padres, Docentes y Catequistas</h4>
+</div>
+</div>
+<div class="sf-recebe-checks">
+<div class="sf-check-pill">✅ Acceso de por vida al contenido completo y a las actualizaciones futuras</div>
+<div class="sf-check-pill">✅ Contenido en PDF + editable en Canva</div>
+<div class="sf-check-pill">✅ Listo para imprimir; funciona en celular, tablet y compu</div>
+</div>
+</div>
+</section>
+<section class="sf-section sf-bonus">
+<div class="sf-section-inner">
+<h2 class="sf-section-title">🎁 Bonos Exclusivos si Comprás Ahora:</h2>
+<div class="sf-bonus-grid">
+<div class="sf-bonus-card">
+<div class="sf-bonus-num">🎁 Bono 1</div>
+<div class="sf-bonus-emoji-area"><img alt="Kit de Actividades Bíblicas para Pintar y Jugar" decoding="async" height="600" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/bono-1.webp" width="600"/></div>
+<div class="sf-bonus-body">
+<h3>Kit de Actividades Bíblicas para Pintar y Jugar</h3>
+<div class="sf-bonus-valor">
+<span class="sf-bonus-de">Valor: $18.490</span>
+<span class="sf-bonus-gratis">GRATIS HOY</span>
+</div>
+<p>Páginas hermosas con dibujos bíblicos, laberintos, desafíos y juegos para fijar lo aprendido con alegría.</p>
+</div>
+</div>
+<div class="sf-bonus-card">
+<div class="sf-bonus-num">🎁 Bono 2</div>
+<div class="sf-bonus-emoji-area"><img alt="Devocional Padres e Hijos · 360 Días de Camino con Dios" decoding="async" height="600" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/bono-2.webp" width="600"/></div>
+<div class="sf-bonus-body">
+<h3>Devocional Padres e Hijos · 360 Días de Camino con Dios</h3>
+<div class="sf-bonus-valor">
+<span class="sf-bonus-de">Valor: $29.630</span>
+<span class="sf-bonus-gratis">GRATIS HOY</span>
+</div>
+<p>Un plan completo de un año para crear momentos de fe, charla y conexión entre padres e hijos.</p>
+</div>
+</div>
+<div class="sf-bonus-card">
+<div class="sf-bonus-num">🎁 Bono 3</div>
+<div class="sf-bonus-emoji-area"><img alt="Juego de la Memoria de las Parábolas" decoding="async" height="600" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/semillitas/landing-img/bono-3.webp" width="600"/></div>
+<div class="sf-bonus-body">
+<h3>Juego de la Memoria de las Parábolas (imprimible)</h3>
+<div class="sf-bonus-valor">
+<span class="sf-bonus-de">Valor: $12.310</span>
+<span class="sf-bonus-gratis">GRATIS HOY</span>
+</div>
+<p>Cartas de colores con los nombres y símbolos de las parábolas para recortar, jugar y memorizar en familia.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sf-section sf-oferta" id="sf-offer">
+<div class="sf-oferta-box">
+<h2>Quiero Mi Kit Completo Ahora</h2>
+<p style="color:var(--text-muted);margin-bottom:16px;font-size:0.95rem;">Acceso inmediato a todo el contenido apenas se confirma el pago</p>
+<div class="sf-countdown-box">
+<div class="sf-countdown-label">⚠️ La oferta especial termina hoy, <span id="sf-data-hoje">en esta fecha</span></div>
+<div class="sf-countdown-urgencia">Aprovechalo ahora antes de que termine</div>
+</div><div class="sf-ribbon">Oferta de lanzamiento</div><p class="sf-from">Antes <s>{{original_price}}</s> <span class="sf-save-pill">Ahorrás {{savings}}</span></p><div class="sf-price-tag"><span class="sf-val">{{price}}</span></div><p class="sf-price-note">Pago único · Acceso de por vida</p>
+<div class="sf-oferta-checks">
+<div class="sf-oferta-check"><span class="sf-ico">✅</span><span>+1.000 Historias con Valores Bíblicos</span></div>
+<div class="sf-oferta-check"><span class="sf-ico">✅</span><span>Devocional de 360 Días de Camino con Dios</span></div>
+<div class="sf-oferta-check"><span class="sf-ico">✅</span><span>Kit de Actividades Bíblicas para Pintar</span></div>
+<div class="sf-oferta-check"><span class="sf-ico">✅</span><span>Juego de la Memoria de las Parábolas (imprimible)</span></div>
+<div class="sf-oferta-check"><span class="sf-ico">✅</span><span>Guía de Aplicación para Padres, Docentes y Catequistas</span></div>
+<div class="sf-oferta-check"><span class="sf-ico">✅</span><span>Acceso de por vida + actualizaciones futuras gratis</span></div>
+</div>
+<a class="sf-btn-cta" href="/checkout" id="sf-btn-checkout">QUIERO MI ACCESO YA · {{price}}</a>
+<div class="sf-secure-note">🔒 Pago 100 % seguro · Encriptación SSL · Acceso inmediato</div>
+</div>
+</section>
+<section class="sf-section sf-garantia">
+<div class="sf-garantia-inner">
+<div class="sf-garantia-badge"><strong>7</strong><span>DÍAS</span></div>
+<h2>Garantía Total de 7 Días</h2>
+<p>Si por cualquier motivo el material no te convence, pedí la devolución dentro de los 7 días posteriores a la compra y te devolvemos el 100 % de tu dinero. Sin vueltas y sin preguntas. El riesgo lo corremos nosotros.</p>
+</div>
+</section>
+<section class="sf-section sf-faq">
+<div class="sf-section-inner">
+<h2 class="sf-section-title" style="margin-bottom:40px;">Preguntas Frecuentes</h2>
+<div class="sf-faq-list">
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿El material es físico o digital?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">100 % digital. Recibís el acceso directo en tu mail apenas se aprueba el pago. Lo podés usar en el celular, la tablet o la compu, o imprimirlo en casa.</div>
+</div>
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿Cómo recibo el contenido?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">Apenas se confirma el pago, te llega un mail con el link de acceso a todo el material. Es automático y tarda menos de 5 minutos.</div>
+</div>
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿Para qué edades es?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">El kit está pensado para chicos de 3 a 10 años. Las historias están ordenadas, así que siempre encontrás algo justo para la edad de tu hijo.</div>
+</div>
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿Puedo imprimir el contenido?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">¡Sí! Todo el material viene en PDF listo para imprimir y también en versión editable en Canva, para personalizarlo como quieras.</div>
+</div>
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿Y si no me gusta?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">Tenés 7 días de garantía incondicional. Si no es para vos, pedís la devolución y te reintegramos el 100 % de lo que pagaste. Sin vueltas.</div>
+</div>
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿Lo puedo usar en catequesis, escuela bíblica o en el aula?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">¡Claro! Catequistas, maestras de escuela bíblica, docentes de colegios religiosos y líderes de grupos infantiles aman este material. Lo imprimís y lo usás con tu grupo.</div>
+</div>
+<div class="sf-faq-item">
+<div class="sf-faq-q" onclick="toggleFaq(this)"><span>¿Necesito experiencia para usarlo?</span><span class="sf-arr">▼</span></div>
+<div class="sf-faq-a">¡No! Todo viene listo y ordenado. La guía de aplicación que acompaña el kit explica cómo usar cada actividad paso a paso, aunque nunca hayas dado catequesis ni enseñado antes.</div>
+</div>
+</div>
+<div style="text-align:center;margin-top:52px;">
+<a class="sf-hero-cta" href="#sf-offer" style="display:inline-block;">QUIERO MI KIT AHORA ↓</a>
+</div>
+</div>
+</section>
+<footer>
+<p>2026 © Semillitas de Fe — Todos los derechos reservados.</p>
+<p style="margin-top:8px;">Este producto es 100 % digital. El acceso se envía por mail cuando se confirma el pago.</p>
+</footer>
+<script>
+  // ── STORY CAROUSEL ──
+  const storyState = {};   // { carouselId: { index, timer } }
+  const STORY_DURATION = 4000; // ms por slide no avanço automático
+
+  function initStoryCarousel(carousel) {
+    const id = carousel.id;
+    storyState[id] = { index: 0, timer: null };
+    updateStoryCarousel(id);
+    startStoryTimer(id);
+
+    // pausa o avanço automático enquanto o usuário interage
+    carousel.addEventListener('mouseenter', () => stopStoryTimer(id));
+    carousel.addEventListener('mouseleave', () => startStoryTimer(id));
+  }
+
+  function updateStoryCarousel(id) {
+    const carousel = document.getElementById(id);
+    const state = storyState[id];
+    const track = carousel.querySelector('.sf-story-track');
+    const dots = carousel.parentElement.querySelectorAll('.sf-story-dot');
+
+    track.style.transform = `translateX(-${state.index * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('sf-active', i === state.index));
+  }
+
+  function storyNav(id, direction) {
+    const carousel = document.getElementById(id);
+    const total = carousel.querySelectorAll('.sf-story-slide').length;
+    const state = storyState[id];
+    state.index = (state.index + direction + total) % total;
+    updateStoryCarousel(id);
+    startStoryTimer(id);
+  }
+
+  function storyGo(id, index) {
+    storyState[id].index = index;
+    updateStoryCarousel(id);
+    startStoryTimer(id);
+  }
+
+  function startStoryTimer(id) {
+    stopStoryTimer(id);
+    storyState[id].timer = setTimeout(() => storyNav(id, 1), STORY_DURATION);
+  }
+
+  function stopStoryTimer(id) {
+    if (storyState[id] && storyState[id].timer) {
+      clearTimeout(storyState[id].timer);
+    }
+  }
+
+  document.querySelectorAll('.sf-story-carousel').forEach(initStoryCarousel);
+
+  // ── FAQ TOGGLE ──
+  function toggleFaq(el) {
+    el.classList.toggle('sf-open');
+    const ans = el.nextElementSibling;
+    ans.classList.toggle('sf-open');
+  }
+
+  // ── DATA DE HOJE NA OFERTA ──
+  (function() {
+    const el = document.getElementById('sf-data-hoje');
+    if (!el) return;
+    el.textContent = new Date().toLocaleDateString('es-AR', {
+      day: 'numeric', month: 'long', year: 'numeric'
+    });
+  })();
+
+
+
+  // ── SMOOTH SCROLL ──
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        var rm = false; try { rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+        target.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
