@@ -1,0 +1,65 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Personalizador de etiquetas · Cajitas Porta-Rosario</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F3EB;--paper:#FFFBF4;--ink:#26272A;--soft:#6A6D72;--ac:#39769A;--acd:#244F6B;--line:#E6E0D4;--gold:#B58A3B}
+*{box-sizing:border-box;margin:0;padding:0}html,body{background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}
+.top{background:var(--acd);color:#fff;text-align:center;padding:11px;font-family:'Playfair Display',serif;font-weight:700}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 16px 60px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(24px,5vw,36px);text-align:center;margin-bottom:6px}
+.sub{text-align:center;color:var(--soft);margin-bottom:20px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+label{display:block;font-size:13px;font-weight:800;color:var(--acd);margin-bottom:5px}
+input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.full{grid-column:1/-1}
+.cols{display:flex;gap:8px;flex-wrap:wrap}.cols button{width:36px;height:36px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer}
+.cols button.on{box-shadow:0 0 0 3px var(--ac)}
+.acts{display:flex;gap:10px;justify-content:center;margin:18px 0}
+.btn{background:var(--ac);color:#fff;border:0;border-radius:12px;padding:14px 26px;font:800 16px Inter;cursor:pointer;box-shadow:0 4px 0 var(--acd)}
+.hint{text-align:center;color:var(--soft);font-size:13px;margin-bottom:14px}
+.hoja{background:#fff;margin:0 auto;width:210mm;min-height:297mm;padding:10mm 12mm;display:grid;grid-template-columns:85mm 85mm;grid-auto-rows:52mm;gap:4mm;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.08);transform-origin:top center}
+.et{border:.3mm dashed #aab;border-radius:3mm;display:flex;align-items:center;gap:3mm;padding:3mm 4mm;overflow:hidden}
+.et img{width:24mm;height:44mm;object-fit:cover;border-radius:2mm;flex:none}
+.tx{flex:1;text-align:center;min-width:0}
+.oc{font:700 9.5pt 'Playfair Display',serif;letter-spacing:.02em}
+.no{font:400 22pt 'Great Vibes',cursive;line-height:1.15;margin:1mm 0;word-break:break-word}
+.fe{font:600 8pt Inter}.pa{font:italic 8pt 'Playfair Display',serif;margin-top:.8mm}.me{font:7.5pt Inter;margin-top:1.2mm;opacity:.85}
+.prev{overflow:auto;padding-bottom:10px}
+@media (max-width:700px){.panel{grid-template-columns:1fr}.hoja{transform:scale(.45);margin-bottom:-160mm}}
+@media print{@page{size:A4;margin:0}body{background:#fff}.top,.wrap>*:not(.prev){display:none!important}.wrap{padding:0;max-width:none}.prev{overflow:visible}.hoja{box-shadow:none;transform:none!important;margin:0!important}}
+</style></head><body>
+<div class="top">Cajitas Porta-Rosario</div>
+<main class="wrap">
+<h1>Personalizador de etiquetas</h1>
+<p class="sub">Completá los datos y se arma una hoja A4 con 10 etiquetas iguales, lista para imprimir y recortar.</p>
+<div class="panel">
+ <div><label>Ocasión</label><select id="oc"><option>Recuerdo de mi Bautismo</option><option>Mi Primera Comunión</option><option>Mi Confirmación</option><option>Recuerdo de Catequesis</option><option>Gracias por acompañarme</option><option>Para mis padrinos</option><option>Con amor y fe</option></select></div>
+ <div><label>Modelo de cajita</label><select id="mo"></select></div>
+ <div><label>Nombre</label><input id="no" value="Valentina" maxlength="28"></div>
+ <div><label>Fecha</label><input id="fe" value="12/10/2026" maxlength="24"></div>
+ <div><label>Parroquia (opcional)</label><input id="pa" value="Parroquia San José" maxlength="40"></div>
+ <div><label>Mensaje corto (opcional)</label><input id="me" value="Gracias por acompañarme" maxlength="50"></div>
+ <div class="full"><label>Color</label><div class="cols" id="cols"></div></div>
+</div>
+<div class="acts"><button class="btn" onclick="window.print()">Imprimir / Guardar PDF</button></div>
+<p class="hint">Imprimí al 100 % (sin «ajustar a la página»). Desde el celular elegí «Guardar como PDF» y llevalo a la copiadora.</p>
+<div class="prev"><div class="hoja" id="hoja"></div></div>
+</main>
+<script>
+var M=[[1, "Virgen", "Virgen de Luján"], [2, "Virgen", "Virgen de Luján"], [3, "Virgen", "Virgen de Fátima"], [4, "Virgen", "Virgen de Fátima"], [5, "Virgen", "Medalla Milagrosa"], [6, "Virgen", "Virgen de Guadalupe"], [7, "Virgen", "Virgen de Guadalupe"], [8, "Virgen", "Inmaculada Concepción"], [9, "Virgen", "Virgen del Rosario"], [10, "Virgen", "Virgen del Rosario de San Nicolás"], [11, "Virgen", "Virgen Desatanudos"], [12, "Virgen", "Virgen del Valle"], [13, "Virgen", "Virgen de Itatí"], [14, "Virgen", "Virgen María"], [15, "Virgen", "Virgen María"], [16, "Virgen", "Virgen de Lourdes"], [17, "Virgen", "Virgen de Schoenstatt"], [18, "Virgen", "Virgen del Carmen"], [19, "Virgen", "Virgen de la Merced"], [20, "Virgen", "Auxiliadora"], [21, "Virgen", "Virgen de la Dulce Espera"], [22, "Virgen", "Virgen Niña"], [23, "Virgen", "Virgen de Copacabana"], [24, "Virgen", "Virgen de Caacupé"], [25, "Virgen", "Rosa Mística"], [26, "Santos", "San José"], [27, "Santos", "San Cayetano"], [28, "Santos", "San Expedito"], [29, "Santos", "San Antonio"], [30, "Santos", "San Francisco de Asís"], [31, "Santos", "Santa Teresita"], [32, "Santos", "San Benito"], [33, "Santos", "San Miguel Arcángel"], [34, "Santos", "San Rafael Arcángel"], [35, "Santos", "San Gabriel Arcángel"], [36, "Santos", "Santa Rita"], [37, "Santos", "San Pío de Pietrelcina"], [38, "Santos", "Santa Clara"], [39, "Santos", "San Juan Pablo II"], [40, "Santos", "Santa Lucía"], [41, "Santos", "Mama Antula"], [42, "Santos", "Cura Brochero"], [43, "Santos", "Ceferino Namuncurá"], [44, "Santos", "San Jorge"], [45, "Santos", "Santa Ana"], [46, "Bautismo", "Mi Bautismo"], [47, "Bautismo", "Mi Bautismo"], [48, "Bautismo", "Bautismo"], [49, "Bautismo", "Bautismo"], [50, "Bautismo", "Bendición de Bautismo"], [51, "Bautismo", "Mi Bautismo"], [52, "Bautismo", "Mi Bautismo"], [53, "Bautismo", "Bautismo"], [54, "Bautismo", "Un regalo de Dios"], [55, "Bautismo", "Bienvenido a la fe"], [56, "Bautismo", "Bienvenida a la fe"], [57, "Bautismo", "Mi Bautismo"], [58, "Primera Comunión", "Mi Primera Comunión"], [59, "Primera Comunión", "Mi Primera Comunión"], [60, "Primera Comunión", "Primera Comunión"], [61, "Primera Comunión", "Primera Comunión"], [62, "Primera Comunión", "Mi Primera Comunión"], [63, "Primera Comunión", "Mi Primera Comunión"], [64, "Primera Comunión", "Jesús, Pan de Vida"], [65, "Primera Comunión", "Primera Comunión"], [66, "Primera Comunión", "Mi Primera Comunión"], [67, "Primera Comunión", "Mi Primera Comunión"], [68, "Primera Comunión", "Recuerdo de Comunión"], [69, "Primera Comunión", "Primera Comunión"], [70, "Primera Comunión", "Mi Primera Comunión"], [71, "Primera Comunión", "Mi Primera Comunión"], [72, "Confirmación", "Mi Confirmación"], [73, "Confirmación", "Confirmación"], [74, "Confirmación", "Mi Confirmación"], [75, "Confirmación", "Mi Confirmación"], [76, "Confirmación", "Ven, Espíritu Santo"], [77, "Confirmación", "Confirmación"], [78, "Confirmación", "Dones del Espíritu"], [79, "Confirmación", "Confirmados en la fe"], [80, "Angelitos y Sagrada Familia", "Mi Angelito"], [81, "Angelitos y Sagrada Familia", "Mi Angelito"], [82, "Angelitos y Sagrada Familia", "Ángel de la Guarda"], [83, "Angelitos y Sagrada Familia", "Sagrada Familia"], [84, "Angelitos y Sagrada Familia", "Sagrada Familia"], [85, "Angelitos y Sagrada Familia", "Niño Jesús"], [86, "Angelitos y Sagrada Familia", "Sagrado Corazón de Jesús"], [87, "Angelitos y Sagrada Familia", "Jesús, en Vos confío"], [88, "Catequesis, padrinos y regalos", "Para mi madrina"], [89, "Catequesis, padrinos y regalos", "Para mi padrino"], [90, "Catequesis, padrinos y regalos", "Para mis padrinos"], [91, "Catequesis, padrinos y regalos", "Gracias, catequista"], [92, "Catequesis, padrinos y regalos", "Catequesis"], [93, "Catequesis, padrinos y regalos", "Una bendición de Dios"], [94, "Catequesis, padrinos y regalos", "Dios te bendiga"], [95, "Catequesis, padrinos y regalos", "Fe, esperanza y amor"], [96, "Catequesis, padrinos y regalos", "Para mamá"], [97, "Catequesis, padrinos y regalos", "Para papá"], [98, "Catequesis, padrinos y regalos", "Recuerdo de Misa"], [99, "Catequesis, padrinos y regalos", "Rezá conmigo"], [100, "Catequesis, padrinos y regalos", "Con amor y fe"]];
+var C=[["#DCEAF5","#244F6B"],["#F7E1E6","#7A3B4C"],["#FBEFE6","#7A4B2C"],["#EEF2E6","#3E5530"],["#F3E6EF","#5C2D4E"],["#F8F3EB","#5A4A2E"],["#FFFFFF","#244F6B"]];
+var col=0,$=function(i){return document.getElementById(i)};
+M.forEach(function(m){var o=document.createElement('option');o.value=m[0];o.textContent=m[0]+' · '+m[2]+' ('+m[1]+')';$('mo').appendChild(o)});
+C.forEach(function(c,i){var b=document.createElement('button');b.style.background=c[0];b.title='Color '+(i+1);b.onclick=function(){col=i;pinta()};$('cols').appendChild(b)});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function pinta(){
+ [].forEach.call($('cols').children,function(b,i){b.className=i==col?'on':''});
+ var n=('000'+$('mo').value).slice(-3),c=C[col],h='';
+ var t='<div class="et" style="background:'+c[0]+';color:'+c[1]+'"><img src="m/'+n+'.jpg" alt=""><div class="tx"><div class="oc">'+esc($('oc').value)+'</div><div class="no">'+esc($('no').value)+'</div><div class="fe">'+esc($('fe').value)+'</div>'+($('pa').value?'<div class="pa">'+esc($('pa').value)+'</div>':'')+($('me').value?'<div class="me">'+esc($('me').value)+'</div>':'')+'</div></div>';
+ for(var i=0;i<10;i++)h+=t; $('hoja').innerHTML=h;
+}
+['oc','mo','no','fe','pa','me'].forEach(function(i){$(i).addEventListener('input',pinta)});
+try{var g=JSON.parse(localStorage.getItem('pr-pers')||'null');if(g){['oc','mo','no','fe','pa','me'].forEach(function(i){if(g[i]!=null)$(i).value=g[i]});col=g.col||0}}catch(e){}
+window.addEventListener('beforeprint',function(){try{var g={col:col};['oc','mo','no','fe','pa','me'].forEach(function(i){g[i]=$(i).value});localStorage.setItem('pr-pers',JSON.stringify(g))}catch(e){}});
+$('mo').value=$('mo').value||1; pinta();
+</script></body></html>
