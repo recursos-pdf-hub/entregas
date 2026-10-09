@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Calculadora de Precio Justo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F3EB;--paper:#FFFBF4;--ink:#26272A;--soft:#6A6D72;--acc:#39769A;--accd:#244F6B;--line:#E6E0D4;--gold:#B58A3B;--ok:#15803d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 40px}
+header{background:linear-gradient(135deg,var(--accd),var(--acc));color:#fff;border-radius:16px;padding:22px 20px;margin-bottom:18px}
+header small{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:11px;opacity:.9}
+h1{font-family:'Playfair Display',Georgia,serif;margin:6px 0 4px;font-size:28px;line-height:1.15}
+header p{margin:0;opacity:.92}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+.card h2{font-family:'Playfair Display',Georgia,serif;color:var(--accd);font-size:20px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:600}
+label span{display:block;font-weight:400;color:var(--soft);font-size:12px}
+input{width:100%;margin-top:4px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;font-size:16px;background:#fff}
+input:focus{outline:2px solid var(--acc);border-color:transparent}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:var(--accd);color:#fff;text-align:left;padding:8px;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+td{padding:9px 8px;border-bottom:1px solid var(--line)}
+tr:nth-child(even) td{background:#fff}
+.big{font-family:'Playfair Display',Georgia,serif;font-size:34px;color:var(--ok);font-weight:700}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+.row>div{flex:1;min-width:150px}
+.k{font-size:12px;color:var(--soft);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.note{font-size:13px;color:var(--soft)}
+.warn{background:#fff4e5;border-left:4px solid var(--gold);padding:10px 12px;border-radius:0 10px 10px 0;font-size:14px;margin-top:10px}
+button{padding:12px 16px;border:0;border-radius:10px;background:var(--accd);color:#fff;font:inherit;font-weight:800;cursor:pointer}
+@media print{button,.noprint{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <small>OTO 1 · Souvenirs que se Venden Solos™</small>
+  <h1>Calculadora de Precio Justo</h1>
+  <p>Cargá lo que te cuestan los materiales y tu tiempo. Te dice cuánto cobrar por cajita y por pack, sin perder plata.</p>
+</header>
+
+<div class="card">
+  <h2>1 · Lo que te cuesta cada cajita</h2>
+  <div class="grid">
+    <label>Precio de la hoja de papel <span>Opalina o ilustración (ver la Guía Rápida de Impresión)</span><input id="papel" type="number" min="0" step="1" value="0"></label>
+    <label>Cajitas que salen por hoja <span>Con los moldes de la colección sale 1 por hoja A4</span><input id="porHoja" type="number" min="1" step="1" value="1"></label>
+    <label>Tinta o impresión por hoja <span>Si imprimís en una copiadora, poné lo que te cobran por hoja color</span><input id="tinta" type="number" min="0" step="1" value="0"></label>
+    <label>Mini rosario <span>Precio por unidad</span><input id="rosario" type="number" min="0" step="1" value="0"></label>
+    <label>Extras por cajita <span>Cinta, etiqueta, tarjetita, bolsita, adhesivo</span><input id="extras" type="number" min="0" step="1" value="0"></label>
+    <label>Desperdicio <span>% de hojas que se arruinan (empezá con 10)</span><input id="desp" type="number" min="0" max="100" step="1" value="10"></label>
+  </div>
+</div>
+
+<div class="card">
+  <h2>2 · Tu tiempo</h2>
+  <div class="grid">
+    <label>Minutos por cajita <span>Imprimir, cortar, doblar, armar y personalizar. Medilo con 5 cajitas.</span><input id="min" type="number" min="0" step="1" value="10"></label>
+    <label>Cuánto querés ganar por hora <span>Tu trabajo también se cobra</span><input id="hora" type="number" min="0" step="100" value="0"></label>
+  </div>
+</div>
+
+<div class="card">
+  <h2>3 · Tu ganancia</h2>
+  <div class="grid">
+    <label>Margen sobre el costo <span>Lo que queda para el emprendimiento (empezá con 30%)</span><input id="margen" type="number" min="0" step="1" value="30"></label>
+    <label>Redondear a múltiplos de <span>Ej. 100 para que quede un precio prolijo</span><input id="redondeo" type="number" min="1" step="1" value="100"></label>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Resultado</h2>
+  <div class="row">
+    <div><div class="k">Costo de materiales</div><div id="rMat" style="font-size:20px;font-weight:800">$0</div></div>
+    <div><div class="k">Tu tiempo</div><div id="rTiempo" style="font-size:20px;font-weight:800">$0</div></div>
+    <div><div class="k">Precio por cajita</div><div class="big" id="rPrecio">$0</div></div>
+  </div>
+  <div id="aviso"></div>
+</div>
+
+<div class="card">
+  <h2>Precios por pack</h2>
+  <p class="note">Descuento por cantidad que podés ofrecer. Cambialo si querés: nunca dejes que el precio quede por debajo del costo.</p>
+  <table>
+    <thead><tr><th>Pack</th><th>Descuento</th><th>Precio por unidad</th><th>Total del pack</th></tr></thead>
+    <tbody id="packs"></tbody>
+  </table>
+  <p class="noprint" style="margin-top:14px"><button onclick="print()">Imprimir o guardar en PDF</button></p>
+</div>
+<p class="note">Los valores se guardan solo en este navegador. Cargá tus precios reales de hoy: cuando cambien, volvé a calcular.</p>
+</div>
+
+<script>
+var ids=['papel','porHoja','tinta','rosario','extras','desp','min','hora','margen','redondeo'];
+var PACKS=[[1,0],[10,5],[20,10],[30,12],[50,15],[100,20]];
+function v(id){var x=parseFloat(document.getElementById(id).value);return isNaN(x)?0:x;}
+function $(n){return '$'+Math.round(n).toLocaleString('es-AR');}
+function calc(){
+  var hojas=1/Math.max(1,v('porHoja'));
+  var mat=(v('papel')+v('tinta'))*hojas*(1+v('desp')/100)+v('rosario')+v('extras');
+  var tiempo=v('min')/60*v('hora');
+  var costo=mat+tiempo, r=Math.max(1,v('redondeo'));
+  var precio=Math.ceil(costo*(1+v('margen')/100)/r)*r;
+  document.getElementById('rMat').textContent=$(mat);
+  document.getElementById('rTiempo').textContent=$(tiempo);
+  document.getElementById('rPrecio').textContent=$(precio);
+  var h='';
+  PACKS.forEach(function(p){
+    var u=Math.ceil(precio*(1-p[1]/100)/r)*r, bajo=u<costo;
+    h+='<tr><td><b>'+(p[0]==1?'1 cajita':'Pack de '+p[0])+'</b></td><td>'+p[1]+'%</td><td'+(bajo?' style="color:#a13a2f;font-weight:800"':'')+'>'+$(u)+(bajo?' ⚠️':'')+'</td><td>'+$(u*p[0])+'</td></tr>';
+  });
+  document.getElementById('packs').innerHTML=h;
+  var a='';
+  if(v('hora')==0)a='<div class="warn">Pusiste $0 por hora: estás regalando tu trabajo. Aunque sea, poné lo que se paga una hora de trabajo en tu zona.</div>';
+  else if(mat==0)a='<div class="warn">Cargá el precio del papel, la tinta y el rosario para que el cálculo sea real.</div>';
+  document.getElementById('aviso').innerHTML=a;
+  try{var s={};ids.forEach(function(i){s[i]=document.getElementById(i).value;});localStorage.setItem('cj-calc',JSON.stringify(s));}catch(e){}
+}
+try{var s=JSON.parse(localStorage.getItem('cj-calc')||'{}');ids.forEach(function(i){if(s[i]!=null)document.getElementById(i).value=s[i];});}catch(e){}
+ids.forEach(function(i){document.getElementById(i).addEventListener('input',calc);});
+calc();
+</script>
+</body>
+</html>

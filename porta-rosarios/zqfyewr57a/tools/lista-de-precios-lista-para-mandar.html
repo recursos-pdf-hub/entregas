@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lista de Precios Lista para Mandar</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{--bg:#F8F3EB;--paper:#FFFBF4;--ink:#26272A;--soft:#6A6D72;--acc:#39769A;--accd:#244F6B;--line:#E6E0D4;--gold:#B58A3B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:18px 16px 40px}
+.help{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;margin-bottom:14px}
+.help b{color:var(--accd)}
+#lista{background:var(--paper);border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 26px rgba(36,79,107,.12)}
+.top{background:linear-gradient(135deg,var(--accd),var(--acc));color:#fff;text-align:center;padding:26px 18px 20px}
+.top .s{font-family:'Great Vibes',cursive;font-size:30px;line-height:1;color:#f3e3c3}
+.top h1{font-family:'Playfair Display',Georgia,serif;font-size:28px;margin:6px 0 4px}
+.top p{margin:0;opacity:.9;font-size:14px}
+.body{padding:18px}
+.item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px dashed var(--line)}
+.item .n{font-weight:800;color:var(--accd)}
+.item .d{font-size:13px;color:var(--soft)}
+.item .p{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:22px;color:var(--gold);white-space:nowrap}
+.inc{margin:14px 0 0;padding:12px;background:#fff;border-radius:12px;font-size:14px;line-height:1.6}
+.foot{text-align:center;font-size:13px;color:var(--soft);padding:0 18px 18px}
+[contenteditable]{outline:none;border-radius:4px}
+[contenteditable]:hover{background:rgba(57,118,154,.08)}
+[contenteditable]:focus{background:rgba(181,138,59,.15)}
+.btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+button{flex:1;min-width:150px;padding:13px;border:0;border-radius:10px;background:var(--accd);color:#fff;font:inherit;font-weight:800;cursor:pointer}
+button.alt{background:var(--gold)}
+@media print{.help,.btns{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="help"><b>Cómo se usa:</b> tocá cualquier texto de la lista y cambialo (nombre de tu emprendimiento, packs y precios). Los precios sacalos de la <b>Calculadora de Precio Justo</b>. Después tocá <b>Descargar imagen</b> y mandala por WhatsApp cada vez que te pregunten «¿cuánto sale?». Los cambios quedan guardados en este navegador.</div>
+
+<div id="lista">
+  <div class="top">
+    <div class="s" contenteditable>Souvenirs de fe</div>
+    <h1 contenteditable>[Nombre de tu emprendimiento]</h1>
+    <p contenteditable>Cajitas porta-rosario personalizadas</p>
+  </div>
+  <div class="body">
+    <div class="item"><div><div class="n" contenteditable>1 cajita (regalo)</div><div class="d" contenteditable>Con nombre y tarjetita</div></div><div class="p" contenteditable>$ 0</div></div>
+    <div class="item"><div><div class="n" contenteditable>Pack de 10</div><div class="d" contenteditable>Ideal bautismo íntimo</div></div><div class="p" contenteditable>$ 0</div></div>
+    <div class="item"><div><div class="n" contenteditable>Pack de 20</div><div class="d" contenteditable>El más elegido</div></div><div class="p" contenteditable>$ 0</div></div>
+    <div class="item"><div><div class="n" contenteditable>Pack de 30</div><div class="d" contenteditable>Comuniones y confirmaciones</div></div><div class="p" contenteditable>$ 0</div></div>
+    <div class="item"><div><div class="n" contenteditable>Pack de 50 o más</div><div class="d" contenteditable>Grupos de catequesis y colegios</div></div><div class="p" contenteditable>Consultar</div></div>
+    <div class="inc" contenteditable>✝️ Más de 100 modelos: Virgen, santos, angelitos y sacramentos<br>✏️ Nombre y fecha en cada cajita<br>📿 Rosario incluido<br>📅 Pedidos con [N] días de anticipación · Seña del 50%</div>
+  </div>
+  <div class="foot" contenteditable>Escribime para reservar tu fecha 💙</div>
+</div>
+
+<div class="btns">
+  <button onclick="descargar()">Descargar imagen</button>
+  <button class="alt" onclick="print()">Imprimir</button>
+</div>
+</div>
+<script>
+var L=document.getElementById('lista');
+try{var g=localStorage.getItem('cj-lista');if(g)L.innerHTML=g;}catch(e){}
+L.addEventListener('input',function(){try{localStorage.setItem('cj-lista',L.innerHTML);}catch(e){}});
+function descargar(){
+  if(!window.html2canvas){alert('No se pudo cargar la herramienta de imagen. Probá con Imprimir y guardá como PDF.');return;}
+  document.activeElement&&document.activeElement.blur();
+  html2canvas(L,{scale:2,backgroundColor:null}).then(function(c){var a=document.createElement('a');a.download='lista-de-precios.png';a.href=c.toDataURL('image/png');a.click();});
+}
+</script>
+</body>
+</html>

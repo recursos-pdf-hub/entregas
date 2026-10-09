@@ -1,0 +1,279 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cajitas Porta-Rosario//Calendario de Pedidos//ES
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Calendario de Pedidos · Cajitas
+BEGIN:VEVENT
+UID:f45638cd-c7be-558e-b6cb-5840addce9d2
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:✝ Día de la Madre
+DESCRIPTION:Ofrecé: Virgen de Luján · Medalla Milagrosa · Una bendición de Dios. Usá el Mensaje 5 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Día de la Madre. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3b14796b-5e3f-519a-b43a-b36bc90520b3
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:✝ Todos los Santos
+DESCRIPTION:Ofrecé: San Antonio · San José · Santa Teresita · San Francisco de Asís. Usá el Mensaje 11 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Todos los Santos. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:01c0837d-8eb7-5f7e-90e4-0187d5bdeff8
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:✝ Inmaculada Concepción · Virgen del Valle
+DESCRIPTION:Ofrecé: Medalla Milagrosa · Virgen de Luján. Usá el Mensaje 6 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Inmaculada Concepción · Virgen del Valle. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:1f217590-74fa-512b-a22f-9616ce18d2dc
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20261225
+DTEND;VALUE=DATE:20261226
+SUMMARY:✝ Navidad
+DESCRIPTION:Ofrecé: Sagrada Familia · Jesús, en Vos confío · Una bendición de Dios. Usá el Mensaje 3 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Navidad. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:e49dd49c-232e-5336-9feb-ad3fb26aee15
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:✝ Reyes
+DESCRIPTION:Ofrecé: Sagrada Familia · Mi Angelito. Usá el Mensaje 3 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Reyes. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:60c5405b-4038-59f8-aaf6-343787a22ffc
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270211
+SUMMARY:✝ Miércoles de Ceniza · empieza la Cuaresma
+DESCRIPTION:Ofrecé: Jesús, en Vos confío. Usá el Mensaje 4 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Miércoles de Ceniza · empieza la Cuaresma. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:93822463-f3d6-5465-8100-67529bc7239e
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270319
+DTEND;VALUE=DATE:20270320
+SUMMARY:✝ San José
+DESCRIPTION:Ofrecé: San José · Sagrada Familia. Usá el Mensaje 7 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: San José. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:60d3328b-1de1-5be2-a51c-cfaa6fcf0140
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270328
+DTEND;VALUE=DATE:20270329
+SUMMARY:✝ Pascua (Domingo de Ramos: 21/3)
+DESCRIPTION:Ofrecé: Jesús, en Vos confío · Sagrada Familia. Usá el Mensaje 4 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Pascua (Domingo de Ramos: 21/3). Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b2f5611b-9092-584e-bbff-5111ce198aff
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270509
+SUMMARY:✝ Nuestra Señora de Luján
+DESCRIPTION:Ofrecé: Virgen de Luján. Usá el Mensaje 6 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Nuestra Señora de Luján. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ee82a73d-33da-5e5a-945a-c72ebc55638d
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270513
+DTEND;VALUE=DATE:20270514
+SUMMARY:✝ Virgen de Fátima
+DESCRIPTION:Ofrecé: Virgen de Fátima. Usá el Mensaje 6 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Virgen de Fátima. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3ae8f7a5-406b-5a9e-9a19-7962de2e4308
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270516
+DTEND;VALUE=DATE:20270517
+SUMMARY:✝ Pentecostés (fecha frecuente de confirmaciones)
+DESCRIPTION:Ofrecé: Confirmación. Usá el Mensaje 11 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Pentecostés (fecha frecuente de confirmaciones). Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:443fc5a0-9e7b-522a-ad60-5415719bc333
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270613
+DTEND;VALUE=DATE:20270614
+SUMMARY:✝ San Antonio
+DESCRIPTION:Ofrecé: San Antonio. Usá el Mensaje 11 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: San Antonio. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:71c098e9-7a89-5cfe-a46c-aca40689011e
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270621
+SUMMARY:✝ Día del Padre
+DESCRIPTION:Ofrecé: San José · Jesús, en Vos confío. Usá el Mensaje 7 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Día del Padre. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:60b7c3d5-7986-5005-9f94-29efccda51e4
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270807
+DTEND;VALUE=DATE:20270808
+SUMMARY:✝ San Cayetano
+DESCRIPTION:Ofrecé: Una bendición de Dios · Jesús, en Vos confío. Usá el Mensaje 8 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: San Cayetano. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:102cf886-0421-5182-b498-afc4d1e4cbec
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270816
+SUMMARY:✝ Día del Niño · Asunción de la Virgen
+DESCRIPTION:Ofrecé: Mi Angelito · Primera Comunión · Virgen de Luján. Usá el Mensaje 9 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Día del Niño · Asunción de la Virgen. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:81e0c893-63ec-50f8-85f3-a4df8e232b3d
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20270821
+DTEND;VALUE=DATE:20270822
+SUMMARY:✝ Día del Catequista
+DESCRIPTION:Ofrecé: Catequesis. Usá el Mensaje 10 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Día del Catequista. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3aae7b2a-16d0-5bcb-bf2c-f44ca295217d
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+SUMMARY:✝ Santa Teresita · comienza la temporada fuerte de comuniones
+DESCRIPTION:Ofrecé: Santa Teresita · Primera Comunión. Usá el Mensaje 11 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Santa Teresita · comienza la temporada fuerte de comuniones. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fd7c56f4-b983-5bc7-b591-eb1dbf098cfc
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20271004
+DTEND;VALUE=DATE:20271005
+SUMMARY:✝ San Francisco de Asís
+DESCRIPTION:Ofrecé: San Francisco de Asís. Usá el Mensaje 11 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: San Francisco de Asís. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:c5ffb13e-fd7c-5ed0-b414-32ea01d56745
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20271017
+DTEND;VALUE=DATE:20271018
+SUMMARY:✝ Día de la Madre
+DESCRIPTION:Ofrecé: Virgen de Luján · Medalla Milagrosa · Una bendición de Dios. Usá el Mensaje 5 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Día de la Madre. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3b76cd83-5858-5949-a9eb-5b9a980cc9a3
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20271115
+DTEND;VALUE=DATE:20271116
+SUMMARY:✝ Cierre del año de catequesis
+DESCRIPTION:Ofrecé: Catequesis · Primera Comunión · Confirmación. Usá el Mensaje 12 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Cierre del año de catequesis. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:8b8572bc-1d49-50f2-b222-4fd5b19a0588
+DTSTAMP:20261009T000000Z
+DTSTART;VALUE=DATE:20271225
+DTEND;VALUE=DATE:20271226
+SUMMARY:✝ Navidad
+DESCRIPTION:Ofrecé: Sagrada Familia · Jesús, en Vos confío. Usá el Mensaje 3 de los 12 Mensajes de Recompra.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 semanas: Navidad. Empezá a ofrecer hoy.
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
