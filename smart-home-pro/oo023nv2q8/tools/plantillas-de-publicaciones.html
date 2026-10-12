@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Plantillas de Publicaciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{--navy:#1E293B;--slate:#334155;--amber:#F59E0B;--paper:#F8FAFC;--ink:#111827;--soft:#64748B;--line:#E2E8F0}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 48px}
+h1{font-family:Poppins,Arial,sans-serif;font-size:clamp(24px,5vw,34px);margin:6px 0}
+.help{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.5;margin:12px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+.post{width:100%;aspect-ratio:1/1;border-radius:10px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:center;padding:9%;font-family:Poppins,Arial,sans-serif}
+.post [contenteditable]{outline:none}
+.post [contenteditable]:focus{box-shadow:0 0 0 2px rgba(245,158,11,.6);border-radius:4px}
+.post .tag{font-size:clamp(10px,2.6vw,13px);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.post .big{font-size:clamp(22px,6.4vw,34px);font-weight:800;line-height:1.08;margin:10px 0}
+.post .small{font-family:Inter,Arial,sans-serif;font-size:clamp(12px,3.4vw,16px);line-height:1.4}
+.post .foot{position:absolute;left:9%;right:9%;bottom:7%;font-size:clamp(10px,2.8vw,13px);font-weight:700;opacity:.85}
+.t-dark{background:linear-gradient(150deg,var(--navy),var(--slate));color:#fff}.t-dark .tag{color:var(--amber)}
+.t-amber{background:var(--amber);color:var(--navy)}
+.t-light{background:#fff;color:var(--navy);border:3px solid var(--navy)}.t-light .tag{color:var(--amber)}
+.t-myth{background:var(--navy);color:#fff}.t-myth .tag{background:#dc2626;color:#fff;display:inline-block;padding:4px 10px;border-radius:6px;align-self:flex-start}
+.t-myth .ok{color:var(--amber)}
+.bar{display:flex;gap:8px;margin-top:10px}
+button{flex:1;border:0;border-radius:10px;padding:11px;font-weight:800;font-size:14px;cursor:pointer;background:var(--navy);color:#fff}
+button:hover{background:var(--slate)}
+.n{font-size:12px;font-weight:800;color:var(--soft);margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em}
+.foot-page{color:var(--soft);font-size:13px;text-align:center;margin-top:30px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Plantillas de Publicaciones</h1>
+<div class="help"><b>Cómo se usa:</b> tocá cualquier texto de una plantilla y escribí encima. Cuando esté lista, tocá <b>Descargar imagen</b> y subila a tu estado, a Instagram o a Marketplace. Las imágenes salen cuadradas (1080 × 1080).</div>
+<div class="grid" id="grid"></div>
+<p class="foot-page">Para uso personal. Prohibida la reventa o redistribución.</p>
+</div>
+<script>
+const P=[
+ ["t-dark","Ahora instalo","Domótica en tu casa","Luces, enchufes, cámaras y cerraduras que manejás desde el celular.","[Tu nombre] · [Tu zona]"],
+ ["t-myth","Mito","«Es carísima»","<span class='ok'>Falso:</span> podés arrancar con 2 o 3 cosas y sumar el resto de a poco.","[Tu nombre] · Instalador de domótica"],
+ ["t-myth","Mito","«Hay que romper paredes»","<span class='ok'>Falso:</span> la mayoría de los equipos son inalámbricos y van en las cajas que ya tenés.","[Tu nombre] · Instalador de domótica"],
+ ["t-myth","Mito","«Sin internet no anda nada»","<span class='ok'>Falso:</span> las luces siguen funcionando con la tecla de siempre.","[Tu nombre] · Instalador de domótica"],
+ ["t-amber","Pregunta","Si pudieras manejar UNA cosa de tu casa desde el celular, ¿cuál sería?","Contestame por privado 👇","[Tu nombre]"],
+ ["t-dark","Precio de lanzamiento","Quedan [3] lugares este mes","Instalaciones de domótica con precio de lanzamiento. Escribime para reservar.","[Tu nombre] · [Tu zona]"],
+ ["t-light","Cómo trabajo","4 pasos, cero sorpresas","1. Visita y diagnóstico<br>2. Presupuesto en 3 opciones<br>3. Instalación y configuración<br>4. Te enseño a usarlo","[Tu nombre]"],
+ ["t-dark","Trabajo terminado ✅","[Barrio]","Luces del living, enchufe con horario y cámara en la entrada. Todo en una sola app.","[Tu nombre] · Instalador de domótica"],
+ ["t-light","Lo que dicen mis clientes","★★★★★","«[Pegá acá la reseña de tu cliente]»<br><br>— [Nombre del cliente]","[Tu nombre]"],
+ ["t-amber","Para tu negocio","Domótica para locales","Luces y cartel con horario, cámara desde el celular y aviso si se abre la puerta.","[Tu nombre] · [Tu zona]"]
+];
+const g=document.getElementById('grid');
+P.forEach((p,i)=>{
+  const d=document.createElement('div');d.className='item';
+  d.innerHTML=`<div class="n">Plantilla ${i+1}</div><div class="post ${p[0]}" id="p${i}">
+  <div class="tag" contenteditable>${p[1]}</div><div class="big" contenteditable>${p[2]}</div><div class="small" contenteditable>${p[3]}</div>
+  <div class="foot" contenteditable>${p[4]}</div></div><div class="bar"><button data-i="${i}">Descargar imagen</button></div>`;
+  g.appendChild(d);
+});
+g.addEventListener('click',async e=>{
+  const b=e.target.closest('button');if(!b)return;
+  const el=document.getElementById('p'+b.dataset.i);
+  if(typeof html2canvas==='undefined'){alert('No se pudo cargar el descargador. Revisá tu conexión y recargá la página.');return}
+  b.textContent='Generando…';document.activeElement&&document.activeElement.blur();
+  const c=await html2canvas(el,{scale:1080/el.offsetWidth,backgroundColor:null,useCORS:true});
+  const a=document.createElement('a');a.download='publicacion-'+(+b.dataset.i+1)+'.png';a.href=c.toDataURL('image/png');a.click();
+  b.textContent='Descargar imagen';
+});
+</script>
+</body>
+</html>

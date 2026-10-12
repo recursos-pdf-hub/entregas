@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Presupuesto en 3 Opciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E293B;--slate:#334155;--amber:#F59E0B;--paper:#F8FAFC;--ink:#111827;--soft:#64748B;--line:#E2E8F0}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 48px}
+h1{font-family:Poppins,Arial,sans-serif;font-size:clamp(24px,5vw,34px);margin:6px 0}
+.help{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.5;margin:12px 0 18px}
+.form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:18px}
+.form h2{font-family:Poppins,Arial,sans-serif;font-size:19px;margin:0 0 10px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:10px}
+label{display:block;font-size:13px;font-weight:700;color:var(--slate);margin-bottom:4px}
+input,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px 10px;font:inherit;font-size:15px;background:#fff}
+textarea{min-height:92px;resize:vertical}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.opt{border:1px solid var(--line);border-radius:12px;padding:12px}
+.opt.mid{border:2px solid var(--amber)}
+button{border:0;border-radius:10px;padding:14px 18px;font-weight:800;font-size:16px;cursor:pointer;background:var(--navy);color:#fff;width:100%}
+/* Vista del presupuesto */
+#doc{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:18px}
+.dh{background:linear-gradient(150deg,var(--navy),var(--slate));color:#fff;padding:22px;border-bottom:5px solid var(--amber)}
+.dh .t{font-family:Poppins,Arial,sans-serif;font-size:24px;font-weight:800}
+.dh .s{opacity:.9;font-size:14px;margin-top:4px}
+.db{padding:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:14px;position:relative}
+.card.mid{border:2px solid var(--amber)}
+.badge{position:absolute;top:-11px;left:14px;background:var(--amber);color:var(--navy);font-size:11px;font-weight:800;padding:3px 10px;border-radius:99px;text-transform:uppercase;letter-spacing:.06em}
+.card h3{font-family:Poppins,Arial,sans-serif;margin:4px 0 6px;font-size:18px}
+.card .p{font-family:Poppins,Arial,sans-serif;font-size:24px;font-weight:800;color:var(--navy);margin:8px 0}
+.card ul{margin:0;padding-left:18px;font-size:14px;line-height:1.5}
+.cond{font-size:13px;color:var(--soft);line-height:1.5;border-top:1px solid var(--line);padding-top:12px;margin-top:6px}
+.foot-page{color:var(--soft);font-size:13px;text-align:center;margin-top:30px}
+@media print{
+  body{background:#fff}.wrap>*:not(#doc){display:none!important}#doc{border:0;margin:0}
+  .dh,.badge{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Presupuesto en 3 Opciones</h1>
+<div class="help"><b>Cómo se usa:</b> completá tus datos, los del cliente y las 3 opciones (un ítem por renglón). Abajo se arma el presupuesto solo. Tocá <b>Guardar como PDF</b> y en la ventana de impresión elegí «Guardar como PDF». Tus datos quedan guardados en este celular o computadora.</div>
+
+<div class="form">
+<h2>Tus datos y los del cliente</h2>
+<div class="row"><div><label>Tu nombre o marca</label><input id="marca" value="[Tu nombre] · Domótica"></div><div><label>Tu teléfono o alias (opcional)</label><input id="tel" value=""></div></div>
+<div class="row"><div><label>Cliente</label><input id="cliente" value="[Nombre del cliente]"></div><div><label>Dirección o barrio</label><input id="dir" value="[Barrio]"></div><div><label>Fecha</label><input id="fecha"></div></div>
+</div>
+
+<div class="form">
+<h2>Las 3 opciones</h2>
+<div class="opts">
+ <div class="opt"><label>Opción 1 · nombre</label><input id="n1" value="Básica"><label style="margin-top:8px">Incluye (un ítem por renglón)</label><textarea id="i1">2 teclas inteligentes en living y entrada
+1 enchufe inteligente con horario
+Configuración en la app y por voz
+Te enseño a usarlo</textarea><label style="margin-top:8px">Precio</label><input id="p1" value="$ [precio]"></div>
+ <div class="opt mid"><label>Opción 2 · nombre (la recomendada)</label><input id="n2" value="Media"><textarea id="i2" style="margin-top:8px">Todo lo de la opción Básica
+1 cámara en la entrada con aviso al celular
+1 sensor de apertura en la puerta
+Escena «Me voy» (apaga todo con un toque)</textarea><label style="margin-top:8px">Precio</label><input id="p2" value="$ [precio]"></div>
+ <div class="opt"><label>Opción 3 · nombre</label><input id="n3" value="Completa"><textarea id="i3" style="margin-top:8px">Todo lo de la opción Media
+Teclas inteligentes en toda la casa
+Cerradura digital o persianas motorizadas
+3 escenas a medida</textarea><label style="margin-top:8px">Precio</label><input id="p3" value="$ [precio]"></div>
+</div>
+<label style="margin-top:12px">Condiciones</label><textarea id="cond">Los equipos se compran con la seña. Seña del 50% para reservar el día. Validez del presupuesto: 7 días. Incluye instalación, configuración y explicación de uso.</textarea>
+</div>
+
+<button onclick="window.print()">Guardar como PDF</button>
+
+<div id="doc">
+ <div class="dh"><div class="t" id="v-marca"></div><div class="s" id="v-sub"></div></div>
+ <div class="db">
+  <div style="font-size:15px"><b>Presupuesto para:</b> <span id="v-cliente"></span> · <span id="v-dir"></span><br><b>Fecha:</b> <span id="v-fecha"></span></div>
+  <p style="font-size:14px;color:var(--soft);margin:10px 0 4px">Te armé tres opciones para que elijas la que mejor se adapta a lo que necesitás.</p>
+  <div class="cards">
+   <div class="card"><h3 id="v-n1"></h3><div class="p" id="v-p1"></div><ul id="v-i1"></ul></div>
+   <div class="card mid"><span class="badge">La que elige la mayoría</span><h3 id="v-n2"></h3><div class="p" id="v-p2"></div><ul id="v-i2"></ul></div>
+   <div class="card"><h3 id="v-n3"></h3><div class="p" id="v-p3"></div><ul id="v-i3"></ul></div>
+  </div>
+  <div class="cond" id="v-cond"></div>
+ </div>
+</div>
+<p class="foot-page">Para uso personal. Prohibida la reventa o redistribución.</p>
+</div>
+<script>
+const ids=['marca','tel','cliente','dir','fecha','n1','i1','p1','n2','i2','p2','n3','i3','p3','cond'];
+const K='presupuesto3op';
+try{const s=JSON.parse(localStorage.getItem(K)||'{}');ids.forEach(i=>{if(s[i]!=null)document.getElementById(i).value=s[i]})}catch(e){}
+const f=document.getElementById('fecha');if(!f.value)f.value=new Date().toLocaleDateString('es-AR');
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function render(){
+  const v=i=>document.getElementById(i).value;
+  document.getElementById('v-marca').textContent=v('marca');
+  document.getElementById('v-sub').textContent='Presupuesto de domótica'+(v('tel')?' · '+v('tel'):'');
+  ['cliente','dir','fecha','cond','n1','n2','n3','p1','p2','p3'].forEach(i=>document.getElementById('v-'+i).textContent=v(i));
+  [1,2,3].forEach(n=>document.getElementById('v-i'+n).innerHTML=v('i'+n).split('\n').filter(x=>x.trim()).map(x=>'<li>'+esc(x)+'</li>').join(''));
+  try{const s={};ids.forEach(i=>s[i]=v(i));localStorage.setItem(K,JSON.stringify(s))}catch(e){}
+}
+ids.forEach(i=>document.getElementById(i).addEventListener('input',render));render();
+</script>
+</body>
+</html>
