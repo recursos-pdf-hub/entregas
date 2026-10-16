@@ -1,0 +1,317 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700;800&display=swap');
+html{scroll-behavior:smooth;background:#FFFFFF}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tg-pulse{animation:none!important}}
+body{margin:0;background:#FFFFFF}
+.tg-root{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#121212;background:#FFFFFF;line-height:1.6;-webkit-font-smoothing:antialiased}
+.tg-root *{box-sizing:border-box;min-width:0}
+.tg-root h1,.tg-root h2,.tg-root h3,.tg-root p,.tg-root td{overflow-wrap:break-word}
+.tg-root img{max-width:100%;height:auto;display:block}
+.tg-wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.tg-narrow{max-width:760px;margin:0 auto;padding:0 24px}
+.tg-top{background:#25596E;color:#fff;text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.06em;padding:9px 12px}
+.tg-top b{color:#F5A623}
+.tg-cd{display:inline-flex;gap:4px;align-items:center;margin-left:8px;font-variant-numeric:tabular-nums}
+.tg-cd span{background:rgba(255,255,255,.14);border-radius:4px;padding:1px 6px}
+.tg-head{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 0;border-bottom:1px solid #E5E7EB}
+.tg-head img{width:38px;height:38px}
+.tg-head span{font-family:'Merriweather',serif;font-weight:900;color:#25596E;font-size:1.05rem}
+.tg-hero{padding:34px 0 56px}
+.tg-hgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:44px;align-items:start}
+.tg-gal-main{border-radius:14px;overflow:hidden;background:#F0F2F5}
+.tg-gal-main img{width:100%;aspect-ratio:1/1;object-fit:contain}
+.tg-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+.tg-thumbs button{padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;background:#F0F2F5;cursor:pointer}
+.tg-thumbs button[aria-pressed="true"]{border-color:#25596E}
+.tg-thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.tg-hero h1{font-family:'Merriweather',serif;font-weight:900;font-size:2.15rem;line-height:1.22;margin:0 0 12px;color:#121212}
+.tg-sub{font-size:1.15rem;font-weight:600;margin:0 0 16px}
+.tg-sub em{font-style:normal;color:#25596E}
+.tg-bul{list-style:none;padding:0;margin:0 0 20px}
+.tg-bul li{position:relative;padding-left:30px;margin:0 0 9px;font-weight:500}
+.tg-bul li:before{content:"✓";position:absolute;left:0;top:0;width:21px;height:21px;border-radius:50%;background:#25596E;color:#fff;font-size:.75rem;display:flex;align-items:center;justify-content:center;font-weight:800}
+.tg-btn{display:inline-block;background:#25596E;color:#fff!important;text-decoration:none;font-weight:800;letter-spacing:.02em;border-radius:10px;padding:16px 30px;text-align:center;box-shadow:0 6px 18px rgba(37,89,110,.28);transition:transform .15s}
+.tg-btn:hover{transform:translateY(-1px)}
+.tg-btn-gold{background:#F5A623;color:#121212!important;box-shadow:0 6px 18px rgba(245,166,35,.32)}
+.tg-btn-full{display:block;width:100%}
+.tg-pulse{animation:tgp 2.2s infinite}
+@keyframes tgp{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.tg-micro{font-size:.82rem;color:#65676B;margin:10px 0 0}
+#tg-offer{scroll-margin-top:24px}
+.tg-offer{border:2px solid #25596E;border-radius:16px;padding:26px 24px;background:#fff;margin-top:6px}
+.tg-ribbon{display:inline-block;background:#F5A623;color:#121212;font-weight:800;font-size:.74rem;letter-spacing:.08em;border-radius:999px;padding:5px 12px;margin-bottom:12px}
+.tg-oname{font-weight:700;font-size:1.02rem;margin:0 0 10px}
+.tg-prices{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:4px}
+.tg-old{color:#65676B;text-decoration:line-through;font-size:1.1rem}
+.tg-save{background:#E8F3E1;color:#2E6B00;font-weight:800;font-size:.8rem;border-radius:999px;padding:4px 10px}
+.tg-big{font-family:'Merriweather',serif;font-weight:900;font-size:3.6rem;line-height:1.05;color:#25596E;margin:4px 0}
+.tg-once{font-weight:600;color:#65676B;font-size:.9rem;margin:0 0 14px}
+.tg-inc{list-style:none;padding:0;margin:0 0 18px;border-top:1px dashed #D6DBE1;padding-top:14px}
+.tg-inc li{margin:0 0 8px;padding-left:28px;position:relative}
+.tg-inc li span{position:absolute;left:0}
+.tg-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;font-size:.8rem;color:#65676B;margin-top:12px}
+.tg-acc{margin-top:18px;border-top:1px solid #E5E7EB}
+.tg-acc details{border-bottom:1px solid #E5E7EB}
+.tg-acc summary{cursor:pointer;list-style:none;font-weight:700;padding:15px 30px 15px 0;position:relative}
+.tg-acc summary::-webkit-details-marker{display:none}
+.tg-acc summary:after{content:"+";position:absolute;right:4px;top:12px;font-size:1.3rem;color:#25596E}
+.tg-acc details[open] summary:after{content:"–"}
+.tg-acc p{margin:0 0 16px;color:#33363B}
+.tg-sec{padding:72px 0}
+.tg-alt{background:#F0F2F5}
+.tg-h2{font-family:'Merriweather',serif;font-weight:900;font-size:2rem;line-height:1.25;margin:0 0 18px;text-align:center}
+.tg-h2 em{font-style:normal;color:#25596E}
+.tg-lead{text-align:center;max-width:680px;margin:0 auto 34px;color:#33363B;font-size:1.06rem}
+.tg-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:46px;align-items:center}
+.tg-split img{border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.12)}
+.tg-split p{margin:0 0 14px;font-size:1.04rem}
+.tg-tag{font-weight:800;color:#25596E}
+.tg-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tg-card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.tg-card .tg-ico{font-size:1.7rem;margin-bottom:8px}
+.tg-card h3{font-size:1.05rem;margin:0 0 6px}
+.tg-card p{margin:0;color:#33363B;font-size:.96rem}
+.tg-teal{background:#25596E;color:#fff}
+.tg-teal .tg-h2{color:#fff}
+.tg-teal .tg-lead{color:rgba(255,255,255,.82)}
+.tg-feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tg-fi{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:18px}
+.tg-fi h3{margin:0 0 6px;font-size:1.02rem;color:#fff}
+.tg-fi p{margin:0;color:rgba(255,255,255,.82);font-size:.94rem}
+.tg-cmp{width:100%;max-width:720px;margin:0 auto;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.tg-cmp th,.tg-cmp td{padding:14px 16px;border-bottom:1px solid #E5E7EB;text-align:center}
+.tg-cmp th{background:#F0F2F5;font-size:.9rem}
+.tg-cmp th.tg-us{background:#25596E;color:#fff}
+.tg-cmp td:first-child,.tg-cmp th:first-child{text-align:left}
+.tg-y{color:#2E6B00;font-weight:800;font-size:1.15rem}
+.tg-n{color:#B42318;font-weight:800;font-size:1.15rem}
+.tg-bel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.tg-bel div{border-left:4px solid #F5A623;background:#fff;padding:18px 20px;border-radius:0}
+.tg-bel h3{margin:0 0 6px;font-size:1.05rem;color:#25596E}
+.tg-bel p{margin:0;color:#33363B;font-size:.96rem}
+.tg-faq{max-width:760px;margin:0 auto}
+.tg-final{text-align:center}
+.tg-foot{background:#121212;color:rgba(255,255,255,.7);font-size:.78rem;text-align:center;padding:26px 16px 90px}
+.tg-foot p{margin:4px auto;max-width:720px}
+.tg-sticky{display:none;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #E5E7EB;padding:10px 14px;z-index:50;box-shadow:0 -6px 18px rgba(0,0,0,.08)}
+.tg-js .tg-rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.tg-js .tg-rv.tg-on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.tg-js .tg-rv{opacity:1;transform:none;transition:none}}
+@media (max-width:900px){
+  .tg-hgrid,.tg-split{grid-template-columns:minmax(0,1fr);gap:28px}
+  .tg-cards{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .tg-wrap,.tg-narrow{padding:0 16px}
+  .tg-hero{padding:22px 0 40px}
+  .tg-hero h1{font-size:1.65rem}
+  .tg-sub{font-size:1.04rem}
+  .tg-h2{font-size:1.5rem}
+  .tg-sec{padding:48px 0}
+  .tg-btn{padding:16px 18px;font-size:.92rem;width:100%}
+  .tg-offer{padding:22px 16px}
+  .tg-big{font-size:2.9rem}
+  .tg-feat,.tg-bel{grid-template-columns:minmax(0,1fr)}
+  .tg-cmp th,.tg-cmp td{padding:11px 9px;font-size:.86rem}
+  .tg-top{font-size:.7rem}
+  .tg-sticky{display:block}
+}
+@media (max-width:380px){
+  .tg-hero h1{font-size:1.45rem}
+  .tg-h2{font-size:1.32rem}
+  .tg-big{font-size:2.5rem}
+  .tg-thumbs{gap:5px}
+  .tg-cd{margin-left:4px}
+}
+</style>
+<script>(function(){try{var u=new URL(location.href);if(!u.searchParams.get("country")){u.searchParams.set("country","HU");location.replace(u.toString());}}catch(e){}})();</script>
+<script>try{document.documentElement.classList.add('tg-js')}catch(e){}
+setTimeout(function(){try{document.querySelectorAll('.tg-rv').forEach(function(el){el.classList.add('tg-on')})}catch(e){}},2500);</script>
+<div class="tg-root">
+
+<div class="tg-top">KORLÁTOZOTT IDEJŰ AJÁNLAT | <b>{{savings}} KEDVEZMÉNY</b> <span class="tg-cd" aria-label="Visszaszámláló"><span id="tg-h">08</span>ó :<span id="tg-m">51</span>p :<span id="tg-s">31</span>mp</span></div>
+
+<header class="tg-head"><img alt="A hit miértje logó" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/logo.jpg" width="38" height="38"/><span>A hit miértje</span></header>
+
+<section class="tg-hero">
+<div class="tg-wrap tg-hgrid">
+  <div>
+    <div class="tg-gal-main"><img id="tg-main" alt="A hit miértje – a füzet borítója" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tapa.jpg" width="1100" height="1100"/></div>
+    <div class="tg-thumbs" role="group" aria-label="Képek a füzetből">
+      <button type="button" aria-pressed="true" data-src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tapa.jpg" data-alt="A hit miértje – a füzet borítója"><img alt="" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tapa.jpg" width="120" height="120"/></button>
+      <button type="button" aria-pressed="false" data-src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-konyv1.jpg" data-alt="Ki az Isten? – minta oldal"><img alt="" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-konyv1.jpg" width="120" height="120"/></button>
+      <button type="button" aria-pressed="false" data-src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-hasznalat.jpg" data-alt="Hogyan használd ezt a könyvet? – bevezető oldal"><img alt="" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-hasznalat.jpg" width="120" height="120"/></button>
+      <button type="button" aria-pressed="false" data-src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tapa-plana.jpg" data-alt="A hit miértje – a füzet borítója"><img alt="" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tapa-plana.jpg" width="120" height="120"/></button>
+      <button type="button" aria-pressed="false" data-src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tablet.jpg" data-alt="A hit miértje tableten és telefonon"><img alt="" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tablet.jpg" width="120" height="120"/></button>
+    </div>
+  </div>
+  <div>
+    <h1>A hit miértje: 52 hét rendszeres teológia gyerekeknek</h1>
+    <p class="tg-sub">Nevelj olyan gyereket, aki tudja, <em>miért</em> hisz — nem csak azt, hogy <em>mit</em>.</p>
+    <ul class="tg-bul">
+      <li>Valódi válaszok, mielőtt az egyetem próbára tenné</li>
+      <li>Magabiztosság, amely a kérdések kereszttüzében is kitart</li>
+      <li>Nyomozós gondolkodás már egészen fiatalon</li>
+      <li>Bizonyítékokra épülő hit, nem csak érzésekre</li>
+    </ul>
+
+    <div class="tg-offer" id="tg-offer">
+      <span class="tg-ribbon">KÜLÖNLEGES AJÁNLAT | KORLÁTOZOTT IDEIG</span>
+      <p class="tg-oname">A hit miértje · 52 hét rendszeres teológia gyerekeknek</p>
+      <div class="tg-prices"><span class="tg-old">{{original_price}}</span><span class="tg-save">Megtakarítasz {{savings}}</span></div>
+      <div class="tg-big">{{price}}</div>
+      <p class="tg-once">Egyszeri fizetés · Élethosszig tartó hozzáférés</p>
+      <ul class="tg-inc">
+        <li><span>📘</span>52 heti lecke a hit alapigazságairól</li>
+        <li><span>🔍</span>Nyomozós kérdések és bizonyítékok minden leckében</li>
+        <li><span>👨‍👩‍👧</span>Beszélgetési útmutató a szülőknek</li>
+        <li><span>📱</span>Digitális: telefonon, tableten, számítógépen – ki is nyomtatható</li>
+      </ul>
+      <a class="tg-btn tg-btn-full tg-pulse" href="/checkout?country=HU">KÉREM A HOZZÁFÉRÉST MOST · {{price}}</a>
+      <div class="tg-trust"><span>🔒 Biztonságos fizetés</span><span>⚡ Azonnali hozzáférés</span><span>🛡️ 7 napos pénzvisszafizetési garancia</span></div>
+    </div>
+
+    <div class="tg-acc">
+      <details><summary>Miért nem elég a hagyományos hittanóra?</summary>
+        <p>A hittanóra a MIT tanítja, nem a MIÉRT. A gyerekek megtanulják, hogy „Isten teremtette a világot”, de soha nem tanulják meg, miért hisszük ezt. Az első nehéz kérdésnél? Nincs mivel megvédeniük. Bibliai történeteket tanulnak meg, de sosem kérdezik meg: „Honnan tudjuk, hogy ez tényleg megtörtént?” Az eredmény: a Biblia inspiráló mesekönyvvé válik, nem történelmi igazsággá. Az apologetika az igazságot tanítja. És csak az igazság állja ki a kérdéseket.</p>
+      </details>
+      <details><summary>Szeresd, vagy visszaadjuk a pénzed</summary>
+        <p>Ezt az anyagot hívők készítették olyan szülőknek, akik többet szeretnének a hittanóránál — felkészült gyermeket szeretnének. Ha a gyereked nem kapcsolódik be, ha nem látod, hogy egyre jobban el tudja magyarázni, miért hisz, a vásárlástól számított 7 napon belül visszakérheted a pénzed.</p>
+      </details>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="tg-sec tg-alt">
+<div class="tg-wrap tg-split">
+  <div class="tg-rv">
+    <h2 class="tg-h2" style="text-align:left">Gyerekek, akik tudják, <em>miért</em> hisznek — nem csak azt, hogy mit</h2>
+    <p>A legtöbb gyerek, aki a templom közelében nőtt fel, <b>nem tudja megmagyarázni, miért hiszi</b> mindazt, amit tanítottak neki. Nem azért, mert nem hisz — hanem mert <b>senki nem adott neki érveket.</b></p>
+    <p>Ez a füzet ezen változtat. Minden 10 perces lecke egy valódi apologetikai kérdést vizsgál meg, három bizonyítékot jár körül, és hagyja, hogy a gyerek gyakorolja a válasza megvédését — mint egy nyomozó, aki felépíti az ügyét.</p>
+    <p>A szülők szeretik, hogy felkészíti a gyerekeket, mielőtt a nehéz kérdések megérkeznek. A gyerekek szeretik megfejteni a hit rejtélyeit.</p>
+    <p class="tg-tag">Bizonyítékokon alapul. Életkornak megfelelő. Megingathatatlan.</p>
+  </div>
+  <img class="tg-rv" alt="A hit miértje tableten és telefonon" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tablet.jpg" width="825" height="1100" loading="lazy"/>
+</div>
+</section>
+
+<section class="tg-sec">
+<div class="tg-wrap">
+  <h2 class="tg-h2 tg-rv">Amit együtt elértek</h2>
+  <p class="tg-lead tg-rv">Heti egy rövid lecke, és a hit már nem csak megszokás, hanem a gyereked saját meggyőződése.</p>
+  <div class="tg-cards">
+    <div class="tg-card tg-rv"><div class="tg-ico">🙋</div><h3>Saját kérdései lesznek</h3><p>Néhány hét után a gyerek maga kezd kérdezni, és a saját szavaival magyarázza el, amit felfedezett.</p></div>
+    <div class="tg-card tg-rv"><div class="tg-ico">🗓️</div><h3>Heti 10 perc, ami szokássá válik</h3><p>Például vasárnaponként: elolvassátok a részt, megbeszélitek a kérdést, és megcsináljátok a feladatot.</p></div>
+    <div class="tg-card tg-rv"><div class="tg-ico">💬</div><h3>Beszélgetések a nehéz témákról is</h3><p>A szenvedésről, Isten létezéséről, a Biblia megbízhatóságáról — a füzet keretet ad, hogy együtt beszélgessetek róluk.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="tg-sec tg-teal">
+<div class="tg-wrap tg-split">
+  <div>
+    <h2 class="tg-h2 tg-rv" style="text-align:left">Nevelj gyereket, akinek a hite kitart</h2>
+    <p class="tg-lead tg-rv" style="text-align:left;margin-left:0">Adj neki érveket — mielőtt a világ kételyeket ad neki.</p>
+    <div class="tg-feat">
+      <div class="tg-fi tg-rv"><h3>📚 Valódi apologetika</h3><p>Isten létezése, a Biblia megbízhatósága, az evolúció, a szenvedés — valódi érvek, gyerekek számára érthető nyelven.</p></div>
+      <div class="tg-fi tg-rv"><h3>✨ Nyomozós tanulás</h3><p>Minden 10 perces lecke: Kihívás → Bizonyíték → A válasz gyakorlása.</p></div>
+      <div class="tg-fi tg-rv"><h3>💪 Felkészülten a nehéz kérdésekre</h3><p>A szkeptikus barát előtt. A nehéz tanár előtt. Mielőtt a kétely gyökeret ver.</p></div>
+      <div class="tg-fi tg-rv"><h3>✏️ Nincs szükség előkészületre</h3><p>Nyisd ki, olvasd el, csináld meg. Minden lecke teljesen kész — a szülőknek nem kell külön tervezniük.</p></div>
+    </div>
+  </div>
+  <img class="tg-rv" alt="A hit miértje – a füzet borítója" src="https://recursos-pdf-hub.github.io/entregas/teologia-hu/landing-img/hu-tapa-plana.jpg" width="827" height="1100" loading="lazy"/>
+</div>
+</section>
+
+<section class="tg-sec tg-alt">
+<div class="tg-wrap">
+  <h2 class="tg-h2 tg-rv">Miben más ez a füzet?</h2>
+  <table class="tg-cmp tg-rv">
+    <thead><tr><th></th><th class="tg-us">Rendszeres teológia</th><th>Más füzetek</th></tr></thead>
+    <tbody>
+      <tr><td>Elmagyarázza, miért igaz a hit</td><td class="tg-y">✓</td><td class="tg-n">✗</td></tr>
+      <tr><td>Válaszol a gyerekek valódi kérdéseire</td><td class="tg-y">✓</td><td class="tg-n">✗</td></tr>
+      <tr><td>Gyakorlati, felfedezésen alapuló tanulás</td><td class="tg-y">✓</td><td class="tg-n">✗</td></tr>
+      <tr><td>Kifejezetten 8–14 éveseknek tervezve</td><td class="tg-y">✓</td><td class="tg-n">✗</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section class="tg-sec">
+<div class="tg-wrap">
+  <h2 class="tg-h2 tg-rv">Amit hiszünk</h2>
+  <div class="tg-bel">
+    <div class="tg-rv"><h3>A hit otthon kezdődik</h3><p>A szülők az első hitoktatók. Isten arra hív minket, hogy ne csak azt tanítsuk, mit higgyenek a gyerekeink, hanem azt is, miért igaz, és hogyan védjék meg (MTörv 6,6–7).</p></div>
+    <div class="tg-rv"><h3>A Szentírás</h3><p>Isten sugalmazott szava. Nem csupán bölcsességirodalom — történelmi alapokon nyugvó igazság.</p></div>
+    <div class="tg-rv"><h3>Isten és az üdvösség</h3><p>Egy Isten, három személy. Az üdvösség Isten ingyenes kegyelméből, Jézus Krisztusban.</p></div>
+    <div class="tg-rv"><h3>Küldetésünk</h3><p>A hit miértje azért jött létre, hogy segítse a szülőket olyan gyerekeket nevelni, akik meg tudják védeni a hitüket — mielőtt a világ megkérdőjelezné.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="tg-sec tg-alt">
+<div class="tg-wrap">
+  <h2 class="tg-h2 tg-rv">Gyakori kérdések</h2>
+  <div class="tg-faq tg-acc">
+    <details><summary>Ez csak még több bibliai történet?</summary><p>Nem. Ez arra tanítja a gyerekeket, HOGYAN gondolkodjanak a hitről, nem csak bibliai tényekre. Míg más anyagok ugyanazt az 50 történetet ismétlik, ez a füzet azokra a valódi kérdésekre válaszol, amelyeket a gyerekek feltesznek — és amelyek megválaszolatlanul később megingathatják a hitüket.</p></details>
+    <details><summary>Miben más, mint a hittanóra?</summary><p>A hittanóra arra összpontosít, MIT higgyünk. Ez a füzet azt tanítja, MIÉRT. A felfedezésen alapuló tanulásra épít — ugyanarra a módszerre, amellyel az iskolák a kritikus gondolkodást tanítják.</p></details>
+    <details><summary>Miért olyan fontos a 8–14 éves kor?</summary><p>8 és 14 éves kor között a gyerekek gondolkodása megváltozik: már nem fogadnak el valamit csak azért, mert egy felnőtt mondja. Ekkor alakítják ki azt a keretet, amellyel eldöntik, mi igaz. Ha ebben a korban nem kapnak érveket a hit mellett, a középiskolában érveket fognak találni ellene.</p></details>
+    <details><summary>A gyerekem egyházi iskolába vagy hittanra jár. Nem elég?</summary><p>Sok gyerek, aki egyházi iskolába vagy hittanra jár, ismeri a bibliai történeteket, mégsem tudja megmagyarázni, MIÉRT hiszi, amit hisz. Ez a füzet ezt a hiányt pótolja.</p></details>
+    <details><summary>Több gyereknek is jó?</summary><p>Igen. Mivel digitális, annyiszor nyomtathatod ki, ahány gyereked van — így mindegyiknek lehet saját példánya, amibe írhat.</p></details>
+    <details><summary>Mit tartalmaz a füzet?</summary><p>52 heti leckét az alapvető hitigazságokról: Isten, a teremtés, a bűn, Krisztus, az üdvösség, az Egyház és a végső dolgok. Minden lecke tartalmaz egy történetet, nyomozós kérdéseket, bizonyítékokat, teológiai összefoglalót, gyakorló részt és beszélgetési útmutatót a szülőknek.</p></details>
+    <details><summary>Teljesen digitális a tartalom?</summary><p>Igen. Telefonon, tableten vagy számítógépen is megnyithatod, és ha a család úgy szeretné, ki is nyomtathatod.</p></details>
+    <details><summary>Meddig férek hozzá?</summary><p>A hozzáférés élethosszig szól. Akkor és annyiszor használod, amikor és ahányszor csak szeretnéd.</p></details>
+  </div>
+</div>
+</section>
+
+<section class="tg-sec tg-final">
+<div class="tg-narrow">
+  <h2 class="tg-h2 tg-rv">Adj neki érveket — mielőtt a világ kételyeket ad</h2>
+  <p class="tg-lead tg-rv">52 hét, heti 10 perc, és a gyereked tudni fogja, miért hisz.</p>
+  <a class="tg-btn tg-pulse" href="#tg-offer">Kérem a füzetet ↓</a>
+  <p class="tg-micro">Digitális termék • Azonnali hozzáférés • 7 napos garancia</p>
+</div>
+</section>
+
+<footer class="tg-foot">
+  <p>© <span id="tg-y">2026</span> A hit miértje • Digitális termék</p>
+  <p>Minden család más helyzetben van, ezért az eredmények eltérhetnek. A tartalom oktatási célú, és nem garantál konkrét eredményt.</p>
+  <p>Ez az oldal nem áll kapcsolatban a Facebookkal, az Instagrammal vagy a Metával.</p>
+</footer>
+
+<div class="tg-sticky"><a class="tg-btn tg-btn-full" href="#tg-offer">Kérem a füzetet · {{price}} ↓</a></div>
+</div>
+<script>
+(function(){
+  try{document.getElementById('tg-y').textContent=new Date().getFullYear()}catch(e){}
+  try{
+    var main=document.getElementById('tg-main');
+    document.querySelectorAll('.tg-thumbs button').forEach(function(b){
+      b.addEventListener('click',function(){
+        main.src=b.getAttribute('data-src');main.alt=b.getAttribute('data-alt');
+        document.querySelectorAll('.tg-thumbs button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+        b.setAttribute('aria-pressed','true');
+      });
+    });
+  }catch(e){}
+  try{
+    var KEY='tg_cd_end',end=null,now=Date.now();
+    try{end=parseInt(localStorage.getItem(KEY),10)}catch(e){}
+    if(!end||end<now){end=now+(8*3600+51*60+31)*1000;try{localStorage.setItem(KEY,String(end))}catch(e){}}
+    var pad=function(n){return(n<10?'0':'')+n};
+    var h=document.getElementById('tg-h'),m=document.getElementById('tg-m'),s=document.getElementById('tg-s');
+    var tick=function(){var d=Math.max(0,Math.floor((end-Date.now())/1000));h.textContent=pad(Math.floor(d/3600));m.textContent=pad(Math.floor(d%3600/60));s.textContent=pad(d%60)};
+    tick();setInterval(tick,1000);
+  }catch(e){}
+  var all=function(){document.querySelectorAll('.tg-rv').forEach(function(el){el.classList.add('tg-on')})};
+  try{
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!('IntersectionObserver' in window)||reduce){all();return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('tg-on');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.tg-rv').forEach(function(el){io.observe(el)});
+  }catch(e){all()}
+})();
+</script>
