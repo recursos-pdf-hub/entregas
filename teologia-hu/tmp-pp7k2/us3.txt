@@ -35,7 +35,7 @@
 <p class="hm-price"><b>{price}</b></p>
 <p class="hm-cierre">Idén az advent kétféle lehet: vagy a gyereked úgy gyújtja meg a gyertyát, hogy tudja, kit vár, vagy ez is egy karácsony lesz, ajándékokkal és semmi mással.</p>
 <p class="hm-gar">🛡️ 7 napos garancia. Ha nem válik be, a teljes összeget visszaadjuk.</p>
-<button type="button" data-pp-decline class="hm-btn hm-si">✅ IGEN, ünnepeljük együtt a hitet 🔁</button>
-<button type="button" data-pp-accept class="hm-btn hm-no">Nem, köszönöm. Az ünnepek maradjanak olyanok, mint eddig</button>
+<button type="button" data-pp-accept class="hm-btn hm-si">✅ IGEN, ünnepeljük együtt a hitet 🔁</button>
+<button type="button" data-pp-decline class="hm-btn hm-no">Nem, köszönöm. Az ünnepek maradjanak olyanok, mint eddig</button>
 <p class="hm-safe">🔒 Biztonságos fizetés · ⚡ Azonnali hozzáférés · ✓ Egyszeri fizetés</p>
 </div>

@@ -35,7 +35,7 @@
 <p class="hm-price"><b>{price}</b></p>
 <p class="hm-cierre">30 nap múlva két dolog egyike történik: vagy a gyereked hozzád fordul a kérdéseivel, és te tudod a választ, vagy már megtanulta, hogy jobb a YouTube-ot kérdezni.</p>
 <p class="hm-gar">🛡️ 7 napos garancia. Ha nem válik be, a teljes összeget visszaadjuk.</p>
-<button type="button" data-pp-decline class="hm-btn hm-si">✅ IGEN, tudni akarom a választ 💡</button>
-<button type="button" data-pp-accept class="hm-btn hm-no">Nem, köszönöm. Majd rögtönzök, amikor kérdez</button>
+<button type="button" data-pp-accept class="hm-btn hm-si">✅ IGEN, tudni akarom a választ 💡</button>
+<button type="button" data-pp-decline class="hm-btn hm-no">Nem, köszönöm. Majd rögtönzök, amikor kérdez</button>
 <p class="hm-safe">🔒 Biztonságos fizetés · ⚡ Azonnali hozzáférés · ✓ Egyszeri fizetés</p>
 </div>

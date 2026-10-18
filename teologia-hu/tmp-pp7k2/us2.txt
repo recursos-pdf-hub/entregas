@@ -35,7 +35,7 @@
 <p class="hm-price"><b>{price}</b></p>
 <p class="hm-cierre">Egy hónap múlva vagy az 5. hétnél tartotok, és ő kéri a vasárnapi tíz percet, vagy a füzet egy mappában pihen, és te úgy érzed, megint nem sikerült.</p>
 <p class="hm-gar">🛡️ 7 napos garancia. Ha nem válik be, a teljes összeget visszaadjuk.</p>
-<button type="button" data-pp-decline class="hm-btn hm-si">✅ IGEN, végig akarunk menni mind az 52 héten 🤝</button>
-<button type="button" data-pp-accept class="hm-btn hm-no">Nem, köszönöm. Megpróbáljuk egyedül, és meglátjuk, meddig bírjuk</button>
+<button type="button" data-pp-accept class="hm-btn hm-si">✅ IGEN, végig akarunk menni mind az 52 héten 🤝</button>
+<button type="button" data-pp-decline class="hm-btn hm-no">Nem, köszönöm. Megpróbáljuk egyedül, és meglátjuk, meddig bírjuk</button>
 <p class="hm-safe">🔒 Biztonságos fizetés · ⚡ Azonnali hozzáférés · ✓ Egyszeri fizetés</p>
 </div>
