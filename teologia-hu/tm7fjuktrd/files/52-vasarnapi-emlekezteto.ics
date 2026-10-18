@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//A hit miertje//HU
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:a-hit-miertje-vasarnap@heti10perc
+DTSTAMP:20261018T000000Z
+DTSTART;TZID=Europe/Budapest:20261025T170000
+DTEND;TZID=Europe/Budapest:20261025T171000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:A hit miértje · heti 10 perc
+DESCRIPTION:Itt az ideje a heti tíz percnek! Nyisd ki a füzetet és az 52 kész vasárnapi terv következő hetét.
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Fél óra múlva: a heti tíz perc
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT16H
+ACTION:DISPLAY
+DESCRIPTION:Holnap: a heti tíz perc. Készítsd elő a kellékeket!
+END:VALARM
+END:VEVENT
+END:VCALENDAR
