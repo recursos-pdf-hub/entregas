@@ -1,19 +1,64 @@
-<!DOCTYPE html>
-<html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>A hozzáférésed</title>
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Az Építési Hibák Vizuális Atlasza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-html, body { margin:0; background:#F5F3EE; color:#25313C; font-family:Poppins,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-.wrap { max-width:560px; margin:0 auto; padding:64px 20px; text-align:center; }
-.badge { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#1FA75C; color:#fff; padding:6px 12px; border-radius:99px; font-weight:700; }
-h1 { font-size:26px; line-height:1.25; margin:18px 0 10px; color:#102E4A; }
-p { font-size:17px; line-height:1.55; color:#68717A; }
-.card { background:#fff; border:1px solid #E9E4DA; border-radius:16px; padding:24px 20px; margin-top:28px; }
-.card b { color:#102E4A; }
-.dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#E87512; margin-right:8px; animation:p 1.6s infinite; }
-@keyframes p { 50% { opacity:.3; } }
-@media (prefers-reduced-motion: reduce) { .dot { animation:none; } }
-</style></head><body><div class="wrap">
-<span class="badge">Sikeres vásárlás</span>
-<h1>Az Építési Hibák Vizuális Atlasza · 50 Illusztrált Műszaki Adatlap · 3 Ajándék Bónusszal</h1>
-<p><span class="dot"></span>Köszönjük! Most fejezzük be az anyagod előkészítését. Ez az oldal hamarosan frissül, és itt találod majd az összes fájlt.</p>
-<div class="card"><p><b>Mentsd el ezt a linket</b></p><p>Ez a hozzáférésed. Nézz vissza néhány óra múlva: itt lesz mind az 50 adatlap és a 3 bónusz.</p></div>
-</div></body></html>
+/* HUB DE ENTREGA: la única URL que recibe el comprador. Sin OTOs, sin contactos, noindex. */
+:root{--bg:#F5F3EE;--paper:#FFFFFF;--ink:#102E4A;--ink-soft:#5B7A99;--accent:#E87512;--accent-dark:#16894A;--line:#E3DED2}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:'Poppins',-apple-system,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Oswald',Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(160deg,var(--accent-dark),var(--accent));color:var(--paper);padding:48px 0 64px;text-align:center}
+.hero .kicker{display:inline-block;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6vw,48px);margin-bottom:10px}
+.hero p{font-size:18px;opacity:.93;max-width:640px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.stats span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.core{position:relative;margin:-36px auto 36px;background:var(--paper);border:2px solid var(--accent);border-radius:20px;padding:26px;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.10)}
+.core img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18);display:block}
+.core .ph{aspect-ratio:2/3;border-radius:10px;background:linear-gradient(160deg,var(--accent),var(--accent-dark))}
+.tag{display:inline-block;background:var(--accent);color:var(--paper);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.core h2{font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+.core p{color:var(--ink-soft);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:12px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 4px 0 var(--accent-dark)}
+.btn:hover{filter:brightness(1.05)}
+.sec{margin:0 0 40px}
+.sec h2{font-size:clamp(22px,4vw,30px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .12s,border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .n{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.card h3{font-size:19px}
+.card p{color:var(--ink-soft);font-size:15px;flex:1}
+.card .go{font-weight:800;color:var(--accent-dark)}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 58px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--paper);font-weight:800;display:flex;align-items:center;justify-content:center}
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:10px 0 40px}
+@media (max-width:640px){.core{grid-template-columns:1fr;text-align:center;padding:20px}.core img,.core .ph{max-width:170px;margin:0 auto}.btn{width:100%}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Köszönjük a vásárlást!</span>
+    <h1>Az Építési Hibák Vizuális Atlasza</h1>
+    <p>A teljes csomag: 50 illusztrált műszaki adatlap és 3 ajándék bónusz.</p>
+    <div class="stats"><span>50 adatlap</span><span>6 fejezet</span><span>3 bónusz</span></div>
+  </div>
+</header>
+<main class="wrap">
+  <style>.card.me img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:6px;box-shadow:0 6px 16px rgba(0,0,0,.14)}.sec.first{margin-top:-36px;position:relative}.sec.first h2{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}.hero{background:linear-gradient(160deg,#071D31,#102E4A)}.hero .kicker,.stats span{border-color:#E87512;color:#F5A04A}.btn{background:#16894A;color:#fff}.tag{background:#E87512}@media (max-width:640px){.grid{grid-template-columns:1fr 1fr;gap:10px}.card{padding:10px}.card h3{font-size:15px}.card p{font-size:12.5px}}</style><section class="sec first"><h2>Az atlaszod</h2><div class="grid"><a class="card me" href="../../patologias-hu/az-epitesi-hibak-vizualis-atlasza/oce4weyt7p/" target="_blank" rel="noopener"><img src="../../patologias-hu/az-epitesi-hibak-vizualis-atlasza/oce4weyt7p/portada.jpg" alt="Az Építési Hibák Vizuális Atlasza · 50 illusztrált műszaki adatlap" loading="lazy"><span class="n">Teljes csomag</span><h3>Az Építési Hibák Vizuális Atlasza · 50 illusztrált műszaki adatlap</h3><p>A teljes atlasz: 50 adatlap látható jelekkel, valószínű okokkal, figyelmi szinttel, összehasonlítással, megelőzéssel és vizsgálattal.</p><span class="go">Megnyitás · 54 oldal →</span></a></div></section>
+  <section class="sec"><h2>A 3 ajándék bónuszod</h2><div class="grid"><a class="card me" href="../../patologias-hu/1-bonusz-vizualis-epuletbejarasi-ellenorzolista/o7u2z5o112/" target="_blank" rel="noopener"><img src="../../patologias-hu/1-bonusz-vizualis-epuletbejarasi-ellenorzolista/o7u2z5o112/portada.jpg" alt="Vizuális épületbejárási ellenőrzőlista" loading="lazy"><span class="n">1. bónusz</span><h3>Vizuális épületbejárási ellenőrzőlista</h3><p>8 gyakorlati ellenőrzőlista: homlokzat, tető, vizes helyiségek, tartószerkezet, padló, falak, nyílászárók, vízszigetelés.</p><span class="go">Megnyitás · 11 oldal →</span></a><a class="card me" href="../../patologias-hu/2-bonusz-bejarasi-jegyzokonyv-sablon/k092fh75rf/" target="_blank" rel="noopener"><img src="../../patologias-hu/2-bonusz-bejarasi-jegyzokonyv-sablon/k092fh75rf/portada.jpg" alt="Szerkeszthető bejárási jegyzőkönyv-sablon" loading="lazy"><span class="n">2. bónusz</span><h3>Szerkeszthető bejárási jegyzőkönyv-sablon</h3><p>Útmutató és nyomtatható változat. A szerkeszthető Word fájlt (.docx) a megnyitott oldalon, a PDF alatt is letöltheted.</p><span class="go">Megnyitás · 5 oldal →</span></a><a class="card me" href="../../patologias-hu/3-bonusz-a-kivitelezesi-hibak-vizualis-katalogusa/ihrutqc6t4/" target="_blank" rel="noopener"><img src="../../patologias-hu/3-bonusz-a-kivitelezesi-hibak-vizualis-katalogusa/ihrutqc6t4/portada.jpg" alt="A kivitelezési hibák vizuális katalógusa" loading="lazy"><span class="n">3. bónusz</span><h3>A kivitelezési hibák vizuális katalógusa</h3><p>25 illusztrált kivitelezési hiba: mi a hiba, mit okoz, hogyan helyes.</p><span class="go">Megnyitás · 16 oldal →</span></a></div></section>
+  <section class="sec"><h2>Hol kezdd</h2><ol class="pasos"><li>Nyisd meg az atlaszt, és olvasd el az „Így használd az atlaszt” oldalt.</li><li>Mentsd el a PDF-et a telefonodra, hogy a helyszínen is kéznél legyen.</li><li>A következő bejárásra nyomtasd ki a Vizuális épületbejárási ellenőrzőlistát (1. bónusz).</li><li>A megfigyeléseidet rögzítsd a szerkeszthető jegyzőkönyv-sablonban (2. bónusz).</li></ol></section>
+  <p class="foot">Csak személyes használatra. A fájlok továbbértékesítése és terjesztése tilos.</p>
+</main>
+</body>
+</html>
