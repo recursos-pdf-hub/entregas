@@ -1,31 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Accesul tău</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Atlas de Taping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; background:#E4F7F2; color:#002C33; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:560px; margin:0 auto; padding:64px 20px; text-align:center; }
-  .badge { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#CDEFE6; padding:6px 12px; border-radius:99px; }
-  h1 { font-size:28px; line-height:1.2; margin:18px 0 10px; }
-  p { font-size:17px; line-height:1.55; color:#4F696A; }
-  .card { background:#fff; border:1px solid #D4E6E2; border-radius:16px; padding:24px 20px; margin-top:28px; }
-  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#00AC8E; margin-right:8px; animation:p 1.6s infinite; }
-  @keyframes p { 50% { opacity:.3; } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation:none; } }
+/* HUB DE ENTREGA: la única URL que recibe el comprador. Sin OTOs, sin contactos, noindex. */
+:root{--bg:#f3faf9;--paper:#FFFFFF;--ink:#162d31;--ink-soft:#4f6a6e;--accent:#00ac8e;--accent-dark:#162d31;--line:#d4e6e2}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:'Poppins',-apple-system,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Poppins',Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(160deg,var(--accent-dark),var(--accent));color:var(--paper);padding:48px 0 64px;text-align:center}
+.hero .kicker{display:inline-block;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6vw,48px);margin-bottom:10px}
+.hero p{font-size:18px;opacity:.93;max-width:640px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.stats span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.core{position:relative;margin:-36px auto 36px;background:var(--paper);border:2px solid var(--accent);border-radius:20px;padding:26px;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.10)}
+.core img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18);display:block}
+.core .ph{aspect-ratio:2/3;border-radius:10px;background:linear-gradient(160deg,var(--accent),var(--accent-dark))}
+.tag{display:inline-block;background:var(--accent);color:var(--paper);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.core h2{font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+.core p{color:var(--ink-soft);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:12px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 4px 0 var(--accent-dark)}
+.btn:hover{filter:brightness(1.05)}
+.sec{margin:0 0 40px}
+.sec h2{font-size:clamp(22px,4vw,30px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .12s,border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .n{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.card h3{font-size:19px}
+.card p{color:var(--ink-soft);font-size:15px;flex:1}
+.card .go{font-weight:800;color:var(--accent-dark)}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 58px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--paper);font-weight:800;display:flex;align-items:center;justify-content:center}
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:10px 0 40px}
+@media (max-width:640px){.core{grid-template-columns:1fr;text-align:center;padding:20px}.core img,.core .ph{max-width:170px;margin:0 auto}.btn{width:100%}}
 </style>
 </head>
 <body>
+<header class="hero">
   <div class="wrap">
-    <span class="badge">Comandă confirmată</span>
-    <h1>Atlas de Taping · +60 de Hărți Vizuale de Aplicare a Benzii Kinesiologice · 4 Bonusuri Gratuite</h1>
-    <p>Mulțumim! Finalizăm pregătirea materialului tău. Chiar această pagină se va actualiza cu toate fișierele.</p>
-    <div class="card">
-      <p><span class="dot"></span><strong>Salvează acest link</strong></p>
-      <p>Este accesul tău pe viață. Revino peste câteva ore și vei găsi produsul principal și toate bonusurile.</p>
-    </div>
+    <span class="kicker">Mulțumim pentru comandă!</span>
+    <h1>Atlas de Taping</h1>
+    <p>Pachetul complet: atlasul, extrasele incluse și cele 4 bonusuri.</p>
+    <div class="stats"><span>72 de hărți</span><span>12 regiuni</span><span>4 bonusuri</span></div>
   </div>
+</header>
+<main class="wrap">
+  <style>.card.me img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;margin-bottom:6px;box-shadow:0 6px 16px rgba(0,0,0,.12)}.sec.first{margin-top:-36px;position:relative}.sec.first h2{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}.hero{background:linear-gradient(160deg,#162d31,#0d4a43)}.hero .kicker,.stats span{border-color:#00ac8e;color:#9ff0df}.btn{background:#00ac8e;color:#fff}.upd{background:#e9f7f4;border-radius:12px;padding:14px 16px;font-size:15px;line-height:1.55}.stats{flex-wrap:wrap;justify-content:center}.card{min-width:0}.card h3,.card p{overflow-wrap:anywhere}@media (max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{padding:10px}.card h3{font-size:15px}.card p{font-size:12.5px}}</style><section class="sec first"><h2>Atlasul tău</h2><div class="grid"><a class="card me" href="../../taping-ro/atlas-de-taping/g4f6f6ginq/" target="_blank" rel="noopener"><img src="../../taping-ro/atlas-de-taping/g4f6f6ginq/portada.jpg" alt="Atlas de Taping · +60 de Hărți Vizuale" loading="lazy"><span class="n">Produsul principal</span><h3>Atlas de Taping · +60 de Hărți Vizuale</h3><p>Cele 60 de hărți pe 12 regiuni + 12 hărți combinate, cuprins cu link-uri, o hartă pe ecran.</p><span class="go">Deschide · 90 pagini →</span></a></div></section>
+  <section class="sec"><h2>Inclus în ofertă</h2><div class="grid"><a class="card me" href="../../taping-ro/carduri-de-buzunar/ox8t7ldk6n/" target="_blank" rel="noopener"><img src="../../taping-ro/carduri-de-buzunar/ox8t7ldk6n/portada.jpg" alt="20 de carduri de buzunar" loading="lazy"><span class="n">Inclus</span><h3>20 de carduri de buzunar</h3><p>Cele mai folosite hărți, 4 pe pagină A4, gata de decupat și plastifiat.</p><span class="go">Deschide · 6 pagini →</span></a><a class="card me" href="../../taping-ro/atlas-a4-alb-negru/hevt8t3ikc/" target="_blank" rel="noopener"><img src="../../taping-ro/atlas-a4-alb-negru/hevt8t3ikc/portada.jpg" alt="Versiune A4 de printat alb-negru" loading="lazy"><span class="n">Inclus</span><h3>Versiune A4 de printat alb-negru</h3><p>Toate cele 72 de hărți pe A4, în alb-negru: consumă mai puțină cerneală.</p><span class="go">Deschide · 73 pagini →</span></a><a class="card me" href="../../taping-ro/glosar-vizual-de-taping/tqetulgvri/" target="_blank" rel="noopener"><img src="../../taping-ro/glosar-vizual-de-taping/tqetulgvri/portada.jpg" alt="Glosar vizual de taping" loading="lazy"><span class="n">Inclus</span><h3>Glosar vizual de taping</h3><p>28 de termeni ilustrați, de la ancoră la convoluții.</p><span class="go">Deschide · 8 pagini →</span></a><a class="card me" href="../../taping-ro/ghid-de-taiere-si-pastrare-a-rolei/d3rnld8c69/" target="_blank" rel="noopener"><img src="../../taping-ro/ghid-de-taiere-si-pastrare-a-rolei/d3rnld8c69/portada.jpg" alt="Ghid de tăiere și păstrare a rolei" loading="lazy"><span class="n">Inclus</span><h3>Ghid de tăiere și păstrare a rolei</h3><p>Cum măsori, tai și păstrezi banda ca să țină și să nu pierzi material.</p><span class="go">Deschide · 6 pagini →</span></a></div></section><section class="sec"><h2>Cele 4 bonusuri</h2><div class="grid"><a class="card me" href="../../taping-ro/bonus-1-ghidul-tensiunilor-si-taieturilor/bm914frmmj/" target="_blank" rel="noopener"><img src="../../taping-ro/bonus-1-ghidul-tensiunilor-si-taieturilor/bm914frmmj/portada.jpg" alt="Ghidul Tensiunilor și Tăieturilor: de la 0% la 75%" loading="lazy"><span class="n">Bonus #1</span><h3>Ghidul Tensiunilor și Tăieturilor: de la 0% la 75%</h3><p>18 pagini cu tabelul rapid obiectiv → tăietură → tensiune → direcție.</p><span class="go">Deschide · 18 pagini →</span></a><a class="card me" href="../../taping-ro/bonus-2-checklist-pentru-piele/89itl0u9p1/" target="_blank" rel="noopener"><img src="../../taping-ro/bonus-2-checklist-pentru-piele/89itl0u9p1/portada.jpg" alt="Checklist pentru Piele, Îngrijire și Contraindicații" loading="lazy"><span class="n">Bonus #2</span><h3>Checklist pentru Piele, Îngrijire și Contraindicații</h3><p>12 pagini și o fișă printabilă: test, pregătire, iritație, îndepărtare, contraindicații.</p><span class="go">Deschide · 13 pagini →</span></a><a class="card me" href="../../taping-ro/bonus-3-15-protocoale-pe-obiectiv/q9c2i8x5o0/" target="_blank" rel="noopener"><img src="../../taping-ro/bonus-3-15-protocoale-pe-obiectiv/q9c2i8x5o0/portada.jpg" alt="15 Protocoale pe Obiectiv" loading="lazy"><span class="n">Bonus #3</span><h3>15 Protocoale pe Obiectiv</h3><p>Câte un protocol pe pagină, cu secvența numerotată, tăietura și tensiunea fiecărei benzi.</p><span class="go">Deschide · 16 pagini →</span></a><a class="card me" href="../../taping-ro/bonus-4-kit-de-evidenta-a-pacientului/mr6x62xybw/" target="_blank" rel="noopener"><img src="../../taping-ro/bonus-4-kit-de-evidenta-a-pacientului/mr6x62xybw/portada.jpg" alt="Kit de Evidență a Pacientului" loading="lazy"><span class="n">Bonus #4</span><h3>Kit de Evidență a Pacientului</h3><p>6 fișe printabile și 2 planșe A4 de perete.</p><span class="go">Deschide · 9 pagini →</span></a></div></section><section class="sec"><h2>Actualizări</h2><div class="upd">Hărțile noi ale Atlasului apar aici, în aceeași pagină, fără să plătești din nou. Păstrează linkul acestei pagini.</div></section>
+  <section class="sec"><h2>De unde începi</h2><ol class="pasos"><li>Deschide atlasul pe telefon și intră în Cuprins: atingi regiunea și ajungi la hărțile ei.</li><li>Printează cele 20 de carduri de buzunar și plastifică-le pentru masa de tratament.</li><li>Citește Ghidul Tensiunilor (Bonus #1) înainte de prima aplicare.</li><li>Folosește Checklist-ul pentru piele (Bonus #2) și notează fiecare aplicare în Kitul de evidență (Bonus #4).</li></ol></section>
+  <p class="foot">Doar pentru uz personal. Revânzarea și distribuirea fișierelor sunt interzise.</p>
+</main>
 </body>
 </html>
