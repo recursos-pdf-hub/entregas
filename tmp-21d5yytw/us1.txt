@@ -1,0 +1,43 @@
+<div id="hm">
+<style>
+#hm{max-width:520px;margin:0 auto;padding:20px 14px 30px;font-family:Inter,Arial,Helvetica,sans-serif;text-align:center;background:#F5EEDF;color:#08243B;box-sizing:border-box}
+#hm *{box-sizing:border-box}
+#hm .hm-kick{display:inline-block;background:#061827;color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:999px;margin:0 0 12px}
+#hm h1{font-family:'Playfair Display',Georgia,serif;font-size:27px;line-height:1.2;margin:0 0 10px;color:#061827;font-weight:700}
+#hm .hm-sub{font-size:15px;line-height:1.55;margin:0 0 18px;color:#4A5A66}
+#hm .hm-box{background:#FFFDF7;border:1px solid #E6DCC6;border-top:5px solid #B78432;border-radius:16px;padding:18px 14px 14px;margin:0 0 16px;box-shadow:0 6px 22px rgba(22,45,49,.10);position:relative}
+#hm .hm-tag{position:absolute;top:-15px;right:12px;background:#B78432;color:#ffffff;font-weight:900;font-size:13px;padding:6px 11px;border-radius:10px;transform:rotate(3deg);box-shadow:0 3px 8px rgba(0,0,0,.15)}
+#hm .hm-name{display:block;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:18px;line-height:1.3;color:#061827;margin:4px 0 4px}
+#hm ul{list-style:none;padding:0;margin:10px 0 0;text-align:left}
+#hm li{font-size:14px;line-height:1.45;padding:8px 0 8px 26px;border-top:1px solid #E6DCC6;position:relative}
+#hm li:before{content:'✓';position:absolute;left:4px;top:8px;color:#061827;font-weight:900}
+#hm .hm-price{font-size:18px;margin:6px 0 4px;color:#4A5A66}
+#hm .hm-price s{opacity:.75}
+#hm .hm-price b{font-size:30px;color:#15803d;font-weight:800}
+#hm .hm-line{font-size:14px;margin:0 0 14px;color:#4A5A66}
+#hm .hm-btn{display:block;width:100%;min-height:64px;padding:14px;margin:0 0 10px;border:0;border-radius:12px;color:#fff;font-size:17px;line-height:1.3;font-weight:800;cursor:pointer;font-family:inherit}
+#hm .hm-si{background:linear-gradient(#22c55e,#15803d);box-shadow:0 4px 0 #0f5e2c}
+#hm .hm-no{background:linear-gradient(#ef4444,#b91c1c);box-shadow:0 4px 0 #7f1d1d;font-size:15px}
+#hm .hm-safe{font-size:12.5px;line-height:1.6;color:#4A5A66;margin:8px 0 0}
+#hm .hm-dis{font-size:11px;line-height:1.5;color:#4A5A66;margin:10px 0 0;opacity:.85}
+
+#hm .hm-img{display:block;width:100%;max-width:340px;margin:0 auto 14px;border-radius:14px}
+#hm .hm-cierre{font-size:14.5px;line-height:1.55;color:#08243B;background:#F5EEDF;border-radius:12px;padding:12px 14px;margin:0 0 14px;text-align:left}
+#hm .hm-gar{font-size:13.5px;color:#4A5A66;margin:0 0 14px}
+</style>
+<span class="hm-kick">Várj, {first-name}! A rendelésed rendben van ✅</span>
+<h1>Már tudod, hogyan exponálj. Most azt is megtudod, hogyan lesz belőle kész kép 🎯</h1>
+<p class="hm-sub">Az Atlasz megmutatja, mit állíts be a fotózás előtt. Azt nem, mit csinálj utána a telefonodon vagy a gépeden, hogy a kép úgy nézzen ki, ahogy láttad. Ez a csomag jelenetenként megadja a kész szerkesztési receptet, csúszkáról csúszkára.</p>
+<img class="hm-img" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/upsell-oto1.png" alt="Fotóból Kész Kép™">
+<div class="hm-box">
+<span class="hm-name">🎯 Fotóból Kész Kép™</span>
+<ul><li>60 szerkesztési recept jelenetenként</li><li>Színek és fehéregyensúly útmutató</li><li>A 10 leggyakoribb szerkesztési hiba és a javításuk</li><li>Szerkesztési sorrend ellenőrzőlista</li><li>Zsebkártya: a 12 legfontosabb csúszka</li><li>🎁 Titkos bónusz: bent derül ki</li></ul>
+</div>
+<p class="hm-price"><b>{price}</b></p>
+<p class="hm-cierre">30 nap múlva két dolog egyike történik: vagy minden jó fotódból percek alatt kész kép lesz, vagy továbbra is ott maradnak a telefonodon, „majd egyszer megszerkesztem” címszóval.</p>
+<p class="hm-gar">🛡️ 7 napos garancia. Ha nem válik be, a teljes összeget visszaadjuk.</p>
+<button type="button" data-pp-accept class="hm-btn hm-si">✅ IGEN, kész képeket akarok 🎯</button>
+<button type="button" data-pp-decline class="hm-btn hm-no">Nem, köszönöm. A képeimet úgy hagyom, ahogy vannak</button>
+<p class="hm-safe">🔒 Biztonságos fizetés · ⚡ Azonnali hozzáférés · ✓ Egyszeri fizetés</p>
+<p class="hm-dis">A termék digitális, PDF-ben kapod meg. Egyszeri fizetés, nincs előfizetés.</p>
+</div>
