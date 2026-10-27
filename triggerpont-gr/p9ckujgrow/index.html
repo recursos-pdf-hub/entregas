@@ -1,31 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Η πρόσβασή σου</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Άτλαντας Σημείων Πυροδότησης</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; background:#060D1A; color:#FFFFFF; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:560px; margin:0 auto; padding:64px 20px; text-align:center; }
-  .badge { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#10B981; color:#020617; padding:6px 12px; border-radius:99px; }
-  h1 { font-size:28px; line-height:1.2; margin:18px 0 10px; }
-  p { font-size:17px; line-height:1.55; color:#94A3B8; }
-  .card { background:#0F172A; border:1px solid #1E293B; border-radius:16px; padding:24px 20px; margin-top:28px; }
-  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#10B981; margin-right:8px; animation:p 1.6s infinite; }
-  @keyframes p { 50% { opacity:.3; } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation:none; } }
+/* HUB DE ENTREGA: la única URL que recibe el comprador. Sin OTOs, sin contactos, noindex. */
+:root{--bg:#060D1A;--paper:#0F172A;--ink:#FFFFFF;--ink-soft:#94A3B8;--accent:#10B981;--accent-dark:#047857;--line:#1E293B}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:'Manrope',-apple-system,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Manrope',Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(160deg,var(--accent-dark),var(--accent));color:var(--paper);padding:48px 0 64px;text-align:center}
+.hero .kicker{display:inline-block;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6vw,48px);margin-bottom:10px}
+.hero p{font-size:18px;opacity:.93;max-width:640px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.stats span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.core{position:relative;margin:-36px auto 36px;background:var(--paper);border:2px solid var(--accent);border-radius:20px;padding:26px;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.10)}
+.core img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18);display:block}
+.core .ph{aspect-ratio:2/3;border-radius:10px;background:linear-gradient(160deg,var(--accent),var(--accent-dark))}
+.tag{display:inline-block;background:var(--accent);color:var(--paper);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.core h2{font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+.core p{color:var(--ink-soft);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:12px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 4px 0 var(--accent-dark)}
+.btn:hover{filter:brightness(1.05)}
+.sec{margin:0 0 40px}
+.sec h2{font-size:clamp(22px,4vw,30px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .12s,border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .n{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.card h3{font-size:19px}
+.card p{color:var(--ink-soft);font-size:15px;flex:1}
+.card .go{font-weight:800;color:var(--accent-dark)}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 58px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--paper);font-weight:800;display:flex;align-items:center;justify-content:center}
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:10px 0 40px}
+@media (max-width:640px){.core{grid-template-columns:1fr;text-align:center;padding:20px}.core img,.core .ph{max-width:170px;margin:0 auto}.btn{width:100%}}
 </style>
 </head>
 <body>
+<header class="hero">
   <div class="wrap">
-    <span class="badge">Η αγορά επιβεβαιώθηκε</span>
-    <h1>Άτλαντας Σημείων Πυροδότησης · 100+ Οπτικές Κάρτες Αντανακλώμενου Πόνου · 3 Δωρεάν Μπόνους</h1>
-    <p>Σε ευχαριστούμε! Ολοκληρώνουμε την προετοιμασία του υλικού σου. Η σελίδα θα ενημερωθεί σύντομα και εδώ θα βρεις όλα τα αρχεία.</p>
-    <div class="card">
-      <p><span class="dot"></span><strong>Αποθήκευσε αυτόν τον σύνδεσμο</strong></p>
-      <p>Αυτός είναι ο σύνδεσμος πρόσβασής σου για πάντα. Έλα ξανά σε λίγες ώρες· εδώ θα βρεις το κύριο προϊόν και όλα τα μπόνους.</p>
-    </div>
+    <span class="kicker">Ευχαριστούμε για την αγορά σου!</span>
+    <h1>Άτλαντας Σημείων Πυροδότησης</h1>
+    <p>Πλήρες Πακέτο Deluxe: 102 οπτικές κάρτες και 3 δωρεάν μπόνους.</p>
+    <div class="stats"><span>102 κάρτες</span><span>5 περιοχές του σώματος</span><span>3 μπόνους</span></div>
   </div>
+</header>
+<main class="wrap">
+  <style>.card.me img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:10px;margin-bottom:6px;box-shadow:0 6px 16px rgba(0,0,0,.14)}.sec.first{margin-top:-36px;position:relative}.sec.first h2{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3)}.hero{background:linear-gradient(160deg,#060D1A,#0F2A24);color:#FFFFFF}.hero h1{color:#FFFFFF}.hero p{color:#94A3B8}.hero .kicker,.stats span{border-color:#10B981;color:#6EE7B7}.btn{background:#10B981;color:#020617}.tag{background:#DC2626}@media (max-width:640px){.grid{grid-template-columns:1fr 1fr;gap:10px}.card{padding:10px}.card h3{font-size:15px}.card p{font-size:12.5px}}</style><section class="sec first"><h2>Ο άτλαντάς σου</h2><div class="grid"><a class="card me" href="../../triggerpont-gr/atlantas-simeion-pyrodotisis/of0htir0vz/" target="_blank" rel="noopener"><img src="../../triggerpont-gr/atlantas-simeion-pyrodotisis/of0htir0vz/portada.jpg" alt="Άτλαντας Σημείων Πυροδότησης · 102 οπτικές κάρτες" loading="lazy"><span class="n">Πλήρες Πακέτο Deluxe</span><h3>Άτλαντας Σημείων Πυροδότησης · 102 οπτικές κάρτες</h3><p>Ο πλήρης άτλαντας: 102 μύες, σημεία πυροδότησης και μοτίβα αντανακλώμενου πόνου, ευρετήριο και αναζήτηση με βάση το σύμπτωμα.</p><span class="go">Άνοιγμα · 114 σελίδες →</span></a></div></section>
+  <section class="sec"><h2>Τα 3 δωρεάν μπόνους σου</h2><div class="grid"><a class="card me" href="../../triggerpont-gr/bonus-1-formes-grigoris-myikis-axiologisis/0ibqhctm0t/" target="_blank" rel="noopener"><img src="../../triggerpont-gr/bonus-1-formes-grigoris-myikis-axiologisis/0ibqhctm0t/portada.jpg" alt="Φόρμες Γρήγορης Μυϊκής Αξιολόγησης" loading="lazy"><span class="n">Μπόνους 1</span><h3>Φόρμες Γρήγορης Μυϊκής Αξιολόγησης</h3><p>Κλινικές φόρμες για εκτύπωση: χάρτης πόνου, κλίμακα VAS, εύρημα εξέτασης σημείων πυροδότησης, ημερολόγιο θεραπείας.</p><span class="go">Άνοιγμα · 8 σελίδες →</span></a><a class="card me" href="../../triggerpont-gr/bonus-2-optikos-odigos-anatomias-psilafisis/vriom8knx2/" target="_blank" rel="noopener"><img src="../../triggerpont-gr/bonus-2-optikos-odigos-anatomias-psilafisis/vriom8knx2/portada.jpg" alt="Οπτικός Οδηγός Ανατομίας Ψηλάφησης" loading="lazy"><span class="n">Μπόνους 2</span><h3>Οπτικός Οδηγός Ανατομίας Ψηλάφησης</h3><p>Οστικά σημεία αναφοράς, λαβές και τα πιο συχνά λάθη στην ψηλάφηση.</p><span class="go">Άνοιγμα · 12 σελίδες →</span></a><a class="card me" href="../../triggerpont-gr/bonus-3-ekpaideftikes-afises-ypsilis-analysis/qo2suev4lr/" target="_blank" rel="noopener"><img src="../../triggerpont-gr/bonus-3-ekpaideftikes-afises-ypsilis-analysis/qo2suev4lr/portada.jpg" alt="Εκπαιδευτικές Αφίσες Υψηλής Ανάλυσης για το Ιατρείο" loading="lazy"><span class="n">Μπόνους 3</span><h3>Εκπαιδευτικές Αφίσες Υψηλής Ανάλυσης για το Ιατρείο</h3><p>6 αφίσες σε μορφή A3 με τα 6 πιο συχνά μοτίβα αντανακλώμενου πόνου.</p><span class="go">Άνοιγμα · 6 σελίδες →</span></a></div></section>
+  <section class="sec"><h2>Από πού να ξεκινήσεις</h2><ol class="pasos"><li>Άνοιξε τον άτλαντα και ρίξε μια ματιά στη σελίδα «Πώς χρησιμοποιείται ο άτλαντας».</li><li>Χρησιμοποίησε την αναζήτηση με βάση το σύμπτωμα ή τους σελιδοδείκτες του PDF: φτάνεις σε κάθε μυ με ένα κλικ.</li><li>Εκτύπωσε τις Φόρμες Γρήγορης Μυϊκής Αξιολόγησης για την πρώτη εξέταση (Μπόνους 1).</li><li>Εκτύπωσε τις αφίσες A3 για το ιατρείο σου (Μπόνους 3).</li></ol></section>
+  <p class="foot">Μόνο για προσωπική χρήση. Απαγορεύεται η μεταπώληση και η διανομή των αρχείων.</p>
+</main>
 </body>
 </html>
