@@ -1,0 +1,680 @@
+<style>:where(.fh-root) *{box-sizing:border-box;margin:0;padding:0}:root{
+      --navy:#061827;
+      --navy-2:#09243A;
+      --navy-3:#0D314B;
+      --ivory:#F5EEDF;
+      --paper:#FFFDF7;
+      --ink:#08243B;
+      --gold:#B78432;
+      --gold-light:#E1B968;
+      --teal:#5B9FB0;
+      --rust:#B45443;
+      --green:#4FA786;
+    }html{scroll-behavior:smooth}body{
+      background:var(--navy);
+      color:#FFFDF7;
+      font-family:Inter,Arial,sans-serif;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }:where(.fh-root) a{text-decoration:none;color:inherit}:where(.fh-root) img{display:block;max-width:100%;height:auto}:where(.fh-root) section{width:100%}.fh-container{width:min(100% - 40px,760px);margin:auto}.fh-sep{height:1px;border:0;background:linear-gradient(90deg,transparent,rgba(183,132,50,.55),rgba(91,159,176,.42),transparent)}.fh-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      max-width:470px;
+      padding:18px 26px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#B78432,#F0D17D,#A87528);
+      color:#061827;
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:.02em;
+      text-align:center;
+      text-transform:uppercase;
+      box-shadow:0 14px 34px rgba(183,132,50,.22);
+    }.fh-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:7px 11px;
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      color:#FFFDF7;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }:where(.fh-root) /* HERO */
+    .fh-hero{
+      position:relative;
+      padding:48px 0 42px;
+      overflow:hidden;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 10%,rgba(91,159,176,.22),transparent 34%),
+        radial-gradient(circle at 10% 20%,rgba(183,132,50,.12),transparent 27%),
+        linear-gradient(180deg,#061827,#071B2C 65%,#09243A);
+    }.fh-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      opacity:.35;
+      background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(#000,transparent 85%);
+    }.fh-hero .fh-container{position:relative}.fh-hero-kicker{
+      display:inline-block;
+      margin-bottom:18px;
+      padding:8px 14px;
+      border:1px solid rgba(225,185,104,.3);
+      border-radius:999px;
+      background:rgba(183,132,50,.08);
+      color:var(--gold-light);
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.14em;
+    }.fh-hero h1{
+      max-width:700px;
+      margin:0 auto 18px;
+      font-size:clamp(2.2rem,8vw,4.8rem);
+      font-weight:900;
+      letter-spacing:-.06em;
+      line-height:1.03;
+    }.fh-hero h1 span{
+      color:#E1B968 !important;
+      background:none !important;
+      -webkit-background-clip:initial !important;
+      background-clip:initial !important;
+      -webkit-text-fill-color:#E1B968 !important;
+    }.fh-hero-sub{
+      max-width:570px;
+      margin:0 auto 22px;
+      color:#DCE5E5;
+      font-size:16px;
+      line-height:1.65;
+    }.fh-hero-sub strong{color:#FFFDF7}.fh-hero-mockup{
+      position:relative;
+      width:min(100%,560px);
+      margin:42px auto 20px;
+      border-radius:18px;
+      overflow:visible;
+      box-shadow:0 30px 75px rgba(0,0,0,.4);
+      background:transparent;
+    }.fh-hero-video{
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      border:0;
+      border-radius:18px;
+      pointer-events:none;
+    }.fh-hero-mockup img{
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+    }.fh-hero-physical-ribbon{
+      position:absolute;
+      top:0;
+      left:50%;
+      z-index:3;
+      display:block!important;
+      width:min(70%,320px)!important;
+      max-height:80px;
+      height:auto!important;
+      transform:translate(-50%,-50%);
+      object-fit:contain!important;
+      opacity:1!important;
+      visibility:visible!important;
+      pointer-events:none;
+      filter:drop-shadow(0 8px 14px rgba(0,0,0,.42));
+    }.fh-hero-pills{
+      display:flex;
+      justify-content:center;
+      gap:7px;
+      flex-wrap:wrap;
+      margin:0 auto 18px;
+    }.fh-hero-social{margin:13px 0 7px;color:#C7D3D5;font-size:13px}.fh-hero-social strong{color:#FFFDF7}.fh-hero-trust{color:#A9BEC4;font-size:12px}:where(.fh-root) /* STATS */
+    .fh-stats{padding:48px 0;background:linear-gradient(#061827,#09243A)}.fh-stats-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:11px;
+      margin-bottom:32px;
+    }.fh-stat{
+      padding:18px 10px;
+      border:1px solid rgba(91,159,176,.23);
+      border-radius:14px;
+      background:rgba(255,255,255,.035);
+      text-align:center;
+    }.fh-stat strong{display:block;color:#FFFDF7;font-size:clamp(28px,6vw,45px);line-height:1}.fh-stat span{display:block;margin-top:7px;color:var(--gold-light);font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.fh-steps{
+      display:grid;
+      gap:12px;
+    }.fh-step{
+      position:relative;
+      padding:20px;
+      border:1px solid rgba(91,159,176,.23);
+      border-radius:16px;
+      background:rgba(255,255,255,.035);
+      overflow:hidden;
+    }.fh-step-number{color:var(--gold-light);font-size:12px;font-weight:900;letter-spacing:.12em}.fh-step h3{margin:5px 0;color:#FFFDF7;font-size:17px}.fh-step p{color:#C7D3D5;font-size:14px;line-height:1.6}.fh-step-image{
+      width:100%;
+      margin-top:16px;
+      border-radius:12px;
+      overflow:hidden;
+      background:#0d2a3b;
+      line-height:0;
+    }.fh-step-image img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      object-fit:cover;
+    }:where(.fh-root) /* PROBLEMAS */
+    .fh-problems{
+      padding:52px 0;
+      background:
+        radial-gradient(circle at 90% 10%,rgba(91,159,176,.13),transparent 26%),
+        radial-gradient(circle at 5% 90%,rgba(183,132,50,.12),transparent 25%),
+        var(--ivory);
+      color:var(--ink);
+    }.fh-section-title{
+      margin-bottom:28px;
+      font-size:clamp(26px,6vw,42px);
+      font-weight:900;
+      letter-spacing:-.045em;
+      line-height:1.15;
+      text-align:center;
+    }.fh-section-title span{color:#A87528}.fh-problem-list{display:grid;gap:10px}.fh-problem{
+      display:flex;
+      align-items:flex-start;
+      gap:13px;
+      padding:16px 18px;
+      border:1px solid rgba(8,36,59,.12);
+      border-left:3px solid rgba(180,84,67,.7);
+      border-radius:14px;
+      background:rgba(255,253,247,.8);
+      box-shadow:0 8px 20px rgba(8,36,59,.05);
+    }.fh-problem-icon{
+      display:flex;
+      flex:0 0 28px;
+      align-items:center;
+      justify-content:center;
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      background:rgba(180,84,67,.13);
+      color:var(--rust);
+      font-size:18px;
+      font-weight:900;
+    }.fh-problem p{font-size:15px;line-height:1.65}.fh-problem-end{margin-top:28px;color:#A87528;font-size:clamp(18px,4vw,27px);font-weight:900;line-height:1.3;text-align:center}:where(.fh-root) /* SOLUCIÓN */
+    .fh-solution{padding:55px 0;background:var(--navy);text-align:center}.fh-solution-badge{
+      display:inline-block;
+      margin-bottom:20px;
+      padding:8px 14px;
+      border:1px solid rgba(225,185,104,.3);
+      border-radius:999px;
+      background:rgba(183,132,50,.08);
+      color:var(--gold-light);
+      font-size:12px;
+      font-weight:900;
+    }.fh-solution h2{font-family:"Playfair Display",serif;font-size:clamp(2.3rem,9vw,4rem);letter-spacing:.02em}.fh-solution h3{margin:5px 0 22px;color:var(--gold-light);font-size:clamp(17px,4vw,25px);letter-spacing:.04em;text-transform:uppercase}.fh-solution-box{
+      margin-bottom:20px;
+      padding:20px;
+      border:1px solid rgba(91,159,176,.3);
+      border-radius:16px;
+      background:rgba(255,255,255,.045);
+    }.fh-solution-box p{font-size:16px;font-weight:700;line-height:1.55}.fh-tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}.fh-tag{padding:5px 10px;border:1px solid rgba(255,255,255,.09);border-radius:7px;background:rgba(255,255,255,.05);color:#DCE5E5;font-size:12px;font-weight:700}.fh-solution-highlight{margin:22px 0;color:var(--gold-light);font-weight:900}.fh-solution-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:30px}.fh-solution-stats strong{display:block;color:var(--gold-light);font-size:clamp(21px,5vw,31px);line-height:1}.fh-solution-stats span{display:block;margin-top:4px;color:#A9BEC4;font-size:11px;font-weight:800;text-transform:uppercase}.fh-solution-img{margin:0 auto 24px;border-radius:16px;overflow:hidden;box-shadow:0 20px 55px rgba(0,0,0,.32)}.fh-features{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.fh-feature{padding:10px;border:1px solid rgba(91,159,176,.32);border-radius:9px;background:rgba(91,159,176,.12);font-size:12px;font-weight:800}:where(.fh-root) /* CONTENIDO */
+    .fh-content{padding:52px 0;background:linear-gradient(#09243A,#0B2A42,#071B2C)}.fh-eyebrow{margin-bottom:8px;color:var(--gold-light);font-size:11px;font-weight:900;letter-spacing:.18em;text-align:center}.fh-content h2{margin-bottom:28px;font-size:clamp(27px,6vw,43px);font-weight:900;letter-spacing:-.045em;line-height:1.14;text-align:center}.fh-content h2 span{color:var(--gold-light)}.fh-content-box{
+      padding:20px;
+      border:1px solid rgba(91,159,176,.3);
+      border-radius:18px;
+      background:rgba(6,24,39,.72);
+    }.fh-content-box-title{
+      margin-bottom:18px;
+      color:var(--gold-light);
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-align:center;
+    }.fh-module{
+      display:flex;
+      gap:12px;
+      padding:14px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }.fh-module:last-child{border:0}.fh-module-number{
+      display:flex;
+      flex:0 0 30px;
+      align-items:center;
+      justify-content:center;
+      width:30px;
+      height:30px;
+      border-radius:8px;
+      background:rgba(183,132,50,.13);
+      color:var(--gold-light);
+      font-size:13px;
+      font-weight:900;
+    }.fh-module h3{margin-bottom:3px;font-size:16px}.fh-module p{color:#C7D3D5;font-size:14px;line-height:1.55}.fh-content-metrics{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:20px 0 0;text-align:center}.fh-content-metrics strong{display:block;color:var(--gold-light);font-size:22px}.fh-content-metrics span{color:#A9BEC4;font-size:11px;font-weight:800;text-transform:uppercase}:where(.fh-root) /* BONOS */
+    .fh-bonuses{padding:52px 0;background:var(--ivory);color:var(--ink)}.fh-bonuses .fh-eyebrow{color:#A87528}.fh-bonuses h2{margin-bottom:24px;font-size:clamp(25px,6vw,39px);font-weight:900;letter-spacing:-.045em;line-height:1.18;text-align:center}.fh-bonuses h2 span{color:#A87528}.fh-bonus-box{
+      overflow:hidden;
+      border:1px solid rgba(8,36,59,.18);
+      border-radius:18px;
+      background:rgba(255,253,247,.78);
+      box-shadow:0 14px 34px rgba(8,36,59,.08);
+    }.fh-bonus{border-bottom:1px solid rgba(8,36,59,.1)}.fh-bonus:last-child{border:0}.fh-bonus-cover{background:#E5EEF0}.fh-bonus-cover img{width:100%}.fh-bonus-body{display:flex;align-items:flex-start;gap:12px;padding:16px}.fh-bonus-icon{display:flex;flex:0 0 38px;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;background:rgba(91,159,176,.13);font-size:18px}.fh-bonus h3{font-size:16px;line-height:1.3}.fh-bonus small{display:inline-block;margin:4px 0;padding:2px 8px;border-radius:4px;background:rgba(183,132,50,.12);color:#A87528;font-size:11px;font-weight:900}.fh-bonus p{color:#365262;font-size:13px;line-height:1.5}.fh-included{margin-top:6px;color:var(--green);font-size:13px;font-weight:900}.fh-bonus-total{margin-top:18px;padding:14px;border:1px solid rgba(183,132,50,.45);border-radius:14px;background:linear-gradient(135deg,rgba(183,132,50,.14),rgba(91,159,176,.11));color:#365262;text-align:center}.fh-bonus-total strong{color:#A87528}:where(.fh-root) /* OFERTA */
+    .fh-offer-banner{padding:17px 20px;background:linear-gradient(135deg,#061827,#0B2A42);text-align:center}.fh-offer-banner strong{display:block;margin-bottom:5px;color:var(--gold-light);font-size:12px;letter-spacing:.12em}.fh-offer-banner p{color:#C9E1E2;font-size:13px;font-weight:700}.fh-offer{padding:55px 0;background:var(--navy)}.fh-offer h2{margin-bottom:25px;font-size:clamp(25px,6vw,37px);font-weight:900;line-height:1.2;text-align:center}.fh-offer h2 span{color:var(--gold-light)}.fh-price-card{
+      padding:30px 20px 22px;
+      border:2px solid rgba(183,132,50,.8);
+      border-radius:18px;
+      background:linear-gradient(160deg,rgba(13,49,75,.88),rgba(6,24,39,.98));
+      box-shadow:0 0 48px rgba(91,159,176,.16);
+      text-align:center;
+    }.fh-price-badge{
+      display:inline-block;
+      margin-top:-46px;
+      margin-bottom:16px;
+      padding:6px 14px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#B78432,#F0D17D);
+      color:var(--navy);
+      font-size:11px;
+      font-weight:900;
+    }.fh-price-img{
+      width:100%;
+      max-width:620px;
+      margin:18px auto 24px;
+      border-radius:14px;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }.fh-price-img img{
+      display:block !important;
+      width:100% !important;
+      max-width:620px !important;
+      height:auto !important;
+      object-fit:contain;
+      opacity:1 !important;
+      visibility:visible !important;
+    }.fh-price-card h3{font-size:18px;line-height:1.25}.fh-price-sub{margin:8px 0 16px;color:#C7D3D5;font-size:14px}.fh-old-price{color:#A9BEC4;font-size:14px;text-decoration:line-through}.fh-new-price{margin:4px 0;color:var(--gold-light);font-size:clamp(40px,11vw,58px);font-weight:900;line-height:1}.fh-discount{display:inline-block;margin-bottom:18px;padding:4px 11px;border-radius:7px;background:rgba(183,132,50,.17);color:#F3D899;font-size:12px;font-weight:900}.fh-check-list{display:grid;gap:10px;margin-bottom:20px;text-align:left}.fh-check-list li{list-style:none;color:#EAF1F0;font-size:14px;line-height:1.45}.fh-check-list li::before{content:"✓";display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;margin-right:8px;border-radius:50%;background:var(--green);color:white;font-size:11px;font-weight:900}.fh-trust{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}.fh-trust span{padding:7px 10px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(255,255,255,.04);color:#DCE5E5;font-size:11px;font-weight:700}:where(.fh-root) /* FAQ + CTA */
+    .fh-faq{padding:52px 0;background:#09243A}.fh-faq h2{margin-bottom:25px;font-size:clamp(28px,6vw,43px);font-weight:900;text-align:center}.fh-faq h2 span{color:var(--gold-light)}:where(.fh-root) details{
+      margin-bottom:10px;
+      overflow:hidden;
+      border-left:3px solid rgba(183,132,50,.55);
+      border-radius:14px;
+      background:rgba(255,255,255,.045);
+    }:where(.fh-root) summary{padding:17px 18px;cursor:pointer;color:#FFFDF7;font-size:15px;font-weight:800}:where(.fh-root) details p{padding:0 18px 17px;color:#C7D3D5;font-size:14px;line-height:1.65}.fh-final{padding:55px 0;background:#0D314B;text-align:center}.fh-final-kicker{margin-bottom:16px;color:var(--gold-light);font-size:11px;font-weight:900;letter-spacing:.16em}.fh-final h2{margin-bottom:12px;font-size:clamp(21px,5vw,31px);line-height:1.35}.fh-final h3{margin-bottom:27px;color:var(--gold-light);font-size:clamp(22px,5vw,34px);line-height:1.28}.fh-comparison{overflow:hidden;margin-bottom:28px;border:1px solid rgba(183,132,50,.3);border-radius:16px;text-align:left}.fh-comparison-head,.fh-comparison-row{display:grid;grid-template-columns:1fr 1fr}.fh-comparison-head{background:rgba(6,24,39,.8);font-size:12px;font-weight:900}.fh-comparison-head div,.fh-comparison-row div{padding:12px}.fh-comparison-head div:last-child{border-left:1px solid rgba(183,132,50,.3);color:var(--gold-light)}.fh-comparison-row{border-top:1px solid rgba(255,255,255,.08);font-size:13px}.fh-comparison-row div:first-child{color:#C7D3D5}.fh-comparison-row div:last-child{border-left:1px solid rgba(255,255,255,.08);background:rgba(183,132,50,.07);font-weight:800}:where(.fh-root) footer{padding:38px 20px;background:#04121E;border-top:1px solid rgba(183,132,50,.2);text-align:center}:where(.fh-root) footer strong{display:block;margin-bottom:9px;color:var(--gold-light);font-size:17px;letter-spacing:.08em}:where(.fh-root) footer p{color:#A9BEC4;font-size:13px;line-height:1.65}:where(.fh-root) footer small{display:block;margin-top:18px;color:#819DA6;font-size:11px}
+
+    @media(min-width:640px){.fh-stats-grid{grid-template-columns:repeat(4,1fr)}.fh-steps{grid-template-columns:1fr}.fh-features{grid-template-columns:repeat(4,1fr)}
+    }:where(.fh-root) /* ===== CAROUSEL ANTEPRIME ATLANTE ===== */
+    .fh-preview-strip{padding:38px 0 46px;background:var(--navy);overflow:hidden}.fh-preview-strip .fh-eyebrow{margin-bottom:8px;color:#E5B85E;text-align:center}.fh-preview-strip h2{margin:0 auto 22px;max-width:680px;color:#fff;font-size:clamp(24px,6vw,36px);line-height:1.15;text-align:center;letter-spacing:-.035em}.fh-preview-strip h2 span{color:#E5B85E}.fh-preview-viewport{width:100%;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}.fh-preview-track{display:flex;width:max-content;gap:14px;animation:fhPreviewScroll 18s linear infinite;will-change:transform}.fh-preview-track:hover{animation-play-state:paused}.fh-preview-card{flex:0 0 auto;width:min(68vw,290px);overflow:hidden;border:1px solid rgba(229,184,94,.28);border-radius:14px;background:#fff;box-shadow:0 16px 35px rgba(0,0,0,.22)}.fh-preview-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+    @keyframes fhPreviewScroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 7px))}}:where(.fh-root) /* ===== SOCIAL PROOF / REVIEWS ===== */
+    .fh-reviews{padding:52px 0;background:#F5EFE2;color:var(--ink);overflow:hidden}.fh-reviews .fh-eyebrow{color:#A87528;text-align:center}.fh-reviews h2{margin:7px auto 8px;max-width:720px;font-size:clamp(27px,6.5vw,40px);font-weight:900;line-height:1.12;letter-spacing:-.045em;text-align:center}.fh-reviews h2 span{color:#A87528}.fh-reviews-sub{margin:0 auto 24px;max-width:620px;color:#526976;font-size:14px;line-height:1.55;text-align:center}.fh-reviews-viewport{position:relative;overflow:hidden;padding:2px 46px 8px;touch-action:pan-y}.fh-reviews-track{display:flex;transition:transform .55s cubic-bezier(.22,.61,.36,1);will-change:transform}.fh-review-slide{flex:0 0 100%;padding:0 7px}.fh-review-slide img{display:block;width:min(100%,390px);height:auto;margin:auto;border-radius:18px;box-shadow:0 14px 34px rgba(8,36,59,.15)}.fh-review-arrow{position:absolute;top:50%;z-index:5;display:grid;place-items:center;width:40px;height:40px;transform:translateY(-50%);border:1px solid rgba(8,36,59,.16);border-radius:50%;background:rgba(255,255,255,.96);color:var(--ink);font-size:25px;line-height:1;cursor:pointer;box-shadow:0 7px 20px rgba(8,36,59,.16)}.fh-review-arrow:hover{transform:translateY(-50%) scale(1.06)}#fh-reviewPrev{left:3px}#fh-reviewNext{right:3px}.fh-review-dots{display:flex;align-items:center;justify-content:center;gap:6px;max-width:180px;margin:15px auto 0;overflow:hidden}.fh-review-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#C8BCA7;cursor:pointer;transition:.2s}.fh-review-dot.fh-active{width:20px;border-radius:20px;background:#A87528}.fh-reviews-note{margin-top:14px;color:#667984;font-size:11px;text-align:center}
+
+    @media (min-width:760px){.fh-preview-card{width:310px}.fh-review-slide{flex-basis:50%;padding:0 10px}
+    }
+    @media (prefers-reduced-motion:reduce){.fh-preview-track{animation-play-state:paused}.fh-reviews-track{transition:none}}:where(.fh-root) /* ===== PROTEZIONE COLORI / IMPULTIENDA =====
+       Evita che gli stili globali del tema rendano testi invisibili. */
+    .fh-problems,.fh-problems p,.fh-problems h2,.fh-problems h3,.fh-problems .fh-section-title{color:#08243B !important;}.fh-problems .fh-section-title span,.fh-problems .fh-problem-end{color:#A87528 !important;}.fh-problems .fh-problem p{color:#08243B !important;}.fh-reviews,.fh-reviews p,.fh-reviews h2,.fh-reviews h3{color:#08243B !important;}.fh-reviews .fh-eyebrow,.fh-reviews h2 span{color:#A87528 !important;}.fh-reviews .fh-reviews-sub{color:#526976 !important;}.fh-reviews .fh-reviews-note{color:#667984 !important;}.fh-bonuses,.fh-bonuses p,.fh-bonuses h2,.fh-bonuses h3{color:#08243B !important;}.fh-bonuses .fh-eyebrow,.fh-bonuses h2 span,.fh-bonuses small{color:#A87528 !important;}.fh-bonuses .fh-bonus p,.fh-bonuses .fh-bonus-total{color:#365262 !important;}.fh-bonuses .fh-included{color:#4FA786 !important;}.fh-hero,.fh-stats,.fh-solution,.fh-content,.fh-offer,.fh-faq,.fh-final,:where(.fh-root) footer{color:#FFFDF7;}.fh-hero h1,.fh-stats h3,.fh-solution h2,.fh-solution-box p,.fh-content h2,.fh-content h3,.fh-offer h2,.fh-price-card h3,.fh-faq h2,.fh-faq summary,.fh-final h2,:where(.fh-root) footer strong{color:#FFFDF7 !important;}.fh-hero-sub,.fh-step p,.fh-module p,.fh-price-sub,.fh-faq details p,.fh-comparison-row div:first-child{color:#C7D3D5 !important;}.fh-hero-kicker,.fh-stat span,.fh-step-number,.fh-solution-badge,.fh-solution h3,.fh-solution-highlight,.fh-solution-stats strong,.fh-eyebrow,.fh-content h2 span,.fh-content-box-title,.fh-module-number,.fh-offer h2 span,.fh-new-price,.fh-faq h2 span,.fh-final-kicker,.fh-final h3,:where(.fh-root) footer strong{color:#E1B968 !important;}:where(.fh-root) /* Visibilità forzata: impedisce al tema Impultienda di nascondere testo o immagini */
+    .fh-atlas-page h1,.fh-atlas-page h2,.fh-atlas-page h3,.fh-atlas-page h4,.fh-atlas-page p,.fh-atlas-page span,.fh-atlas-page li,.fh-atlas-page small,.fh-atlas-page strong,.fh-atlas-page summary,.fh-atlas-page a{
+      opacity:1 !important;
+      visibility:visible !important;
+    }.fh-atlas-page img,.fh-atlas-page video{
+      opacity:1 !important;
+      visibility:visible !important;
+    }
+
+    @media (max-width:600px){.fh-price-img{
+        width:calc(100% + 16px);
+        max-width:none;
+        margin:14px -8px 20px;
+      }.fh-price-img img{max-width:none !important;border-radius:10px;}
+    }.fh-btn{color:#061827 !important;}:where(.fh-root) /* AVVISO FORMATO DIGITALE */
+    .fh-digital-ribbon{
+      width:100%;
+      overflow:hidden;
+      background:#F2C94C;
+      color:#061827;
+      border-bottom:1px solid rgba(6,24,39,.12);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.045em;
+      line-height:1.25;
+    }.fh-digital-ribbon-track{
+      display:flex;
+      width:max-content;
+      animation:fh-digital-ribbon-scroll 14s linear infinite;
+    }.fh-digital-ribbon-group{
+      display:flex;
+      flex:none;
+      align-items:center;
+      gap:30px;
+      padding:12px 15px;
+      white-space:nowrap;
+    }.fh-digital-ribbon-group span::after{content:"✦";margin-left:30px;color:#73520B}
+    @keyframes fh-digital-ribbon-scroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }.fh-digital-product-note{
+      margin:10px auto 0;
+      color:#C7D3D5;
+      font-size:12px;
+      line-height:1.55;
+      text-align:center;
+    }.fh-price-card .fh-digital-product-note{max-width:440px;margin:10px auto 16px;color:#C7D3D5}
+    @media (prefers-reduced-motion:reduce){.fh-digital-ribbon-track{animation:none;width:100%}.fh-digital-ribbon-group[aria-hidden="true"]{display:none}}
+
+  
+html{scroll-behavior:smooth;background:#061827}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:#061827}
+#fh-comprar{scroll-margin-top:24px}
+.fh-root{overflow-x:clip}
+.fh-gain-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:26px;text-align:left}
+@media(min-width:640px){.fh-gain-grid{grid-template-columns:1fr 1fr}}
+.fh-gain-card{padding:20px 18px;border:1px solid rgba(183,132,50,.28);border-radius:16px;background:rgba(255,255,255,.04)}
+.fh-gain-ico{display:block;font-size:26px;margin-bottom:8px}
+.fh-gain-card h3{font-size:17px;font-weight:900;color:#E1B968;margin-bottom:6px}
+.fh-gain-card p{font-size:15px;line-height:1.55;color:rgba(255,253,247,.86)}
+@media(max-width:520px){.fh-root .fh-container{width:calc(100% - 32px)}.fh-root h1{font-size:30px;line-height:1.15}.fh-root h2{font-size:26px;line-height:1.2}}
+@media(max-width:380px){.fh-root h1{font-size:27px}.fh-root h2{font-size:23px}.fh-btn{font-size:14px;padding:16px 18px}}
+</style>
+<div class="fh-root"><section class="fh-hero">
+<div class="fh-container">
+<p class="fh-hero-kicker">📷 A FOTÓS TECHNIKÁK VIZUÁLIS ATLASZA™</p>
+<h1>A fotóid nem függhetnek<br/>a szerencsétől.<br/><span>Tudd meg, mit állíts át, mielőtt exponálsz.</span></h1>
+<p class="fh-hero-sub">
+        Ha egy kép sötét, bemozdult vagy lapos, nem kell mindent kipróbálnod.<br/>
+<strong>Azt kell megértened, mit figyelj, melyik beállítást módosítsd és miért.</strong>
+</p>
+<div class="fh-hero-mockup">
+<img alt="A digitális termék grafikus ábrázolása" class="fh-hero-physical-ribbon" loading="eager" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/repressentacion-fisica.jpg"/>
+<video aria-label="A Fotós Technikák Vizuális Atlasza" autoplay="" class="fh-hero-video" loop="" muted="" playsinline="" preload="auto" webkit-playsinline="">
+<source src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/hero-hu.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="fh-hero-pills">
+<span class="fh-pill">📷 Fotózz magabiztosabban</span>
+<span class="fh-pill">📷 +1.000 fotós technika</span>
+<span class="fh-pill">🎁 3 bónusz ajándékba</span>
+<span class="fh-pill">⚡ Azonnali hozzáférés</span>
+</div>
+<a class="fh-btn" href="#fh-comprar">Kérem az Atlaszomat ↓</a>
+<p class="fh-hero-social">🎉 <strong>67% kedvezmény</strong> az évfordulónk alkalmából</p>
+<p class="fh-hero-trust">🛡️ 7 napos garancia · 🔒 Biztonságos fizetés · 📧 Azonnali hozzáférés</p>
+</div>
+</section><section class="fh-stats">
+<div class="fh-container">
+<div class="fh-stats-grid">
+<div class="fh-stat"><strong>+1.000</strong><span>📷 fotós technika</span></div>
+<div class="fh-stat"><strong>83</strong><span>📖 vizuális oldal</span></div>
+<div class="fh-stat"><strong>3</strong><span>🎁 gyakorlati bónusz</span></div>
+<div class="fh-stat"><strong>1</strong><span>🧭 fellapozható útmutató</span></div>
+</div>
+<div class="fh-steps">
+<article class="fh-step">
+<span class="fh-step-number">01</span>
+<h3>Nézd meg a jelenetet</h3>
+<p>Mielőtt a géphez nyúlnál, megérted, mi a kép valódi problémája.</p>
+<div class="fh-step-image">
+<img alt="A fény gyönyörű. De nem tudod, hogyan fotózd le." loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/luce.jpg"/>
+</div>
+</article>
+<article class="fh-step">
+<span class="fh-step-number">02</span>
+<h3>Nyisd ki a megfelelő oldalt</h3>
+<p>Az Atlasz megmutatja minden döntés hatását: nincs félbehagyott elmélet.</p>
+<div class="fh-step-image">
+<img alt="Mindent egyszerre átállítani nem megoldás." loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/momento.jpg"/>
+</div>
+</article>
+<article class="fh-step">
+<span class="fh-step-number">03</span>
+<h3>Állíts be és exponálj</h3>
+<p>Lépj túl az ösztönön, és fotózz több kontrollal és szándékkal.</p>
+<div class="fh-step-image">
+<img alt="A pillanat elmúlik, miközben a megfelelő beállítást keresed." loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/soluzione.jpg"/>
+</div>
+</article>
+</div>
+</div>
+</section><section class="fh-problems">
+<div class="fh-container">
+<h2 class="fh-section-title">Jó fényképezőgéped van.<br/><span>A képek mégsem úgy sikerülnek, ahogy láttad.</span></h2>
+<div class="fh-problem-list">
+<div class="fh-problem"><span class="fh-problem-icon">×</span><p>Felhúzod az ISO-t, állítasz a záridőn, és újrapróbálod, de nem tudod, mi befolyásolja valójában a képet.</p></div>
+<div class="fh-problem"><span class="fh-problem-icon">×</span><p>Gyenge fényben a képek bemozdulnak, zajosak vagy túl sötétek, és a végén a számítógépen javítgatod őket.</p></div>
+<div class="fh-problem"><span class="fh-problem-icon">×</span><p>Rengeteg oktatóvideót megnéztél, de egy valódi jelenet előtt nem tudod, melyik tanácsot alkalmazd először.</p></div>
+<div class="fh-problem"><span class="fh-problem-icon">×</span><p>Automata módban fotózol, mert a manuális bonyolultnak tűnik, pedig tudod, hogy a géped többre képes.</p></div>
+<div class="fh-problem"><span class="fh-problem-icon">×</span><p>Megismételhetetlen pillanatokat veszítesz el, miközben a beállításokat próbálod kitalálni.</p></div>
+</div>
+<p class="fh-problem-end">Nem a tehetség hiányzik.<br/>Egy útmutató hiányzik, amellyel dönteni tudsz az előtted álló jelenetben.</p>
+</div>
+</section><section aria-label="Betekintés az Atlaszba" class="fh-preview-strip">
+<div class="fh-container">
+<p class="fh-eyebrow">NÉZZ BELE AZ ATLASZBA</p>
+<h2>Nem kell elképzelned, mit találsz benne.<br/><span>Már most láthatod.</span></h2>
+</div>
+<div class="fh-preview-viewport">
+<div class="fh-preview-track">
+<div class="fh-preview-card"><img alt="Az Atlasz 1. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/001.jpg"/></div>
+<div class="fh-preview-card"><img alt="Az Atlasz 2. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/012.jpg"/></div>
+<div class="fh-preview-card"><img alt="Az Atlasz 3. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/017.jpg"/></div>
+<div class="fh-preview-card"><img alt="Az Atlasz 4. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/035.jpg"/></div>
+<div class="fh-preview-card"><img alt="Az Atlasz 5. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/047.jpg"/></div>
+<div class="fh-preview-card"><img alt="Az Atlasz 6. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/058.jpg"/></div>
+<div class="fh-preview-card"><img alt="Az Atlasz 7. oldalának előnézete" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/070.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/001.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/012.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/017.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/035.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/047.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/058.jpg"/></div>
+<div aria-hidden="true" class="fh-preview-card"><img alt="" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/070.jpg"/></div>
+</div>
+</div>
+</section><section class="fh-solution">
+<div class="fh-container">
+<p class="fh-solution-badge">🏆 A vizuális útmutató, amellyel zűrzavar nélkül megérted a gépedet</p>
+<h2>VIZUÁLIS ATLASZ™</h2>
+<h3>Nem egy követendő tanfolyam. Egy használható útmutató.</h3>
+<div class="fh-solution-box">
+<p>Minden tábla egy konkrét helyzetből indul, és megmutatja, mit figyelj, mit állíts át és milyen eredményre számíthatsz.</p>
+<div class="fh-tags">
+<span class="fh-tag">Fény</span>
+<span class="fh-tag">Expozíció</span>
+<span class="fh-tag">Élesség</span>
+<span class="fh-tag">Kompozíció</span>
+<span class="fh-tag">Portrék</span>
+</div>
+</div>
+<p class="fh-solution-highlight">📷 Kevesebb vaktában próbálkozás. Több olyan kép, amely arra hasonlít, amit láttál.</p>
+<div class="fh-solution-stats">
+<div><strong>+1.000</strong><span>technika</span></div>
+<div><strong>83</strong><span>oldal</span></div>
+<div><strong>3</strong><span>bónusz</span></div>
+<div><strong>PDF</strong><span>azonnal</span></div>
+</div>
+<div class="fh-solution-img">
+<img alt="A Fotós Technikák Vizuális Atlasza" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/atlas-bonos-promesa.jpg"/>
+</div>
+<p class="fh-digital-product-note">A könyv formájú képek a digitális Atlasz grafikus ábrázolásai. A terméket PDF-ben kapod, azonnali hozzáféréssel: fizikai terméket nem küldünk.</p>
+<div class="fh-features">
+<span class="fh-feature">✅ Akkor is, ha automatából indulsz</span>
+<span class="fh-feature">✅ DSLR-hez és MILC-hez</span>
+<span class="fh-feature">✅ Érthető nyelvezet</span>
+<span class="fh-feature">✅ Azonnal fellapozható</span>
+</div>
+</div>
+</section><section class="fh-content">
+<div class="fh-container">
+<p class="fh-eyebrow">MINDEN, AMIT BENNE TALÁLSZ</p>
+<h2>Az oldalak, amelyekkel eljutsz<br/>a <span>„próbálgatom” szinttől</span> a „tudom, mit csinálok” szintig.</h2>
+<div class="fh-content-box">
+<p class="fh-content-box-title">📷 A FŐ ATLASZ</p>
+<div class="fh-module">
+<span class="fh-module-number">1</span>
+<div><h3>Beállítások, amelyeknek végre van értelme</h3><p>Expozíció, ISO, záridő, rekesz és élességállítás vizuális összehasonlításokkal elmagyarázva.</p></div>
+</div>
+<div class="fh-module">
+<span class="fh-module-number">2</span>
+<div><h3>A fény: olvasd ki, mielőtt exponálsz</h3><p>Természetes fény, ellenfény, golden hour, árnyékok és gyenge fény, hogy ne harcolj többé a jelenettel.</p></div>
+</div>
+<div class="fh-module">
+<span class="fh-module-number">3</span>
+<div><h3>Kompozíció, amely vezeti a tekintetet</h3><p>Képkivágás, vonalak, mélység, szögek és tér: egyszerű döntések, amelyek megváltoztatnak egy fotót.</p></div>
+</div>
+<div class="fh-module">
+<span class="fh-module-number">4</span>
+<div><h3>Emberek, mozgás és valódi pillanatok</h3><p>Természetes portrék, a tekintet iránya, akció, spontaneitás és élesség, amikor minden mozog.</p></div>
+</div>
+<div class="fh-module">
+<span class="fh-module-number">5</span>
+<div><h3>Diagnózis és gyakorlat terepen</h3><p>Megérted, miért nem működik egy kép, és jobb döntéseket hozol a valódi helyzetekben.</p></div>
+</div>
+</div>
+<div class="fh-content-metrics">
+<div><strong>83</strong><span>oldal</span></div>
+<div><strong>+1.000</strong><span>technika</span></div>
+<div><strong>3</strong><span>bónusz</span></div>
+<div><strong>PDF</strong><span>azonnal</span></div>
+</div>
+</div>
+</section><section class="fh-reviews" id="fh-risultati"><div class="fh-container"><p class="fh-eyebrow">MIT KAPSZ TŐLE</p><h2>Apró változtatások.<br/><span>Fotók, amelyeknek végre van értelme.</span></h2><p class="fh-reviews-sub">Ez változik, amikor tudod, mit figyelj és mit állíts át, mielőtt exponálsz.</p><div class="fh-gain-grid"><div class="fh-gain-card"><span class="fh-gain-ico">📷</span><h3>Fotózz nagyobb magabiztossággal</h3><p>Lépj túl az ösztönön, és fotózz több kontrollal és szándékkal.</p></div><div class="fh-gain-card"><span class="fh-gain-ico">🎯</span><h3>Kevesebb vaktában próbálkozás</h3><p>Több olyan kép, amely arra hasonlít, amit láttál.</p></div><div class="fh-gain-card"><span class="fh-gain-ico">🧭</span><h3>Te döntesz a jelenetről</h3><p>Már nem a gép dönt helyetted: szándékosan állítasz.</p></div><div class="fh-gain-card"><span class="fh-gain-ico">✨</span><h3>Eleve jobb képpel indulsz</h3><p>Kevesebb utólagos javítás, mert a jó döntés már az exponálás előtt megszületik.</p></div><div class="fh-gain-card"><span class="fh-gain-ico">⏱️</span><h3>Nem szalasztod el többé a pillanatot</h3><p>Tudod, melyik beállítást módosítsd, amíg a jelenet még ott van.</p></div></div></div></section><section class="fh-bonuses">
+<div class="fh-container">
+<p class="fh-eyebrow">FELÁR NÉLKÜL BENNE VAN</p>
+<h2>Ráadásul kapsz <span>3 bónuszt, hogy tényleg fotózni kezdj.</span></h2>
+<div class="fh-bonus-box">
+<article class="fh-bonus">
+<div class="fh-bonus-cover"><img alt="Fotózásra Kész Kártyák" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/schede-pronte-per-lo-scatto.jpg"/></div>
+<div class="fh-bonus-body">
+<span class="fh-bonus-icon">🗂️</span>
+<div>
+<h3>Tudod, mit állíts át, mielőtt exponálsz.</h3>
+<small>gyors döntések</small>
+<p>Egy jelenet előtt tudod, hol kezdd, további oktatóvideók keresése nélkül.</p>
+<div class="fh-included">✓ MA BENNE VAN</div>
+</div>
+</div>
+</article>
+<article class="fh-bonus">
+<div class="fh-bonus-cover"><img alt="Indulj és Fotózz — 30 Fotós Kihívás" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/esci-e-scatta-30-sfide.jpg"/></div>
+<div class="fh-bonus-body">
+<span class="fh-bonus-icon">🎯</span>
+<div>
+<h3>Edzd a fotós szemed, egyszerre egy kihívással.</h3>
+<small>30 vezetett kihívás</small>
+<p>Megtanulod észrevenni a fotós lehetőségeket a hétköznapi jelenetekben is.</p>
+<div class="fh-included">✓ MA BENNE VAN</div>
+</div>
+</div>
+</article>
+<article class="fh-bonus">
+<div class="fh-bonus-cover"><img alt="Gyors Diagnózis" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/diagnosi-rapida.jpg"/></div>
+<div class="fh-bonus-body">
+<span class="fh-bonus-icon">🔎</span>
+<div>
+<h3>Változtasd a hibákat jobb döntésekké.</h3>
+<small>javíts átgondoltan</small>
+<p>Ha egy kép nem győz meg, megérted, mit javíts és miért.</p>
+<div class="fh-included">✓ MA BENNE VAN</div>
+</div>
+</div>
+</article>
+</div>
+<div class="fh-bonus-total">A 3 bónusz <strong>az Atlasz része.</strong></div>
+</div>
+</section><section class="fh-offer-banner">
+<strong>⏳ UTOLSÓ NAP — ÉVFORDULÓS AJÁNLAT</strong>
+<p>Az ajánlat ma lejár: <b>67% kedvezmény</b> a teljes Atlaszra és a 3 bónuszra.</p>
+</section><section class="fh-offer" id="fh-comprar">
+<div class="fh-container">
+<h2>Vidd magaddal a <span>Vizuális Atlaszodat™</span></h2>
+<div class="fh-price-card">
+<span class="fh-price-badge">⏳ UTOLSÓ NAP — ÉVFORDULÓS AJÁNLAT</span>
+<div class="fh-price-img">
+<img alt="A Fotós Technikák Vizuális Atlasza" src="https://recursos-pdf-hub.github.io/entregas/fotografia-hu/landing-img/atlas-conversion.jpg"/>
+</div>
+<p class="fh-digital-product-note">A kép könyv formájú grafikus ábrázolás. A megvásárolt termék digitális, PDF-ben kapod meg.</p>
+<h3>A FOTÓS TECHNIKÁK VIZUÁLIS ATLASZA™</h3>
+<p class="fh-price-sub">83 vizuális oldal + 3 gyakorlati bónusz</p>
+<p class="fh-old-price">{{original_price}}</p>
+<p class="fh-new-price">{{price}}</p>
+<span class="fh-discount">-67% · CSAK MA</span>
+<ul class="fh-check-list">
+<li>A teljes Atlasz több mint 1.000 fotós jegyzettel és technikával</li>
+<li>Expozíció, fény, élesség és kompozíció vizuálisan elmagyarázva</li>
+<li>Portrék, mozgás, gyenge fény és valódi helyzetek</li>
+<li>Fotózásra Kész Kártyák™</li>
+<li>Indulj és Fotózz™ — 30 Fotós Kihívás</li>
+<li>Gyors Diagnózis™</li>
+<li>Azonnali digitális hozzáférés, egyszeri fizetés</li>
+</ul>
+<a class="fh-btn" href="/checkout">Igen, kérem az Atlaszomat →</a>
+</div>
+<div class="fh-trust">
+<span>🔒 Biztonságos fizetés</span>
+<span>⚡ Azonnali hozzáférés</span>
+<span>🛡️ 7 napos garancia</span>
+<span>📧 E-mailben</span>
+</div>
+</div>
+</section><section class="fh-faq">
+<div class="fh-container">
+<h2>Gyakori <span>kérdések</span></h2>
+<details>
+<summary>1. Nekem is jó, ha szinte mindig automata módban fotózom?</summary>
+<p>Igen. Az Atlasz épp azért készült, hogy megértsd a beállításokat anélkül, hogy elárasztana: egyszerre egy helyzet és egy döntés.</p>
+</details>
+<details>
+<summary>2. Működik a fényképezőgépemmel?</summary>
+<p>Ideális DSLR, MILC és haladó kompakt gépekhez, amelyeken állítható az expozíció, az ISO, a záridő és az élesség.</p>
+</details>
+<details>
+<summary>3. Ez egy tanfolyam, amit elejétől végéig kell követni?</summary>
+<p>Nem. Kezdheted az alapokkal, vagy rögtön kinyithatod azt a részt, amelyre az előtted álló jelenethez szükséged van.</p>
+</details>
+<details>
+<summary>4. Kezdőknek is megfelel?</summary>
+<p>Igen. A nyelvezete egyszerű, a vizuális oldalak pedig érthetővé teszik a gyakran technikainak tűnő fogalmakat.</p>
+</details>
+<details>
+<summary>5. Hogyan kapom meg az Atlaszt?</summary>
+<p>Fizetés után azonnal megkapod a digitális hozzáférést e-mailben, és megnyithatod telefonon, tableten vagy számítógépen.</p>
+</details>
+<details>
+<summary>6. Egyszeri a fizetés?</summary>
+<p>Igen. Egyszer fizetsz; nincs előfizetés és nincs havidíj.</p>
+</details>
+</div>
+</section><section class="fh-final">
+<div class="fh-container">
+<p class="fh-final-kicker">📷 A FOTÓS TECHNIKÁK VIZUÁLIS ATLASZA™</p>
+<h2>Folytathatod a véletlenszerű beállítások próbálgatását, abban reménykedve, hogy a következő kép jól sikerül.</h2>
+<h3>Vagy tudhatod, mit nézz és mit állíts át, mielőtt exponálsz.</h3>
+<div class="fh-comparison">
+<div class="fh-comparison-head">
+<div>Atlasz nélkül</div>
+<div>Az Atlasszal</div>
+</div>
+<div class="fh-comparison-row">
+<div>❌ Mindent egyszerre állítasz át</div>
+<div>✅ Szándékosan állítasz</div>
+</div>
+<div class="fh-comparison-row">
+<div>❌ Szétszórt videók között veszíted az időt</div>
+<div>✅ Kinyitod a hasznos oldalt</div>
+</div>
+<div class="fh-comparison-row">
+<div>❌ Utólag javítgatsz szerkesztéskor</div>
+<div>✅ Eleve jobb képpel indulsz</div>
+</div>
+<div class="fh-comparison-row">
+<div>❌ A gép dönt helyetted</div>
+<div>✅ Te döntesz a jelenetről</div>
+</div>
+</div>
+<a class="fh-btn" href="#fh-comprar">Kérem az Atlaszomat ↓</a>
+</div>
+</section></div>
