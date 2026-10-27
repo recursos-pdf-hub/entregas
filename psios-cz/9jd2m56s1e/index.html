@@ -1,31 +1,37 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Tvůj přístup</title>
-<style>
-  html, body { margin:0; background:#FAF7F2; color:#2B2522; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:560px; margin:0 auto; padding:64px 20px; text-align:center; }
-  .badge { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#EFE6DA; padding:6px 12px; border-radius:99px; }
-  h1 { font-size:28px; line-height:1.2; margin:18px 0 10px; }
-  p { font-size:17px; line-height:1.55; color:#5B514B; }
-  .card { background:#fff; border:1px solid #EAE0D5; border-radius:16px; padding:24px 20px; margin-top:28px; }
-  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#1F9D55; margin-right:8px; animation:p 1.6s infinite; }
-  @keyframes p { 50% { opacity:.3; } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation:none; } }
-</style>
-</head>
-<body>
-  <div class="wrap">
-    <span class="badge" data-t>Nákup potvrzen</span>
-    <h1>Terapeutický Vizuální Atlas · 120 Myšlenkových Map Emocí a +70 Vizuálních Nástrojů · 4 Dárkové Bonusy</h1>
-    <p data-t>Děkujeme! Dokončujeme přípravu tvého materiálu. Tato stránka se brzy aktualizuje se všemi soubory.</p>
-    <div class="card">
-      <p><span class="dot"></span><strong data-t>Ulož si tento odkaz</strong></p>
-      <p data-t>Je to tvůj doživotní přístup. Vrať se za pár hodin a najdeš tu hlavní produkt i všechny bonusy.</p>
-    </div>
-  </div>
-</body>
-</html>
+<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Terapeutický Vizuální Atlas · Tvůj přístup</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"><style>:root{--bg:#F7F6F2;--paper:#FFFFFF;--ink:#202525;--ink-soft:#5D6664;--accent:#2B565F;--accent-dark:#183D46;--line:#E3DED3;--gold:#7E988A;--amber:#EC9A6D}
+*{box-sizing:border-box;margin:0;padding:0}html,body{background:var(--bg);color:var(--ink)}
+body{font-family:Inter,Arial,sans-serif;line-height:1.55}h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.15}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(160deg,var(--accent-dark),var(--accent));color:#fff;padding:44px 0 56px;text-align:center;border-bottom:6px solid var(--amber)}
+.kicker{display:inline-block;background:var(--amber);color:#fff;border-radius:99px;padding:5px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6vw,46px);margin-bottom:10px}.hero p{font-size:18px;opacity:.93;max-width:660px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
+.stats span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.note{background:#FBF1EA;border:1px solid #F2C4A6;border-radius:14px;padding:14px 18px;margin:24px 0 0;font-size:15px}
+.sec{margin:30px 0 34px}.sec h2{font-size:clamp(22px,4vw,30px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;transition:transform .12s,border-color .12s}
+a.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card.soon{opacity:.6;border-style:dashed}
+.card .n{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.card h3{font-size:20px}.card p{color:var(--ink-soft);font-size:15px;flex:1}.card .go{font-weight:800;color:var(--accent-dark)}
+.card.soon .go{color:#B4613A}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 58px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--amber);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:10px 0 40px}</style></head><body>
+<header class="hero"><div class="wrap"><span class="kicker">Tvůj přístup</span><h1>Terapeutický Vizuální Atlas</h1>
+<p>120 Myšlenkových Map Emocí a +70 Vizuálních Nástrojů · 4 Dárkové Bonusy</p>
+<div class="stats"><span>120 map · 240 stran</span><span>12 oblastí</span><span>+70 vizuálních nástrojů</span></div></div></header>
+<main class="wrap">
+<section class="sec"><h2>120 myšlenkových map, podle oblastí</h2><div class="grid"><a class="card " href="pdf/01-uzkost-strach-a-obavy.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 1</span><h3>Úzkost, Strach a Obavy</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/02-emoce-a-emocni-regulace.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 2</span><h3>Emoce a Emoční Regulace</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/03-sebeucta-a-identita.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 3</span><h3>Sebeúcta a Identita</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/04-vztahy-a-vazby.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 4</span><h3>Vztahy a Vazby</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/05-rodina-a-pribeh-puvodu.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 5</span><h3>Rodina a Příběh Původu</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/06-stres-trauma-a-bezpeci.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 6</span><h3>Stres, Trauma a Bezpečí</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/07-sebesabotaz-a-vzorce-chovani.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 7</span><h3>Sebesabotáž a Vzorce Chování</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/08-hranice-a-komunikace.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 8</span><h3>Hranice a Komunikace</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/09-smutek-ztraty-a-zmeny.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 9</span><h3>Smutek, Ztráty a Změny</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/10-telo-sebeobraz-a-intimita.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 10</span><h3>Tělo, Sebeobraz a Intimita</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/11-prace-penize-a-smysl.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 11</span><h3>Práce, Peníze a Smysl</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/12-sebepoznani-a-vnitrni-zdroje.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál · oblast 12</span><h3>Sebepoznání a Vnitřní Zdroje</h3><p>10 myšlenkových map emocí · 20 stran</p><span class="go">Otevřít →</span></a></div></section>
+<section class="sec"><h2>Metafory, tabule, diagramy a bonusy</h2><div class="grid"><a class="card " href="pdf/terapeuticky-vizualni-atlas-kompletni.pdf" target="_blank" rel="noopener"><span class="n">Hlavní materiál</span><h3>Kompletní Atlas v Jednom Souboru</h3><p>Všech 120 map (240 stran) s rejstříkem.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/32-vizualnich-metafor.pdf" target="_blank" rel="noopener"><span class="n">Součást materiálu</span><h3>32 Vizuálních Metafor</h3><p>Na první pohled uvidíš, jak vzorec funguje zevnitř.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/12-srovnavacich-tabuli.pdf" target="_blank" rel="noopener"><span class="n">Součást materiálu</span><h3>12 Srovnávacích Tabulí</h3><p>Varianty stejného tématu vedle sebe.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/12-konzultacnich-diagramu.pdf" target="_blank" rel="noopener"><span class="n">Součást materiálu</span><h3>12 Konzultačních Vývojových Diagramů</h3><p>Jeden pro každou oblast: od situace ke správné mapě.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/rejstrik-a-odkazy.pdf" target="_blank" rel="noopener"><span class="n">Součást materiálu</span><h3>Rejstřík a Bibliografické Odkazy</h3><p>Abecední rejstřík a rejstřík podle situací, se zdroji.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/12-terapeutickych-smeru.pdf" target="_blank" rel="noopener"><span class="n">Bonus 01</span><h3>12 Map Hlavních Terapeutických Směrů</h3><p>KBT, psychoanalýza, gestalt, ACT, DBT, schématerapie a další, podle stejných kritérií.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/6-vizualnich-skal.pdf" target="_blank" rel="noopener"><span class="n">Bonus</span><h3>6 Vizuálních Škál</h3><p>Okno tolerance, intenzita emocí, asertivita a další škály.</p><span class="go">Otevřít →</span></a><a class="card " href="pdf/upravitelne-dokumenty.zip" download><span class="n">Bonus 02</span><h3>Upravitelné Psychologické Dokumenty</h3><p>Potvrzení, psychologická zpráva, zpráva o průběhu, posudek a doporučení k dalšímu odborníkovi (Word).</p><span class="go">Stáhnout →</span></a></div></section>
+<section class="sec"><h2>Kde začít</h2><ol class="pasos">
+<li>Otevři oblast, se kterou teď pracuješ nejvíc.</li>
+<li>Projdi šest bloků jedné mapy: Pochop → Další kroky.</li>
+<li>Mapu si vytiskni a používej ji na sezení nebo k sebereflexi.</li>
+<li>Pokud nevíš, kterou mapu hledat, začni u vývojových diagramů nebo v rejstříku.</li></ol></section>
+<p class="foot">Ulož si tuto stránku: je to tvůj doživotní přístup. Pravidelné aktualizace (Bonus 03) přibývají sem, bez příplatku. Pouze pro osobní a profesní použití; další prodej a šíření jsou zakázány. Jde o vzdělávací materiál, který nenahrazuje diagnostiku, léčbu ani vyšetření kvalifikovaným odborníkem.</p>
+</main></body></html>
