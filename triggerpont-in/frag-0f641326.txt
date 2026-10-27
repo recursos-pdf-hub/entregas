@@ -286,7 +286,7 @@ body{margin:0;background:#060D1A;color:#E2E8F0;font-family:'Plus Jakarta Sans',s
 <p class="tp-tot">Total bonus value: ₹4,297 – yours free today</p>
 </div>
 <div class="tp-price">
-<div class="tp-old"><s>{{original_price}}</s> regularly <span class="tp-save">Save {{savings}}</span></div>
+<div class="tp-old"><s>{{original_price}}</s> regular price <span class="tp-save">Save {{savings}}</span></div>
 <span class="tp-big">{{price}}</span>
 </div>
 <div class="tp-once">One-time secure payment · Lifetime access</div>
