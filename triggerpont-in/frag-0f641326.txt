@@ -1,0 +1,365 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+html{scroll-behavior:smooth;background:#060D1A}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tp-pulse{animation:none!important}.tp-track{animation:none!important}}
+body{margin:0;background:#060D1A;color:#E2E8F0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.tp-wrap *{box-sizing:border-box}
+.tp-wrap{background:#060D1A;color:#E2E8F0;font-size:16px;line-height:1.6;overflow-x:hidden}
+.tp-in{max-width:1080px;margin:0 auto;padding:0 20px}
+.tp-narrow{max-width:760px;margin:0 auto}
+.tp-top{position:sticky;top:0;z-index:50;background:#DC2626;color:#fff;text-align:center;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px}
+.tp-sec{padding:64px 0}
+.tp-sec.tp-a{background:#060D1A}
+.tp-sec.tp-b{background:#091122;border-top:1px solid #1E293B;border-bottom:1px solid #1E293B}
+.tp-h1{font-weight:800;text-transform:uppercase;color:#fff;font-size:30px;line-height:1.15;text-align:center;margin:18px 0 18px}
+.tp-h2{font-weight:800;text-transform:uppercase;color:#fff;font-size:24px;line-height:1.2;text-align:center;margin:0 0 14px}
+.tp-grad{background:linear-gradient(90deg,#34D399,#6EE7B7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tp-kick{display:block;text-align:center;color:#34D399;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.tp-sub{text-align:center;color:#94A3B8;margin:0 auto 28px;max-width:640px}
+.tp-pill{display:flex;width:max-content;max-width:100%;margin:0 auto;align-items:center;gap:8px;border:1px solid rgba(16,185,129,.4);background:rgba(16,185,129,.1);color:#6EE7B7;border-radius:999px;padding:7px 16px;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+.tp-box{background:rgba(30,41,59,.55);border:1px solid #1E293B;border-radius:16px;padding:16px 20px;text-align:center;color:#E2E8F0;max-width:640px;margin:0 auto 28px}
+.tp-frame{background:#0F172A;border:1px solid #1E293B;border-radius:18px;padding:10px;margin:0 auto;max-width:620px}
+.tp-frame img{display:block;width:100%;height:auto;border-radius:12px}
+.tp-p{color:#94A3B8;text-align:center;max-width:680px;margin:26px auto}
+.tp-p b{color:#fff}
+.tp-btn{display:block;width:100%;max-width:520px;margin:0 auto;text-align:center;text-decoration:none;background:#10B981;color:#020617;font-weight:900;font-size:16px;letter-spacing:.04em;text-transform:uppercase;border-radius:12px;padding:18px 18px;box-shadow:0 10px 30px rgba(16,185,129,.25)}
+.tp-btn.tp-buy{background:#00923F;color:#fff;box-shadow:0 10px 30px rgba(0,146,63,.3)}
+.tp-pulse{animation:tp-pulse 2.2s ease-in-out infinite}
+@keyframes tp-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.tp-note{text-align:center;color:#94A3B8;font-size:13px;margin-top:12px}
+.tp-hr{border:0;border-top:1px solid #1E293B;margin:48px 0}
+.tp-marq{overflow:hidden;margin-top:28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.tp-track{display:flex;gap:14px;width:max-content;animation:tp-marq 38s linear infinite}
+.tp-track img{width:220px;height:auto;border-radius:12px;border:1px solid #1E293B;display:block}
+@keyframes tp-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tp-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tp-card{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:24px}
+.tp-card h3{font-weight:800;text-transform:uppercase;font-size:18px;margin:0 0 16px}
+.tp-no h3{color:#FDA4AF}.tp-no{border-color:rgba(220,38,38,.45);background:rgba(76,5,25,.35)}
+.tp-si h3{color:#6EE7B7}.tp-si{border-color:rgba(16,185,129,.45);background:rgba(6,78,59,.25)}
+.tp-list{list-style:none;margin:0;padding:0}
+.tp-list li{position:relative;padding:8px 0 8px 32px;color:#E2E8F0;border-bottom:1px solid rgba(51,65,85,.5)}
+.tp-list li:last-child{border-bottom:0}
+.tp-list li:before{position:absolute;left:0;top:8px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}
+.tp-x li:before{content:'✕';background:rgba(220,38,38,.2);color:#F87171}
+.tp-v li:before{content:'✓';background:rgba(16,185,129,.2);color:#34D399}
+.tp-prof{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tp-prof div{background:#0F172A;border:1px solid #1E293B;border-left:4px solid #10B981;border-radius:0;padding:16px 18px;font-weight:700;font-size:14px;text-transform:uppercase;color:#E2E8F0;line-height:1.45}
+.tp-timer{display:flex;justify-content:center;align-items:center;gap:10px;margin:22px 0 28px}
+.tp-timer .tp-t{background:#0F172A;border:1px solid #334155;border-radius:14px;min-width:92px;padding:12px 8px;text-align:center}
+.tp-timer b{display:block;font-size:40px;font-weight:800;color:#fff;line-height:1}
+.tp-timer small{font-size:11px;letter-spacing:.12em;color:#94A3B8;font-weight:700}
+.tp-timer .tp-dots{font-size:34px;font-weight:800;color:#F87171}
+.tp-wins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tp-win{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:20px}
+.tp-win .tp-ic{width:38px;height:38px;border-radius:50%;background:rgba(16,185,129,.15);color:#34D399;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.tp-win p{margin:0;color:#E2E8F0;font-size:15px}
+.tp-get{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.tp-bon{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tp-bcard{background:#0F172A;border:1px solid #1E293B;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.tp-bcard img{width:100%;height:auto;display:block}
+.tp-bcard .tp-bb{padding:20px}
+.tp-tag{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12px;font-weight:800;text-transform:uppercase}
+.tp-tag span:first-child{color:#94A3B8;text-decoration:line-through}
+.tp-tag span:last-child{background:#10B981;color:#020617;border-radius:999px;padding:3px 10px}
+.tp-bcard h3{margin:0 0 6px;color:#fff;font-size:18px;font-weight:800}
+.tp-bcard h4{margin:0 0 12px;color:#34D399;font-size:12px;letter-spacing:.06em;font-weight:800;text-transform:uppercase}
+.tp-bcard p{color:#94A3B8;font-size:14px;margin:0 0 12px}
+.tp-bcard .tp-list li{font-size:14px;padding:6px 0 6px 28px}
+.tp-bcard .tp-list li:before{width:18px;height:18px;font-size:10px;top:7px}
+#tp-offer{scroll-margin-top:24px}
+.tp-offer{max-width:620px;margin:0 auto;background:#0F172A;border:2px solid #10B981;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(16,185,129,.15)}
+.tp-ribbon{background:#10B981;color:#020617;text-align:center;font-weight:900;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:10px}
+.tp-ob{padding:26px 24px}
+.tp-ob h3{text-align:center;color:#fff;font-weight:800;font-size:24px;text-transform:uppercase;margin:0 0 4px}
+.tp-ob .tp-mini{text-align:center;color:#34D399;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.tp-price{text-align:center;margin:22px 0 6px}
+.tp-old{color:#94A3B8;font-size:16px}
+.tp-old s{color:#F87171}
+.tp-save{display:inline-block;margin-left:8px;background:rgba(220,38,38,.18);color:#FDA4AF;border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800}
+.tp-big{display:block;font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:64px;line-height:1.05;color:#fff;margin:8px 0 2px}
+.tp-once{text-align:center;color:#94A3B8;font-size:13px;margin-bottom:20px}
+.tp-bonbox{border:2px dashed rgba(16,185,129,.55);border-radius:14px;padding:14px 16px;margin:16px 0 4px;background:rgba(16,185,129,.06)}
+.tp-bonbox p{margin:4px 0;color:#E2E8F0;font-size:14px}
+.tp-bonbox .tp-tot{color:#6EE7B7;font-weight:800;margin-top:8px}
+.tp-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;color:#94A3B8;font-size:12px;margin-top:14px}
+.tp-gar{background:#FFFDF9;color:#0F172A;padding:64px 0;border-top:1px solid #E2E8F0}
+.tp-gar .tp-gin{display:flex;gap:28px;align-items:center;max-width:820px;margin:0 auto}
+.tp-seal{flex:0 0 150px;height:150px;border-radius:50%;background:#10B981;color:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-weight:800;border:6px double #fff;box-shadow:0 0 0 4px #10B981}
+.tp-seal small{font-size:10px;letter-spacing:.08em}
+.tp-seal b{font-size:30px;line-height:1}
+.tp-gar h2{color:#0F172A;text-align:left;font-weight:800;text-transform:uppercase;font-size:24px;margin:0 0 10px}
+.tp-gar p{margin:0;color:#334155}
+.tp-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tp-step{background:#0F172A;border:1px solid #1E293B;border-radius:16px;padding:20px}
+.tp-step .tp-n{font-size:30px;font-weight:800;color:#10B981;line-height:1}
+.tp-step h3{color:#fff;font-size:16px;font-weight:800;margin:10px 0 6px}
+.tp-step p{color:#94A3B8;font-size:14px;margin:0 0 12px}
+.tp-step span{display:inline-block;font-size:11px;font-weight:800;color:#6EE7B7;background:rgba(16,185,129,.12);border-radius:999px;padding:3px 10px;text-transform:uppercase;letter-spacing:.05em}
+.tp-faq details{background:#0F172A;border:1px solid #1E293B;border-radius:14px;margin-bottom:10px}
+.tp-faq summary{cursor:pointer;list-style:none;padding:16px 46px 16px 18px;font-weight:700;color:#fff;position:relative}
+.tp-faq summary::-webkit-details-marker{display:none}
+.tp-faq summary:after{content:'+';position:absolute;right:18px;top:12px;font-size:22px;color:#34D399}
+.tp-faq details[open] summary:after{content:'–'}
+.tp-faq details p{margin:0;padding:0 18px 16px;color:#94A3B8}
+.tp-final{background:linear-gradient(180deg,#091122 0%,#040812 100%);padding:72px 0;text-align:center}
+.tp-final .tp-btn{border-radius:16px}
+.tp-foot{background:#030712;border-top:1px solid #0F172A;color:#64748B;font-size:12px;padding:44px 0;text-align:center}
+.tp-logo{width:44px;height:44px;border-radius:12px;background:#10B981;color:#020617;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.tp-foot h4{color:#E2E8F0;font-size:13px;letter-spacing:.08em;margin:0 0 22px;text-transform:uppercase}
+.tp-foot h5{color:#94A3B8;font-size:12px;letter-spacing:.08em;margin:0 0 8px;text-transform:uppercase}
+.tp-foot p{max-width:720px;margin:0 auto 18px;line-height:1.7}
+@media(min-width:900px){.tp-h1{font-size:46px}.tp-h2{font-size:34px}.tp-track img{width:260px}}
+@media(max-width:820px){.tp-cols,.tp-get{grid-template-columns:1fr}.tp-wins,.tp-bon{grid-template-columns:1fr}.tp-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tp-sec{padding:48px 0}.tp-in{padding:0 16px}.tp-h1{font-size:27px}.tp-h2{font-size:22px}.tp-prof,.tp-steps{grid-template-columns:1fr}.tp-big{font-size:56px}.tp-gar .tp-gin{flex-direction:column;text-align:center}.tp-gar h2{text-align:center}.tp-timer .tp-t{min-width:80px}.tp-timer b{font-size:34px}.tp-card{padding:20px}.tp-ob{padding:22px 16px}}
+@media(max-width:380px){.tp-h1{font-size:24px}.tp-h2{font-size:20px}.tp-btn{font-size:14px;padding:16px 12px}.tp-big{font-size:48px}.tp-top{font-size:11px}.tp-pill{font-size:10px;padding:6px 12px}.tp-track img{width:180px}}
+</style>
+<div class="tp-wrap">
+<div class="tp-top">Special offer today only — <span id="tp-date">October 28, 2026</span></div>
+<section class="tp-sec tp-a" style="padding-top:32px">
+<div class="tp-in">
+<div class="tp-pill">🔒 100% safe and secure checkout</div>
+<h1 class="tp-h1">across 100+ visual cards <span class="tp-grad">on referred pain</span> and trigger points</h1>
+<div class="tp-box">Stop rote memorization. See muscles, trigger points, and referral patterns at a glance—in seconds.</div>
+<div class="tp-frame"><img alt="100+ visual cards: referred pain and trigger points" loading="eager" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg-usa-1.jpg"/></div>
+<p class="tp-p">An intuitive, visual reference library displaying <b>muscles, potential trigger points, and common referral patterns</b>, organized by body region. Look them up in seconds during clinical practice, study, or exams—no more wasting hours flipping through bulky textbooks and scattered notes.</p>
+<a class="tp-btn tp-pulse" href="#tp-offer">Get instant access now ↓</a>
+<div class="tp-note">✉️ Instant access via email</div>
+<hr class="tp-hr"/>
+<h2 class="tp-h2">See exactly what you get.</h2>
+<div class="tp-frame" style="max-width:520px"><img alt="Visual cards on tablet and in print" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg-usa-2.jpg"/></div>
+<div class="tp-marq"><div class="tp-track">
+<img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg1.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg2.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg3.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg4.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg5.jpg"/>
+<img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg1.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg2.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg3.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg4.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg5.jpg"/>
+</div></div>
+</div>
+</section>
+<section class="tp-sec tp-a" style="background:#060D1A;padding-top:16px">
+<div class="tp-in">
+<h2 class="tp-h2">From tedious searching to fast, visual knowledge</h2>
+<p class="tp-sub">Compare your daily routine before and after the Trigger Point Atlas.</p>
+<div class="tp-cols">
+<div class="tp-card tp-no"><h3>Without the visual cards</h3><ul class="tp-list tp-x">
+<li>Information scattered across dozens of heavy textbooks, slides, and notes.</li>
+<li>You constantly struggle to recall which muscle corresponds to which pain area.</li>
+<li>Valuable time wasted searching for anatomy diagrams during or between consultations.</li>
+<li>Frustrating to explain myofascial referral pathways clearly and simply to your patients.</li>
+<li>Confusion is common between where the patient feels pain and which muscle is typically responsible for that referral pattern.</li>
+<li>Hours lost drafting your own study notes and summary charts from scratch.</li>
+<li>Anxiety before practical palpation exams, internships, and clinical postings.</li>
+<li>Bulky, heavy textbooks that are impossible to consult quickly on your phone.</li>
+<li>Stress, wasted time, and recurring diagnostic uncertainty.</li>
+</ul></div>
+<div class="tp-card tp-si"><h3>With the visual cards</h3><ul class="tp-list tp-v">
+<li>Over 100 anatomical cards, systematically organized by body region.</li>
+<li>Lightning-fast visual reference for direct clinical application.</li>
+<li>Muscles, trigger points, and referral pathways, presented with crystal clarity.</li>
+<li>Clear visual landmarks for palpation, taut bands, and pain referral zones.</li>
+<li>Logical structure: head, cervical spine, upper limb, spine, pelvis, leg, and foot.</li>
+<li>100% digital material you can open instantly on your phone, tablet, or computer.</li>
+<li>Quick revision before exams, practicals, clinical shifts, or challenging cases.</li>
+<li>A lifetime reference library at your fingertips, with 300 DPI files optimized for printing.</li>
+<li>Accuracy, clinical confidence, and hours of saved time.</li>
+</ul></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">Practitioners and students</span>
+<h2 class="tp-h2">The Trigger Point Atlas is for you if:</h2>
+<div class="tp-prof" style="margin-top:26px">
+<div>You are a physiotherapist, osteopath, chiropractor, massage therapist, sports trainer, or healthcare student.</div>
+<div>You struggle to memorize so many complex myofascial referral patterns.</div>
+<div>You sometimes find it difficult to connect the area where pain presents to the muscles typically linked to that referral pattern.</div>
+<div>You lose time cross-referencing multiple separate textbooks and PDFs while studying or treating.</div>
+<div>Spending valuable hours creating your own revision charts, summaries, and anatomy sketches.</div>
+<div>You want a high-quality visual tool to clearly explain referred pain to your patients right by the treatment table.</div>
+<div>You want instant access to the cards on your phone, tablet, or laptop, wherever you are.</div>
+<div>You are just entering the musculoskeletal field, or preparing for clinical exams, practicals, and supervised training.</div>
+</div>
+<p class="tp-p">If you recognized yourself in at least two of these points, the Trigger Point Atlas was designed specifically to transform and simplify your clinical practice and studies.</p>
+</div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in tp-narrow">
+<span class="tp-kick" style="color:#F87171">Limited introductory price</span>
+<h2 class="tp-h2">How many more hours will you spend searching through scattered textbooks?</h2>
+<p class="tp-sub" style="margin-bottom:0">Take advantage of this limited-time promotional price</p>
+<div aria-live="polite" class="tp-timer"><div class="tp-t"><b id="tp-mm">15</b><small>MINUTES</small></div><span class="tp-dots">:</span><div class="tp-t"><b id="tp-ss">00</b><small>SECONDS</small></div></div>
+<a class="tp-btn tp-buy" href="#tp-offer">Get instant access and start using it today ↓</a>
+<div class="tp-note">Instant access upon confirmation • Direct download</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">What you gain in practice</span>
+<h2 class="tp-h2">How your daily practice transforms</h2>
+<div class="tp-wins" style="margin-top:26px">
+<div class="tp-win"><div class="tp-ic">1</div><p>All essential clinical information in one place: crisp, quick-reference cards between consultations.</p></div>
+<div class="tp-win"><div class="tp-ic">2</div><p>Save valuable time: no more digging through thick textbooks to look up a muscle or trigger point referral.</p></div>
+<div class="tp-win"><div class="tp-ic">3</div><p>From the illustrations, you'll easily understand where common trigger points are located and how referred pain patterns present.</p></div>
+<div class="tp-win"><div class="tp-ic">4</div><p>As a quick visual reference, you review the referral pattern and anatomical landmarks in seconds.</p></div>
+<div class="tp-win"><div class="tp-ic">5</div><p>You learn much faster visually: everything is organized by body region, making the atlas exceptionally practical.</p></div>
+</div>
+<div class="tp-marq"><div class="tp-track" style="animation-duration:44s">
+<img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg3.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg4.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg5.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg1.jpg"/><img alt="Sample card" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg2.jpg"/>
+<img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg3.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg4.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg5.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg1.jpg"/><img alt="" aria-hidden="true" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg2.jpg"/>
+</div></div>
+</div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in">
+<span class="tp-kick">Instant access after ordering</span>
+<h2 class="tp-h2">What you get</h2>
+<div class="tp-get" style="margin-top:26px">
+<ul class="tp-list tp-v">
+<li>Over 100 visual cards on referred pain and trigger points.</li>
+<li>Methodically organized by anatomical body region.</li>
+<li>Detailed cards for the head, face, and cervical region.</li>
+<li>Cards for the shoulder, arm, forearm, and hand.</li>
+<li>Cards for the thoracic and lumbar spine.</li>
+<li>Cards for the pelvis, hip, and gluteal muscles.</li>
+<li>Cards for the thigh, knee, lower leg, ankle, and foot.</li>
+<li>High-precision visual identification of major muscles.</li>
+<li>Referred pain patterns mapped on 3D anatomical models.</li>
+<li>Visual markers for bony landmarks and palpation lines.</li>
+<li>Clinical index to locate any muscle in under 10 seconds.</li>
+<li>Interactive, ultra-HD digital PDF files, calibrated for printing.</li>
+<li>100% compatible with phone, tablet, and computer.</li>
+</ul>
+<div class="tp-frame"><img alt="The complete card library" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg-usa-1.jpg"/></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in">
+<span class="tp-kick">And that's not all… you also get</span>
+<h2 class="tp-h2">3 exclusive free bonuses (worth ₹4,297)</h2>
+<div class="tp-bon" style="margin-top:26px">
+<div class="tp-bcard"><img alt="Bonus 1: Quick Muscle Assessment Forms" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/b1-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Worth ₹1,299</span><span>Free</span></div>
+<h3>Bonus 1 · Quick Muscle Assessment Forms</h3>
+<h4>Printable or tablet-fillable clinical assessment sheets</h4>
+<p>Ready-to-use clinical templates to record pain areas, pain intensity (VAS scale), aggravating movements, myofascial history, and clinical findings in seconds. Structure your assessments with total confidence.</p>
+<ul class="tp-list tp-v"><li>Muscle-tendon assessment organized by body region</li><li>Visual Analog Scale for pain intensity</li><li>Checklist for palpating taut bands and trigger points</li><li>Interactive digital and printable A4 format</li></ul>
+</div></div>
+<div class="tp-bcard"><img alt="Bonus 2: Visual Palpation Anatomy Guide" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/b2-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Worth ₹1,599</span><span>Free</span></div>
+<h3>Bonus 2 · Visual Palpation Anatomy Guide</h3>
+<h4>Illustrated atlas of bony landmarks and muscle pathways</h4>
+<p>A richly illustrated guide with distinct bony landmarks, tension vectors, and recommended hand placements, so you can locate muscles, tendons, and trigger points in daily practice without hesitation.</p>
+<ul class="tp-list tp-v"><li>Clinical photographs with overlaid anatomical landmarks</li><li>Recommended hand placements for every muscle group</li><li>Common palpation mistakes to avoid</li><li>Ideal for quick revision before clinic rounds or exams</li></ul>
+</div></div>
+<div class="tp-bcard"><img alt="Bonus 3: High-Resolution Educational Posters for Your Clinic" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/b3-pg.jpg"/><div class="tp-bb">
+<div class="tp-tag"><span>Worth ₹1,399</span><span>Free</span></div>
+<h3>Bonus 3 · High-Resolution Educational Posters for Your Clinic</h3>
+<h4>Educational charts to clearly explain to patients where their pain originates</h4>
+<p>Ultra-high-resolution (300 DPI) charts you can print and frame in your clinic or treatment room. They clearly illustrate how pain felt in the arm can often originate from structures in the neck or shoulder.</p>
+<ul class="tp-list tp-v"><li>Professional 300 DPI resolution in A3 / A2 size</li><li>Clean, aesthetic medical design that elevates your clinic's professional look</li><li>Instantly improves patient understanding and compliance</li><li>Includes the 6 most common referred pain patterns</li></ul>
+</div></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-a" id="tp-offer">
+<div class="tp-in">
+<span class="tp-kick" style="color:#F87171">⏰ Last chance — limited offer today</span>
+<h2 class="tp-h2">The Complete Deluxe Package</h2>
+<p class="tp-sub">Instant digital access upon confirmation • 7-day money-back guarantee</p>
+<div class="tp-offer">
+<div class="tp-ribbon">🔥 Introductory offer · today only</div>
+<div class="tp-ob">
+<h3>Complete Deluxe Package</h3>
+<div class="tp-mini">Trigger Point Atlas · 100+ Visual Cards</div>
+<div class="tp-frame" style="padding:6px;margin-bottom:18px"><img alt="Trigger Point Atlas – Complete Deluxe Package" loading="lazy" src="https://recursos-pdf-hub.github.io/entregas/triggerpont-in/landing-img/pg-usa-1.jpg"/></div>
+<ul class="tp-list tp-v">
+<li>📚 Full library: 100+ detailed visual cards</li>
+<li>🧭 All body regions: head, cervical spine, shoulder, back, pelvis, lower limb</li>
+<li>🔎 Alphabetical clinical index and symptom finder in 10 seconds</li>
+<li>📱 Mobile-optimized and premium 300 DPI print-ready</li>
+<li>♾️ Instant access and free lifetime updates</li>
+</ul>
+<div class="tp-bonbox">
+<p>🎁 Bonus 1: Quick Muscle Assessment Forms</p>
+<p>🎁 Bonus 2: Visual Palpation Anatomy Guide</p>
+<p>🎁 Bonus 3: High-Resolution Educational Posters for Your Clinic</p>
+<p class="tp-tot">Total bonus value: ₹4,297 – yours free today</p>
+</div>
+<div class="tp-price">
+<div class="tp-old"><s>{{original_price}}</s> regularly <span class="tp-save">Save {{savings}}</span></div>
+<span class="tp-big">{{price}}</span>
+</div>
+<div class="tp-once">One-time secure payment · Lifetime access</div>
+<a class="tp-btn tp-buy tp-pulse" href="/checkout">Get the Complete Deluxe Package – {{price}}</a>
+<div class="tp-trust"><span>🔒 100% SSL-encrypted payment</span><span>⚡ Instant delivery via email</span><span>🛡️ 7-day guarantee</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tp-gar">
+<div class="tp-in"><div class="tp-gin">
+<div class="tp-seal"><small>100% SATISFACTION</small><b>7 DAYS</b><small>GUARANTEE</small></div>
+<div><h2>Unconditional 7-day guarantee</h2>
+<p>You are protected by a complete, unconditional 7-day guarantee. If you feel the visual atlas doesn't meet your expectations in your studies or clinical work, simply email us within this period. You'll get a swift, full refund with no hassle or explanations required.</p></div>
+</div></div>
+</section>
+<section class="tp-sec tp-a">
+<div class="tp-in">
+<h2 class="tp-h2">Order now for instant access</h2>
+<p class="tp-sub">A seamless, instant, and secure process in 4 simple steps.</p>
+<div class="tp-steps">
+<div class="tp-step"><div class="tp-n">01</div><h3>Click the button</h3><p>Select the Complete Deluxe Package ({{price}}).</p><span>Ready in 1 minute</span></div>
+<div class="tp-step"><div class="tp-n">02</div><h3>100% secure payment</h3><p>Pay securely via 256-bit SSL encrypted checkout (Debit/Credit Card, Apple Pay, Google Pay).</p><span>Ready in 1 minute</span></div>
+<div class="tp-step"><div class="tp-n">03</div><h3>Instant delivery</h3><p>Within 60 seconds, you'll receive your personal, secure download link via email.</p><span>Ready in 1 minute</span></div>
+<div class="tp-step"><div class="tp-n">04</div><h3>Immediate clinical application</h3><p>Browse the cards instantly on your phone or tablet, or print the high-resolution charts for your treatment room.</p><span>Ready in 1 minute</span></div>
+</div>
+</div>
+</section>
+<section class="tp-sec tp-b">
+<div class="tp-in tp-narrow">
+<span class="tp-kick">Clear answers</span>
+<h2 class="tp-h2">Frequently Asked Questions</h2>
+<p class="tp-sub">Everything you need to know before ordering the visual cards.</p>
+<div class="tp-faq">
+<details><summary>Do I need prior experience in manual therapy or myofascial trigger points?</summary><p>Not at all. The cards are designed with a dual approach: intuitive visual clarity for students and beginners (color-coded anatomical landmarks and clearly mapped referral patterns), and advanced clinical precision for seasoned practitioners (exact innervation, anatomical origin and insertion, and targeted palpation cues).</p></details>
+<details><summary>Is this material suitable for healthcare and physiotherapy students?</summary><p>Yes, it is the ideal revision tool for physiotherapy, osteopathy, chiropractic, medical, sports science, and massage therapy students. You'll save hundreds of hours summarizing complex textbooks and prepare effectively for practical palpation exams and clinical internships.</p></details>
+<details><summary>Is the content digital or printed?</summary><p>100% digital material with instant access as ultra-high-resolution (300 DPI) interactive PDFs. Carry it anywhere on your phone, tablet, or laptop, and print any chart for your clinic.</p></details>
+<details><summary>How do I receive access after ordering?</summary><p>As soon as your payment is processed, you'll immediately receive a confirmation email with your personal, secure access link. In less than 60 seconds, you can start browsing your cards.</p></details>
+<details><summary>Is lifetime access guaranteed?</summary><p>Yes! With the Complete Deluxe Package, you get unlimited lifetime access to the entire library with no subscriptions or recurring fees. All future updates and new charts are included completely free.</p></details>
+<details><summary>Can I print the anatomy cards for my clinic?</summary><p>Absolutely! Every PDF file is crafted in ultra-sharp 300 DPI high resolution. You can print them in standard A4 size for your binder, or in larger A3/A2 format as wall posters for your treatment room.</p></details>
+<details><summary>Does this material replace accredited education or a degree?</summary><p>No. This visual atlas is an educational clinical reference designed to reinforce your knowledge and streamline your daily practice. It does not replace a university degree, professional licensing, or formal diagnostic training.</p></details>
+<details><summary>Do the cards reveal the exact cause of every patient's pain?</summary><p>The cards accurately document the myofascial referred pain patterns described in scientific literature (Travell and Simons' foundational work). However, patient pain must always be assessed through thorough case history and differential diagnosis to rule out red flags.</p></details>
+<details><summary>How does the money-back guarantee work?</summary><p>You are protected by an unconditional 7-day money-back guarantee. If for any reason the material does not fully meet your expectations, simply let us know, and you'll receive an immediate, full refund with no questions asked.</p></details>
+</div>
+</div>
+</section>
+<section class="tp-final">
+<div class="tp-in tp-narrow">
+<span class="tp-kick">Transform your clinical practice</span>
+<h2 class="tp-h2">Start now</h2>
+<p class="tp-sub">Instant digital access to the full library of over 100 visual cards on referred pain and trigger points.</p>
+<a class="tp-btn" href="#tp-offer">Get the Deluxe Package ({{price}}) ↓</a>
+<div class="tp-note">View the offer</div>
+<div class="tp-trust"><span>🔒 256-bit encrypted checkout</span><span>🛡️ 7-day money-back guarantee</span><span>✉️ Instant delivery via email</span></div>
+</div>
+</section>
+<footer class="tp-foot">
+<div class="tp-in">
+<div class="tp-logo">TP</div>
+<h4>Trigger Point Atlas: Referred Pain and Trigger Points</h4>
+<h5>Legal and medical disclaimer</h5>
+<p>This anatomical study and reference material is designed for continuing education, student revision, clinical reference, and patient education. It does not constitute individualized medical advice, provide medical diagnoses, or replace an examination by a licensed healthcare professional. The application of manual therapy and palpation techniques is the sole responsibility of each practitioner and must remain within their professional and legal scope of practice.</p>
+<p>© 2026 Trigger Point Atlas. All rights reserved. Created for healthcare professionals.</p>
+</div>
+</footer>
+</div>
+<script>
+(function(){
+ try{var d=new Date(),m=['January','February','March','April','May','June','July','August','September','October','November','December'];var el=document.getElementById('tp-date');if(el)el.textContent=m[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();}catch(e){}
+ var mm=document.getElementById('tp-mm'),ss=document.getElementById('tp-ss');if(!mm||!ss)return;
+ var end;try{end=parseInt(localStorage.getItem('tp_end')||'0',10);}catch(e){end=0}
+ var now=Date.now();if(!end||end<now){end=now+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}}
+ function tick(){var r=Math.max(0,end-Date.now());if(r===0){end=Date.now()+15*60*1000;try{localStorage.setItem('tp_end',String(end));}catch(e){}r=15*60*1000;}var s=Math.floor(r/1000);mm.textContent=String(Math.floor(s/60)).padStart(2,'0');ss.textContent=String(s%60).padStart(2,'0');}
+ tick();setInterval(tick,1000);
+})();
+</script>
