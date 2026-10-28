@@ -1,0 +1,43 @@
+<div id="hm">
+<style>
+#hm{max-width:520px;margin:0 auto;padding:20px 14px 30px;font-family:Inter,Arial,Helvetica,sans-serif;text-align:center;background:#F7F6F2;color:#202525;box-sizing:border-box}
+#hm *{box-sizing:border-box}
+#hm .hm-kick{display:inline-block;background:#183D46;color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 13px;border-radius:999px;margin:0 0 12px}
+#hm h1{font-family:'Noto Serif Display',Georgia,serif;font-size:25px;line-height:1.25;margin:0 0 10px;color:#183D46;font-weight:700}
+#hm .hm-sub{font-size:15px;line-height:1.55;margin:0 0 18px;color:#5D6664}
+#hm .hm-box{background:#ffffff;border:1px solid #E3DED3;border-top:5px solid #C2AE95;border-radius:16px;padding:18px 14px 14px;margin:0 0 16px;box-shadow:0 6px 22px rgba(24,61,70,.10);position:relative}
+#hm .hm-tag{position:absolute;top:-15px;right:12px;background:#C2AE95;color:#183D46;font-weight:900;font-size:13px;padding:6px 11px;border-radius:10px;transform:rotate(3deg);box-shadow:0 3px 8px rgba(0,0,0,.15)}
+#hm .hm-name{display:block;font-family:'Noto Serif Display',Georgia,serif;font-weight:900;font-size:18px;line-height:1.3;color:#183D46;margin:4px 0 4px}
+#hm ul{list-style:none;padding:0;margin:10px 0 0;text-align:left}
+#hm li{font-size:14px;line-height:1.45;padding:8px 0 8px 26px;border-top:1px solid #E3DED3;position:relative}
+#hm li:before{content:'✓';position:absolute;left:4px;top:8px;color:#15803d;font-weight:700}
+#hm .hm-price{font-size:18px;margin:6px 0 4px;color:#5D6664}
+#hm .hm-price s{opacity:.75}
+#hm .hm-price b{font-family:'Noto Serif Display',Georgia,serif;font-size:30px;color:#15803d;font-weight:700}
+#hm .hm-line{font-size:14px;margin:0 0 14px;color:#5D6664}
+#hm .hm-btn{display:block;width:100%;min-height:64px;padding:14px;margin:0 0 10px;border:0;border-radius:12px;color:#fff;font-size:17px;line-height:1.3;font-weight:800;cursor:pointer;font-family:inherit}
+#hm .hm-si{background:linear-gradient(#22c55e,#15803d);box-shadow:0 4px 0 #0f5e2c}
+#hm .hm-no{background:linear-gradient(#ef4444,#b91c1c);box-shadow:0 4px 0 #7f1d1d;font-size:15px}
+#hm .hm-safe{font-size:12.5px;line-height:1.6;color:#5D6664;margin:8px 0 0}
+#hm .hm-dis{font-size:11px;line-height:1.5;color:#5D6664;margin:10px 0 0;opacity:.85}
+
+#hm .hm-img{display:block;width:100%;max-width:340px;margin:0 auto 14px;border-radius:14px}
+#hm .hm-cierre{font-size:14.5px;line-height:1.55;color:#202525;background:#F4EDE4;border-radius:12px;padding:12px 14px;margin:0 0 14px;text-align:left}
+#hm .hm-gar{font-size:13.5px;color:#5D6664;margin:0 0 14px}
+</style>
+<span class="hm-kick">Ένα βήμα ακόμα πριν ανοίξεις τον άτλαντα, {first-name}</span>
+<h1>Καμία δύσκολη στιγμή να μη σε μπλοκάρει στη μέση της συνεδρίας 🤝</h1>
+<p class="hm-sub">Τα Διαγράμματα Ροής Συνεδρίας σου δείχνουν ποιον χάρτη να βγάλεις. Όχι τι να κάνεις αν ο θεραπευόμενος βάλει τα κλάματα, σωπάσει, θυμώσει ή πει κάτι που σε υποχρεώνει να τον παραπέμψεις. Αυτό το πακέτο σε καθοδηγεί περίπτωση με περίπτωση και σου δείχνει πότε μια κατάσταση δεν είναι για σένα.</p>
+<img class="hm-img" src="https://recursos-pdf-hub.github.io/entregas/psios-gr/landing-img/upsell-oto2.png" alt="Σίγουρος με Κάθε Θεραπευόμενο™">
+<div class="hm-box">
+<span class="hm-name">🤝 Σίγουρος με Κάθε Θεραπευόμενο™</span>
+<ul><li>30 παραδείγματα περιπτώσεων βήμα βήμα</li><li>Δύσκολες στιγμές στη συνεδρία: 25 καταστάσεις</li><li>Σημάδια κινδύνου: πότε να παραπέμψεις τον θεραπευόμενο</li><li>Πρότυπο για συζήτηση περιπτώσεων και εποπτεία</li><li>Τα σημάδια κινδύνου σε μία σελίδα, για τον τοίχο του γραφείου σου</li><li>🎁 Μυστικό μπόνους: θα το ανακαλύψεις μέσα</li></ul>
+</div>
+<p class="hm-price"><b>{price}</b></p>
+<p class="hm-cierre">Σε έναν μήνα, ή κάθε νέος θεραπευόμενος θα είναι μια περίπτωση που ξέρεις πώς να την πιάσεις, ή θα συνεχίσεις να σφίγγεται το στομάχι σου κάθε φορά που μια συνεδρία δεν πάει όπως την είχες σχεδιάσει.</p>
+<p class="hm-gar">🛡️ Εγγύηση 7 ημερών. Αν δεν σου ταιριάζει, σου επιστρέφουμε όλα τα χρήματα.</p>
+<button type="button" data-pp-accept class="hm-btn hm-si">✅ ΝΑΙ, θέλω να νιώθω σίγουρος με κάθε θεραπευόμενο 🤝</button>
+<button type="button" data-pp-decline class="hm-btn hm-no">Όχι, ευχαριστώ. Τις δύσκολες στιγμές θα τις βγάλω πέρα όπως μπορώ</button>
+<p class="hm-safe">🔒 Ασφαλής πληρωμή · ⚡ Άμεση πρόσβαση · ✓ Εφάπαξ πληρωμή</p>
+<p class="hm-dis">Το υλικό έχει εκπαιδευτικό σκοπό και δεν αντικαθιστά τη διάγνωση, τη θεραπεία ή την αξιολόγηση από επαγγελματία.</p>
+</div>
