@@ -1,4 +1,4 @@
-<div id="hm">
+<div id="hm" lang="el">
 <style>
 #hm{max-width:520px;margin:0 auto;padding:20px 14px 30px;font-family:Inter,Arial,Helvetica,sans-serif;text-align:center;background:#F7F6F2;color:#202525;box-sizing:border-box}
 #hm *{box-sizing:border-box}
