@@ -247,7 +247,7 @@ html{scroll-behavior:smooth;background:#fff}
 <div class="ps-hero__head">
 <span class="ps-eyebrow">Terapi seansları için görsel kütüphane</span>
 <h1>Terapötik Zihin Haritaları</h1>
-<p class="ps-hero__sub">Duyguları, örüntüleri, davranışları ve ilişkileri net, düzenli ve kolayca başvurulabilir bir şekilde anlamak için 250'den fazla harita içeren görsel bir atlas.</p>
+<p class="ps-hero__sub">Duyguları, örüntüleri, davranışları ve ilişkileri net, düzenli ve kolayca başvurulabilir bir şekilde anlamak için 190'dan fazla harita içeren görsel bir atlas.</p>
 <div class="ps-hero__cta" style="margin-top:26px"><a class="ps-btn ps-btn--lg" href="#ps-oferta">ŞİMDİ ERİŞMEK İSTİYORUM ↓</a></div></div>
 <figure class="ps-hero__figure">
 <!-- MOCKUP PRINCIPAL: mesa elegante de consultório com 8–12 mapas impressos sobrepostos (títulos legíveis: ANSIEDADE, DEPENDÊNCIA EMOCIONAL, AUTOSSABOTAGEM, LIMITES, CRÍTICO INTERNO, MEDO DE ABANDONO), tablet ao lado exibindo outro mapa e a capa do Atlas discretamente presente. O conteúdo das folhas deve ser visível. -->
