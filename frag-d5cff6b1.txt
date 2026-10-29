@@ -1,0 +1,1576 @@
+<style>
+
+    /* Variables de Color — Atlas Visual de Cortes Femeninos */
+
+    :root {
+
+      --primary: #3B1B39;         /* Berenjena profundo */
+
+      --primary-soft: #4A2348;    /* Berenjena algo más claro */
+
+      --secondary: #C9962C;       /* Dorado */
+
+      --secondary-light: #E3BE72; /* Dorado claro */
+
+      --secondary-rgb: 201, 150, 44;
+
+      --pink: #E01C82;            /* Magenta / rosa fuerte */
+
+      --pink-rgb: 224, 28, 130;
+
+      --black: #241124;
+
+      --white: #FFFFFF;
+
+      --cream: #FDF8F1;           /* Marfil cálido */
+
+      --paper: #FFFFFF;
+
+      --dark-gray: #4A3D49;
+
+      --muted: #8C7C89;
+
+      --border-soft: rgba(59,27,57,0.08);
+
+      --shadow: 0 14px 40px -20px rgba(36,17,36,0.28);
+
+      --shadow-lift: 0 20px 55px -18px rgba(201,150,44,0.30);
+
+      --transition: all 0.4s cubic-bezier(.4,0,.2,1);
+
+    }
+
+
+
+    #landing-mapa-visual * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: 'Inter', sans-serif;
+
+    }
+
+
+
+    #landing-mapa-visual {
+
+      color: var(--dark-gray);
+
+      background-color: var(--cream);
+
+      overflow-x: hidden;
+
+      font-size: 16px;
+
+      line-height: 1.65;
+
+      -webkit-font-smoothing: antialiased;
+
+    }
+
+
+
+    #landing-mapa-visual .container { max-width: 640px; margin: 0 auto; }
+
+    #landing-mapa-visual .container-large { max-width: 920px; margin: 0 auto; }
+
+    #landing-mapa-visual section { padding: 64px 22px; position: relative; }
+
+
+
+    #landing-mapa-visual h1, #landing-mapa-visual h2 {
+
+      font-family: 'Poppins', sans-serif;
+
+      color: var(--primary);
+
+      letter-spacing: -0.01em;
+
+      font-weight: 700;
+
+    }
+
+    #landing-mapa-visual h3, #landing-mapa-visual h4 {
+
+      font-family: 'Inter', sans-serif;
+
+      color: var(--primary);
+
+      letter-spacing: -0.005em;
+
+      font-weight: 700;
+
+    }
+
+    #landing-mapa-visual h2 {
+
+      font-size: 30px;
+
+      text-align: center;
+
+      margin-bottom: 14px;
+
+      font-weight: 800;
+
+      line-height: 1.22;
+
+    }
+
+
+
+    #landing-mapa-visual .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+
+      color: var(--pink);
+
+      margin-bottom: 14px;
+
+    }
+
+    #landing-mapa-visual .eyebrow::before {
+
+      content: '';
+
+      width: 20px;
+
+      height: 1px;
+
+      background: var(--pink);
+
+      display: inline-block;
+
+    }
+
+    #landing-mapa-visual .eyebrow.center { justify-content: center; }
+
+    #landing-mapa-visual .eyebrow.on-dark { color: var(--secondary-light); }
+
+    #landing-mapa-visual .eyebrow.on-dark::before { background: var(--secondary-light); }
+
+
+
+    /* Divisor dorado con punto — firma visual del Atlas */
+
+    #landing-mapa-visual .section-divider {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      margin: 0 0 28px;
+
+    }
+
+    #landing-mapa-visual .section-divider .line {
+
+      width: 38px;
+
+      height: 1px;
+
+      background: linear-gradient(90deg, transparent, var(--secondary));
+
+    }
+
+    #landing-mapa-visual .section-divider .line.right {
+
+      background: linear-gradient(90deg, var(--secondary), transparent);
+
+    }
+
+    #landing-mapa-visual .section-divider .dot {
+
+      width: 6px;
+
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: var(--secondary);
+
+      flex-shrink: 0;
+
+    }
+
+    #landing-mapa-visual .section-divider.on-dark .line { background: linear-gradient(90deg, transparent, var(--secondary-light)); }
+
+    #landing-mapa-visual .section-divider.on-dark .line.right { background: linear-gradient(90deg, var(--secondary-light), transparent); }
+
+    #landing-mapa-visual .section-divider.on-dark .dot { background: var(--secondary-light); }
+
+
+
+    /* Reveal on scroll */
+
+    #landing-mapa-visual .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .8s ease; }
+
+    #landing-mapa-visual .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+
+
+    /* HERO SECTION */
+
+    #landing-mapa-visual .hero {
+
+      text-align: center;
+
+      background:
+
+        radial-gradient(ellipse 100% 60% at 50% -12%, rgba(var(--secondary-rgb),0.22) 0%, transparent 60%),
+
+        radial-gradient(ellipse 70% 55% at 100% 105%, rgba(59,27,57,0.10) 0%, transparent 60%),
+
+        repeating-linear-gradient(135deg, rgba(var(--secondary-rgb),0.045) 0px, rgba(var(--secondary-rgb),0.045) 1px, transparent 1px, transparent 24px),
+
+        linear-gradient(180deg, #FCF7EC 0%, var(--cream) 35%, #E9DCE6 100%);
+
+      box-shadow: inset 0 0 140px rgba(36,17,36,0.06);
+
+      padding: 28px 20px 48px !important;
+
+      border-bottom: 1px solid var(--border-soft);
+
+    }
+
+    #landing-mapa-visual .hero h1 {
+
+      font-size: 29px;
+
+      font-weight: 900;
+
+      margin-bottom: 14px;
+
+      line-height: 1.22;
+
+      color: var(--black);
+
+    }
+
+    #landing-mapa-visual .hero h1 span { color: var(--pink); font-style: italic; }
+
+    #landing-mapa-visual .hero p.subtext {
+
+      font-size: 16px;
+
+      margin-bottom: 28px;
+
+      font-weight: 400;
+
+      color: var(--dark-gray);
+
+      max-width: 420px;
+
+      margin-left: auto;
+
+      margin-right: auto;
+
+    }
+
+    #landing-mapa-visual .hero-image {
+
+      margin: 0 auto 28px;
+
+      box-shadow: var(--shadow);
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      max-width: 380px;
+
+      border: 1px solid var(--border-soft);
+
+    }
+
+    #landing-mapa-visual .hero-image img { width: 100%; display: block; transition: var(--transition); }
+
+    #landing-mapa-visual .hero-image img:hover { transform: scale(1.03); }
+
+
+
+    /* Placeholder de imagen — reemplazar por <img src="tu-imagen.jpg" alt="..."> */
+
+    #landing-mapa-visual .img-ph {
+
+      width: 100%;
+
+      aspect-ratio: 4/5;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 16px;
+
+      background: linear-gradient(155deg, rgba(var(--secondary-rgb),0.18), rgba(var(--pink-rgb),0.08));
+
+      border: 1.5px dashed rgba(var(--secondary-rgb),0.6);
+
+    }
+
+    #landing-mapa-visual .img-ph span {
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 10.5px;
+
+      letter-spacing: 0.06em;
+
+      text-transform: uppercase;
+
+      color: var(--primary);
+
+      font-weight: 700;
+
+      line-height: 1.6;
+
+    }
+
+    #landing-mapa-visual .img-ph.ph-square { aspect-ratio: 1/1; }
+
+    #landing-mapa-visual .img-ph.ph-wide { aspect-ratio: 16/10; }
+
+
+
+    #landing-mapa-visual .trust-line {
+
+      text-align: center;
+
+      font-size: 12.5px;
+
+      font-weight: 700;
+
+      margin-top: 14px;
+
+      letter-spacing: 0.04em;
+
+      color: var(--muted);
+
+      text-transform: uppercase;
+
+    }
+
+    #landing-mapa-visual .trust-line .dot { margin: 0 8px; opacity: .5; }
+
+
+
+    /* GARANTIA */
+
+    #landing-mapa-visual .guarantee-badge {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background-color: var(--paper);
+
+      border: 1px solid rgba(var(--secondary-rgb),0.45);
+
+      border-radius: 22px;
+
+      padding: 30px 26px;
+
+      margin: 18px auto 0;
+
+      max-width: 440px;
+
+      gap: 14px;
+
+      text-align: center;
+
+      box-shadow: var(--shadow);
+
+    }
+
+    #landing-mapa-visual .guarantee-icon-circle {
+
+      width: 68px; height: 68px; border-radius: 50%;
+
+      background: var(--primary);
+
+      display: flex; align-items: center; justify-content: center;
+
+      margin: 0 auto 16px;
+
+      box-shadow: 0 10px 24px -8px rgba(59,27,57,0.4);
+
+    }
+
+    #landing-mapa-visual .guarantee-icon-circle i { color: var(--secondary-light); font-size: 28px; }
+
+
+
+    /* LISTAS DOLORES Y BENEFICIOS */
+
+    #landing-mapa-visual .dark-section { background: linear-gradient(180deg, var(--primary) 0%, var(--primary-soft) 100%); }
+
+    #landing-mapa-visual .dark-section h2 { color: var(--white); }
+
+
+
+    #landing-mapa-visual .checklist-box {
+
+      background: var(--paper);
+
+      padding: 30px 26px;
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+
+      margin-bottom: 20px;
+
+      border: 1px solid var(--border-soft);
+
+      border-left: 3px solid var(--secondary);
+
+    }
+
+    #landing-mapa-visual .checklist-item {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      margin-bottom: 17px;
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+      color: var(--dark-gray);
+
+    }
+
+    #landing-mapa-visual .checklist-item:last-child { margin-bottom: 0; }
+
+    #landing-mapa-visual .emoji-icon {
+
+      margin-right: 13px;
+
+      font-size: 17px;
+
+      font-weight: 800;
+
+      flex-shrink: 0;
+
+      margin-top: 1px;
+
+    }
+
+    #landing-mapa-visual .emoji-icon.pain { color: var(--pink); }
+
+    #landing-mapa-visual .emoji-icon.win { color: var(--secondary); }
+
+
+
+    /* BOTONES */
+
+    #landing-mapa-visual .cta-button {
+
+      position: relative;
+
+      background: linear-gradient(180deg, var(--secondary-light) 0%, var(--secondary) 55%, #B3822F 100%);
+
+      color: #2A1804;
+
+      border: 1px solid rgba(255,255,255,0.35);
+
+      padding: 18px 22px;
+
+      font-size: 15px;
+
+      font-family: 'Inter', sans-serif;
+
+      font-weight: 700;
+
+      letter-spacing: 0.04em;
+
+      text-transform: uppercase;
+
+      border-radius: 12px;
+
+      cursor: pointer;
+
+      box-shadow: 0 12px 28px -10px rgba(var(--secondary-rgb), 0.5), inset 0 1px 0 rgba(255,255,255,0.4);
+
+      display: block;
+
+      margin: 24px auto;
+
+      width: 100%;
+
+      max-width: 400px;
+
+      text-decoration: none;
+
+      text-align: center;
+
+      transition: var(--transition);
+
+      animation: ctaPulse 2.2s ease-in-out infinite;
+
+    }
+
+    @keyframes ctaPulse {
+
+      0%, 100% { transform: scale(1); box-shadow: 0 12px 28px -10px rgba(var(--secondary-rgb), 0.5), inset 0 1px 0 rgba(255,255,255,0.4), 0 0 0 0 rgba(var(--secondary-rgb), 0.45); }
+
+      50% { transform: scale(1.025); box-shadow: 0 12px 28px -10px rgba(var(--secondary-rgb), 0.5), inset 0 1px 0 rgba(255,255,255,0.4), 0 0 0 12px rgba(var(--secondary-rgb), 0); }
+
+    }
+
+    #landing-mapa-visual .cta-button:hover {
+
+      transform: translateY(-2px);
+
+      box-shadow: 0 18px 36px -10px rgba(var(--secondary-rgb), 0.6), inset 0 1px 0 rgba(255,255,255,0.5);
+
+      filter: brightness(1.04);
+
+      animation-play-state: paused;
+
+    }
+
+    #landing-mapa-visual .cta-button .arrow { margin-left: 6px; }
+
+
+
+    /* OFERTA Y PRECIO */
+
+    #landing-mapa-visual .offer-box {
+
+      background:
+
+        radial-gradient(ellipse at top left, rgba(var(--secondary-rgb),0.28) 0%, transparent 55%),
+
+        var(--primary);
+
+      border-radius: 24px;
+
+      padding: 38px 26px;
+
+      margin: 28px auto;
+
+      border: 1px solid rgba(var(--secondary-rgb),0.55);
+
+      text-align: center;
+
+      color: var(--white);
+
+      box-shadow: var(--shadow-lift);
+
+    }
+
+    #landing-mapa-visual .price-old {
+
+      font-size: 16px; text-decoration: line-through; color: #B49AB2;
+
+      margin-bottom: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em;
+
+    }
+
+    #landing-mapa-visual .price-label {
+
+      font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+
+      color: var(--secondary-light); margin-bottom: 6px;
+
+    }
+
+    #landing-mapa-visual .price-new {
+
+      font-size: 52px; font-weight: 900; color: var(--secondary-light);
+
+      line-height: 1; margin-bottom: 12px; font-family: 'Playfair Display', serif;
+
+    }
+
+    #landing-mapa-visual .price-note { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #D8C5D6; }
+
+    #landing-mapa-visual .tags-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-bottom: 24px; }
+
+    #landing-mapa-visual .mini-tag {
+
+      background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.14);
+
+      color: var(--white); padding: 7px 14px; border-radius: 50px; font-size: 12px; font-weight: 600;
+
+    }
+
+
+
+    /* URGENCY TIMER BOX */
+
+    #landing-mapa-visual .urgency-box {
+
+      width: 100%; max-width: 460px; margin: 24px auto; padding: 28px 24px;
+
+      border: 2px solid var(--secondary); border-radius: 22px;
+
+      background: linear-gradient(160deg, #FFFBF2 0%, #FDF2DC 100%);
+
+      text-align: center; box-shadow: 0 0 0 6px rgba(var(--secondary-rgb),0.12), 0 25px 60px -15px rgba(0,0,0,0.5);
+
+    }
+
+    #landing-mapa-visual .urgency-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; line-height: 1.35; color: var(--pink); }
+
+    #landing-mapa-visual .urgency-text { font-size: 13.5px; color: var(--dark-gray); margin: 0 auto 4px; max-width: 340px; }
+
+    #landing-mapa-visual .urgency-subtext { font-size: 12px; color: var(--secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; display: block; }
+
+    #landing-mapa-visual .time-box {
+
+      width: 84px; height: 74px; border-radius: 14px; background: var(--primary);
+
+      border: 1px solid rgba(var(--secondary-rgb),0.5); display: inline-flex; flex-direction: column;
+      justify-content: center; align-items: center; margin: 0 6px;
+
+    }
+
+    #landing-mapa-visual .time-number { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 800; line-height: 1; color: var(--secondary-light); }
+
+    #landing-mapa-visual .time-label { font-size: 9.5px; font-weight: 800; letter-spacing: 0.1em; margin-top: 5px; color: var(--secondary-light); }
+
+
+
+    /* BONOS SECTION */
+
+    #landing-mapa-visual .bonus-card {
+
+      background: var(--paper);
+
+      border-radius: 16px;
+
+      padding: 16px 18px;
+
+      margin-bottom: 14px;
+
+      box-shadow: var(--shadow);
+
+      display: flex;
+
+      flex-direction: row;
+
+      align-items: center;
+
+      text-align: left;
+
+      border: 1px solid rgba(var(--secondary-rgb),0.28);
+
+      transition: var(--transition);
+
+      gap: 14px;
+
+    }
+
+    #landing-mapa-visual .bonus-card:hover { transform: translateY(-3px); }
+
+    #landing-mapa-visual .bonus-card .img-ph { width: 92px; height: 92px; max-width: 92px; flex-shrink: 0; border-radius: 14px; margin-bottom: 0; aspect-ratio: 1/1; }
+
+    #landing-mapa-visual .bonus-card .img-ph span { display: none; }
+
+    #landing-mapa-visual .bonus-card-text { flex: 1; min-width: 0; }
+
+    #landing-mapa-visual .bonus-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--pink); margin-bottom: 3px; display: block; }
+
+    #landing-mapa-visual .bonus-card h3 { font-size: 15px; margin-bottom: 4px; font-weight: 800; line-height: 1.25; }
+
+    #landing-mapa-visual .bonus-card p { font-size: 13px; margin-bottom: 8px; color: var(--dark-gray); line-height: 1.4; }
+
+    #landing-mapa-visual .bonus-price { background: transparent; color: var(--primary); padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 0.02em; border: 1px solid rgba(var(--secondary-rgb),0.4); display: inline-block; }
+
+    #landing-mapa-visual .bonus-price span { text-decoration: line-through; color: var(--muted); margin-right: 5px; font-weight: 500;}
+
+    #landing-mapa-visual .bonus-price strong { color: #A5751E; }
+
+
+
+    /* TESTIMONIOS */
+
+    #landing-mapa-visual .testimonio-card {
+
+      background: var(--paper); border-radius: 22px; padding: 26px; margin-bottom: 16px;
+      box-shadow: var(--shadow); border: 1px solid var(--border-soft); position: relative;
+
+    }
+
+    #landing-mapa-visual .quote-mark { font-family: 'Playfair Display', serif; font-size: 40px; color: rgba(var(--pink-rgb),0.4); line-height: 1; margin-bottom: 4px; display: block; }
+
+    #landing-mapa-visual .stars { color: var(--secondary); font-size: 15px; margin-bottom: 12px; letter-spacing: 3px;}
+
+    #landing-mapa-visual .testimonio-card p {
+
+      font-family: 'Inter', sans-serif; font-style: italic; font-weight: 500; font-size: 15.5px;
+      margin-bottom: 16px; color: var(--primary); line-height: 1.6;
+
+    }
+
+    #landing-mapa-visual .testimonio-card strong { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; }
+
+    /* Carrusel horizontal automático de testimonios */
+
+    #landing-mapa-visual .testimonio-marquee {
+
+      width: calc(100% + 44px);
+
+      margin: 0 -22px;
+
+      overflow: hidden;
+
+      -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+
+      mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+
+    }
+
+    #landing-mapa-visual .testimonio-track {
+
+      display: flex;
+
+      gap: 18px;
+
+      width: max-content;
+
+      animation: marqueeMove 32s linear infinite;
+
+    }
+
+    #landing-mapa-visual .testimonio-marquee:hover .testimonio-track { animation-play-state: paused; }
+
+    #landing-mapa-visual .testimonio-track .testimonio-card {
+
+      width: 300px;
+
+      flex-shrink: 0;
+
+      margin-bottom: 0;
+
+    }
+
+
+
+    /* RESUMEN LISTA */
+
+    #landing-mapa-visual .summary-list { background: var(--paper); padding: 24px; border-radius: 20px; box-shadow: var(--shadow); margin-bottom: 26px; border: 1px solid var(--border-soft); }
+
+    #landing-mapa-visual .summary-list li { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px solid var(--border-soft); font-size: 14px; font-weight: 500; }
+
+    #landing-mapa-visual .summary-list li:last-child { border-bottom: none; }
+
+    #landing-mapa-visual .free-tag { color: var(--pink); font-weight: 800;}
+
+
+
+    /* FAQ SECTION */
+
+    #landing-mapa-visual .faq-item { margin-bottom: 14px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border-soft); background: var(--paper); }
+
+    #landing-mapa-visual .faq-question { padding: 20px 22px; font-weight: 700; font-size: 15px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--primary); gap: 14px; }
+
+    #landing-mapa-visual .faq-question::after {
+
+      content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 12px;
+      color: var(--secondary); transition: transform 0.35s ease; flex-shrink: 0;
+
+    }
+
+    #landing-mapa-visual .faq-question.active::after { transform: rotate(180deg); }
+
+    #landing-mapa-visual .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background: var(--cream); }
+
+    #landing-mapa-visual .faq-answer-content { padding: 4px 22px 20px; font-size: 14px; color: var(--dark-gray); border-top: 1px solid var(--border-soft); padding-top: 16px; }
+
+
+
+    /* FOOTER */
+
+    #landing-mapa-visual footer { background: var(--primary); color: #C7B4C5; text-align: center; padding: 36px 20px; font-size: 12.5px; }
+
+    #landing-mapa-visual footer p:first-child { font-family: 'Playfair Display', serif; color: var(--secondary-light); font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+
+
+
+    /* TRUST BADGES */
+
+    #landing-mapa-visual .custom-trust-badges-container { max-width: 420px; margin: 24px auto 0; }
+
+    #landing-mapa-visual .custom-payment-box { border: 1px solid var(--border-soft); border-radius: 16px; padding: 14px 20px; text-align: center; margin-bottom: 18px; background: var(--paper); }
+
+    #landing-mapa-visual .custom-payment-box legend { padding: 0 10px; color: var(--muted); font-size: 13px; display: flex; align-items: center; gap: 6px; margin: 0 auto; background: var(--paper); }
+
+    #landing-mapa-visual .custom-payment-icons { display: flex; justify-content: center; gap: 20px; align-items: center; padding-top: 6px; }
+
+    #landing-mapa-visual .custom-cc-logo { display: flex; flex-direction: column; align-items: center; }
+
+    #landing-mapa-visual .custom-cc-text { font-size: 8px; color: var(--muted); margin-top: 2px; }
+
+    #landing-mapa-visual .custom-visa { color: #1434CB; font-weight: 900; font-style: italic; font-size: 24px; letter-spacing: -1px; }
+
+    #landing-mapa-visual .custom-paypal { font-size: 22px; }
+
+    #landing-mapa-visual .custom-trust-box {
+
+      background: var(--paper); border-radius: 16px; padding: 20px; box-shadow: var(--shadow);
+      border: 1px solid var(--border-soft); display: flex; align-items: center; gap: 14px;
+
+    }
+
+    #landing-mapa-visual .custom-trust-box .icon-circle {
+
+      width: 44px; height: 44px; border-radius: 50%; background: var(--primary);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+
+    }
+
+    #landing-mapa-visual .custom-trust-box h3 { margin: 0; color: var(--pink); font-size: 16px; font-weight: 800; font-family: 'Inter', sans-serif; }
+
+    #landing-mapa-visual .custom-trust-box p { margin: 4px 0 0 0; color: var(--muted); font-size: 12.5px; }
+
+
+
+    /* Nota manuscrita estilo "El cuidado también es belleza" */
+
+    #landing-mapa-visual .script-note {
+
+      font-family: 'Caveat', cursive;
+
+      font-weight: 700;
+
+      color: var(--pink);
+
+      font-size: 22px;
+
+      line-height: 1.25;
+
+      display: inline-block;
+
+      transform: rotate(-3deg);
+
+    }
+
+    #landing-mapa-visual .script-note-wrap {
+
+      position: relative;
+
+      max-width: 280px;
+
+      margin: 0 auto 22px;
+
+      text-align: center;
+
+    }
+
+    #landing-mapa-visual .script-note-wrap .heart { color: var(--pink); font-size: 15px; margin-left: 3px; }
+
+
+
+    /* Flourish decorativo dorado (esquinas) */
+
+    #landing-mapa-visual .flourish { position: absolute; opacity: 0.55; pointer-events: none; z-index: 0; }
+
+    #landing-mapa-visual .flourish.top-right { top: 18px; right: 14px; width: 74px; }
+
+    #landing-mapa-visual .flourish.bottom-left { bottom: 18px; left: 14px; width: 74px; transform: rotate(180deg); }
+
+    #landing-mapa-visual section > * { position: relative; z-index: 1; }
+
+
+
+    /* Tarjetas de característica con ícono circular (dolores / beneficios) */
+
+    #landing-mapa-visual .feature-card {
+
+      background: var(--paper);
+
+      border-radius: 18px;
+
+      padding: 20px 22px;
+
+      box-shadow: var(--shadow);
+
+      border: 1px solid rgba(var(--secondary-rgb),0.28);
+
+      display: flex;
+
+      gap: 15px;
+
+      align-items: flex-start;
+
+      margin-bottom: 14px;
+
+    }
+
+    #landing-mapa-visual .feature-card:last-child { margin-bottom: 0; }
+
+    #landing-mapa-visual .feature-icon {
+
+      width: 46px; height: 46px; border-radius: 50%;
+
+      background: var(--primary);
+
+      display: flex; align-items: center; justify-content: center;
+
+      flex-shrink: 0;
+
+      box-shadow: 0 8px 18px -6px rgba(59,27,57,0.4);
+
+    }
+
+    #landing-mapa-visual .feature-icon i { color: var(--secondary-light); font-size: 17px; }
+
+    #landing-mapa-visual .feature-icon .step-num { font-family: 'Poppins', sans-serif; color: var(--secondary-light); font-size: 18px; font-weight: 800; }
+
+    #landing-mapa-visual .feature-text h4 {
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 14.5px;
+
+      color: var(--pink);
+
+      font-weight: 800;
+
+      margin-bottom: 4px;
+
+      letter-spacing: -0.005em;
+
+    }
+
+    #landing-mapa-visual .feature-text p { font-size: 14px; color: var(--dark-gray); margin: 0; line-height: 1.5; }
+
+
+
+    /* Carrusel horizontal automático de imágenes (marquee) */
+
+    #landing-mapa-visual .gallery-marquee {
+
+      width: calc(100% + 44px);
+
+      margin: 0 -22px;
+
+      overflow: hidden;
+
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+
+    }
+
+    #landing-mapa-visual .gallery-track {
+
+      display: flex;
+
+      gap: 16px;
+
+      width: max-content;
+
+      animation: marqueeMove 26s linear infinite;
+
+    }
+
+    #landing-mapa-visual .gallery-marquee:hover .gallery-track { animation-play-state: paused; }
+
+    @keyframes marqueeMove {
+
+      from { transform: translateX(-50%); }
+
+      to { transform: translateX(0%); }
+
+    }
+
+    #landing-mapa-visual .gallery-item {
+
+      flex-shrink: 0;
+
+      width: 170px;
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow: 0 0 28px 4px rgba(var(--secondary-rgb),0.35), 0 8px 20px -6px rgba(0,0,0,0.4);
+
+      transition: box-shadow .4s ease;
+
+    }
+
+    #landing-mapa-visual .testimonio-img-item {
+
+      flex-shrink: 0;
+
+      width: 68vw;
+
+      max-width: 620px;
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow: 0 0 28px 4px rgba(var(--secondary-rgb),0.35), 0 8px 20px -6px rgba(0,0,0,0.4);
+
+    }
+
+    #landing-mapa-visual .gallery-item .img-ph {
+
+      border-radius: 16px;
+
+      border-width: 1.5px;
+
+    }
+
+    #landing-mapa-visual .dark-section .img-ph span { color: var(--secondary-light); }
+
+    #landing-mapa-visual .dark-section .img-ph {
+
+      background: linear-gradient(155deg, rgba(var(--secondary-rgb),0.22), rgba(255,255,255,0.05));
+
+      border-color: rgba(var(--secondary-rgb),0.5);
+
+    }
+
+
+
+    /* Degradados premium para secciones claras — de claro a violeta suave en la base */
+
+    #landing-mapa-visual .sec-bloom-gold {
+
+      background:
+
+        radial-gradient(ellipse 100% 55% at 50% -18%, rgba(var(--secondary-rgb),0.22) 0%, transparent 58%),
+
+        radial-gradient(ellipse 70% 55% at 100% 105%, rgba(59,27,57,0.10) 0%, transparent 60%),
+
+        repeating-linear-gradient(135deg, rgba(var(--secondary-rgb),0.045) 0px, rgba(var(--secondary-rgb),0.045) 1px, transparent 1px, transparent 24px),
+
+        linear-gradient(180deg, #FCF7EC 0%, var(--cream) 35%, #E9DCE6 100%);
+
+      box-shadow: inset 0 0 140px rgba(36,17,36,0.06);
+
+    }
+
+    #landing-mapa-visual .sec-bloom-rose {
+
+      background:
+
+        radial-gradient(ellipse 90% 55% at 50% -18%, rgba(224,120,150,0.18) 0%, transparent 58%),
+
+        radial-gradient(ellipse 70% 55% at 0% 105%, rgba(59,27,57,0.10) 0%, transparent 60%),
+
+        repeating-linear-gradient(135deg, rgba(224,120,150,0.04) 0px, rgba(224,120,150,0.04) 1px, transparent 1px, transparent 24px),
+
+        linear-gradient(180deg, #FCF7EC 0%, var(--cream) 35%, #ECDCE8 100%);
+
+      box-shadow: inset 0 0 140px rgba(36,17,36,0.06);
+
+    }
+
+    #landing-mapa-visual .sec-bloom-white {
+
+      background:
+
+        radial-gradient(ellipse 90% 55% at 50% -18%, rgba(var(--secondary-rgb),0.16) 0%, transparent 60%),
+
+        radial-gradient(ellipse 70% 55% at 100% 105%, rgba(59,27,57,0.09) 0%, transparent 60%),
+
+        repeating-linear-gradient(135deg, rgba(var(--secondary-rgb),0.035) 0px, rgba(var(--secondary-rgb),0.035) 1px, transparent 1px, transparent 24px),
+
+        linear-gradient(180deg, #FDFBF8 0%, #FBF6EF 30%, #EDE1EA 100%);
+
+      box-shadow: inset 0 0 140px rgba(36,17,36,0.06);
+
+    }
+
+    /* Aviso producto digital */
+    #landing-mapa-visual .digital-note { display: flex; align-items: center; justify-content: center; gap: 10px; max-width: 420px; margin: 0 auto 22px; padding: 12px 16px; background: var(--cream); border: 1px dashed var(--primary); border-radius: 14px; font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 600; line-height: 1.4; color: var(--primary); text-align: left; }
+    #landing-mapa-visual .digital-note .digital-icon { font-size: 22px; flex-shrink: 0; }
+    #landing-mapa-visual .digital-note strong { font-weight: 800; }
+
+    /* Barra superior de oferta */
+
+    #landing-mapa-visual .top-bar {
+
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-soft) 50%, var(--primary) 100%);
+
+      text-align: center;
+
+      padding: 10px 16px;
+
+      font-family: 'Inter', sans-serif;
+
+      font-size: 12.5px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.06em;
+
+      text-transform: uppercase;
+
+      color: var(--white);
+
+      border-bottom: 1px solid rgba(var(--secondary-rgb),0.4);
+
+    }
+
+    #landing-mapa-visual .hero-img-pulse {
+
+      animation: heroImgPulse 3s ease-in-out infinite;
+
+      filter: drop-shadow(0 10px 30px rgba(var(--secondary-rgb), 0.25));
+
+    }
+
+    @keyframes heroImgPulse {
+
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 10px 30px rgba(var(--secondary-rgb), 0.25)); }
+
+      50% { transform: scale(1.015); filter: drop-shadow(0 14px 40px rgba(var(--secondary-rgb), 0.4)); }
+
+    }
+
+    @media (min-width: 760px) {
+
+      #landing-mapa-visual .hero h1 { font-size: 37px; }
+
+      #landing-mapa-visual h2 { font-size: 34px; }
+
+      #landing-mapa-visual .testimonio-img-item { width: 240px; max-width: 240px; }
+
+    }
+
+
+html{scroll-behavior:smooth;background:#1a1416}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#landing-mapa-visual .cta-button{animation:none!important}}
+body{background:#1a1416}
+#landing-mapa-visual #planos{scroll-margin-top:24px}
+#landing-mapa-visual{overflow-x:clip}
+@media(max-width:520px){#landing-mapa-visual img{max-width:100%;height:auto}#landing-mapa-visual .cta-button{display:block;width:100%;text-align:center;box-sizing:border-box}}
+@media(max-width:380px){#landing-mapa-visual h1{font-size:28px;line-height:1.15}#landing-mapa-visual .cta-button{font-size:15px;padding-left:14px;padding-right:14px}}
+</style>
+<div id="landing-mapa-visual">
+<div class="top-bar">⚡️ Különleges ajánlat, csak ma <span id="fecha-oferta">23/10/2026</span></div>
+<section class="hero">
+<div class="container reveal">
+<span class="eyebrow center">A Női Hajvágások Vizuális Atlasza</span>
+<h1>Ne veszíts többé <span>pénzt és vendégeket</span> csak azért, mert nem tudod, hogyan kell egy frizurát levágni: mától magabiztosan csinálhatod, akkor is, ha még nem vagy profi</h1>
+<p class="subtext">Nézd meg másodpercek alatt a felosztást, a szöget és a vezetőtincset, anélkül hogy munka közben hosszú videókat keresgélnél.</p>
+<div style="position: relative; max-width: 380px; margin: 0 auto 28px;">
+<img alt="A Női Hajvágások Vizuális Atlasza" class="hero-img-pulse" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/atlasv2.jpg" style="width:100%; height:auto; display:block;"/>
+<div class="script-note-wrap" style="position: absolute; bottom: -14px; right: -10px; margin: 0; max-width: none;"><span class="script-note">Stílusos frizurák<span class="heart">♡</span></span></div>
+</div>
+<p style="font-size: 14.5px; color: var(--dark-gray); font-weight: 600; margin-bottom: 14px; margin-top: 26px;">Nézd át gyorsan, hol kezdj, milyen irányba haladj, és mire figyelj az egyes lépéseknél.</p><div style="margin-top:22px;text-align:center"><a class="cta-button" href="#planos">Kérem az Atlaszt ↓</a></div>
+<ul style="list-style: none; display: inline-flex; flex-direction: column; gap: 9px; text-align: left; margin: 0 auto 22px;">
+<li style="display:flex; gap:9px; align-items:flex-start; font-size:14.5px; font-weight:600; color:var(--dark-gray);"><span style="color:var(--secondary); font-weight:800;">✓</span> Alapelvek</li>
+<li style="display:flex; gap:9px; align-items:flex-start; font-size:14.5px; font-weight:600; color:var(--dark-gray);"><span style="color:var(--secondary); font-weight:800;">✓</span> Alapok és formák</li>
+<li style="display:flex; gap:9px; align-items:flex-start; font-size:14.5px; font-weight:600; color:var(--dark-gray);"><span style="color:var(--secondary); font-weight:800;">✓</span> Rövid frizurák</li>
+<li style="display:flex; gap:9px; align-items:flex-start; font-size:14.5px; font-weight:600; color:var(--dark-gray);"><span style="color:var(--secondary); font-weight:800;">✓</span> Hosszú és félhosszú frizurák</li>
+<li style="display:flex; gap:9px; align-items:flex-start; font-size:14.5px; font-weight:600; color:var(--dark-gray);"><span style="color:var(--secondary); font-weight:800;">✓</span> Textúrált és mozgalmas frizurák</li>
+</ul>
+</div>
+</section>
+<section class="dark-section" style="padding-top: 52px; padding-bottom: 52px;">
+<div class="container reveal" style="margin-bottom: 30px;">
+<h2 style="color: var(--white);">Így néznek ki a vizuális térképek, amelyeket megkapsz</h2>
+<p style="text-align: center; color: #D8C5D6; font-size: 15px; font-weight: 500; margin-bottom: 6px;">Kinyitod a szükséges frizura térképét, és habozás nélkül, lépésről lépésre követed a sorrendet.</p>
+<div class="section-divider on-dark"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+</div>
+<div class="gallery-marquee reveal">
+<div class="gallery-track">
+<!-- Imágenes reales de la galería -->
+<div class="gallery-item"><img alt="Vizuális térkép - 1. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/30.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 2. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/31.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 3. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/32.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 4. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/33.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 5. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/34.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 6. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/35.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 7. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/36.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<!-- Duplicado exacto — necesario para que el loop sea continuo, sin cortes -->
+<div class="gallery-item"><img alt="Vizuális térkép - 1. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/30.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 2. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/31.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 3. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/32.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 4. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/33.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 5. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/34.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 6. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/35.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+<div class="gallery-item"><img alt="Vizuális térkép - 7. példa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/36.jpg" style="width:170px; height:240px; object-fit:cover; display:block;"/></div>
+</div>
+</div>
+</section>
+<section class="sec-bloom-white">
+<svg class="flourish top-right" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M5 60C30 60 30 20 60 20C80 20 85 40 95 35" stroke="#C9962C" stroke-linecap="round" stroke-width="1.5"></path><circle cx="95" cy="35" fill="#C9962C" r="2.5"></circle><circle cx="60" cy="20" fill="#C9962C" r="2"></circle></svg>
+<div class="container reveal">
+<h2>Valójában te is tudod…</h2>
+<div class="section-divider"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
+<div class="feature-text"><h4>A frizura, amelyet ritkán vágsz</h4><p>Jön egy vendég, aki olyan frizurát kér, amit nem vágsz minden héten, és összeszorul a gyomrod.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5v7l6-3.5-6-3.5Z" fill="var(--secondary-light)" stroke="none"></path></svg></div>
+<div class="feature-text"><h4>A videó, amit nem találsz</h4><p>Emlékszel a videóra, amit hónapokkal ezelőtt láttál, de nem tudod, hányadik percben magyarázták a vezetőtincset.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" x2="8.12" y1="4" y2="15.88"></line><line x1="14.47" x2="20" y1="14.48" y2="20"></line><line x1="8.12" x2="12" y1="8.12" y2="12"></line></svg></div>
+<div class="feature-text"><h4>A bizonytalanság vágás közben</h4><p>Akár tanuló vagy, akár már szalonban dolgozol, úgy kezdesz vágni, hogy nem vagy biztos az irányban, és menet közben javítgatsz.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="m12 4 8 4-8 4-8-4 8-4Z"></path><path d="m4 13 8 4 8-4"></path></svg></div>
+<div class="feature-text"><h4>Mindig ugyanazok a frizurák</h4><p>A végén mindig ugyanazt a három-négy frizurát ajánlod, mert csak ezeket tudod fejből.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><circle cx="11" cy="11" r="7"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg></div>
+<div class="feature-text"><h4>A kétely a vendég után</h4><p>A vendég után azon gondolkodsz, jó volt-e a szög, vagy maradt-e súly ott, ahol nem kellett volna.</p></div>
+</div>
+</div>
+</section>
+<section class="dark-section">
+<div class="container reveal">
+<span class="eyebrow center on-dark">Az Atlasszal</span>
+<h2>Mit érsz el vele?</h2>
+<div class="section-divider on-dark"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="17"><path d="M20 6 9 17l-5-5"></path></svg></div>
+<div class="feature-text"><h4>Valódi magabiztosság</h4><p>Magabiztosan vágsz, anélkül hogy a memóriádra hagyatkoznál.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="var(--secondary-light)" height="17" stroke="none" viewbox="0 0 24 24" width="17"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"></path></svg></div>
+<div class="feature-text"><h4>Másodpercek alatt megnézed</h4><p>Másodpercek alatt megnézed a szöget és az irányt, akár vágás közben is.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path><path d="M3 21v-5h5"></path></svg></div>
+<div class="feature-text"><h4>Kevesebb javítás</h4><p>Kevesebb javítás a rossz irány vagy a rosszul elosztott súly miatt.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="m15 4 1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2Z" fill="var(--secondary-light)"></path><path d="M4 20 16 8"></path><path d="m5 8 .8 1.6L7.4 10 5.8 10.8 5 12.4 4.2 10.8 2.6 10 4.2 9.2 5 8Z" fill="var(--secondary-light)"></path></svg></div>
+<div class="feature-text"><h4>Nagyobb választék</h4><p>Több frizurát ajánlhatsz a vendégeidnek, a tévedéstől való félelem nélkül.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><svg fill="none" height="17" stroke="var(--secondary-light)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"><path d="M6 3h12"></path><path d="M6 21h12"></path><path d="M6 3c0 5 12 5 12 9s-12 4-12 9"></path><path d="M18 3c0 5-12 5-12 9s12 4 12 9"></path></svg></div>
+<div class="feature-text"><h4>Időt spórolsz</h4><p>Megspórolod az időt, amit most hosszú videók keresgélésével töltesz.</p></div>
+</div>
+</div>
+</section>
+<section class="sec-bloom-rose" id="planos">
+<div class="container reveal">
+<h2>A Női Hajvágások Vizuális Atlasza</h2>
+<div class="section-divider"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+<img alt="A Női Hajvágások Vizuális Atlasza - teljes csomag" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/todo-juntos-sf.jpg" style="width:100%; height:auto; display:block; margin-bottom: 10px;"/>
+<div class="script-note-wrap"><span class="script-note">Magabiztos vágás<span class="heart">♡</span></span></div>
+<p style="text-align: center; font-family:'Inter',sans-serif; font-style: italic; font-weight:500; font-size: 16px; color: var(--primary); margin-bottom: 24px;">„A vizuális segédlet, amelyben másodpercek alatt megnézheted a felosztást, a szögeket és a vezetőtincset, akár munka közben is”</p>
+<div class="offer-box">
+<div class="tags-container"><span class="mini-tag">Felosztások és szögek</span> <span class="mini-tag">Vezetőtincs</span> <span class="mini-tag">Lépésről lépésre sorrend</span> <span class="mini-tag">5 bónusz benne van</span></div>
+<div class="price-old">Normál ár: {{original_price}}</div>
+<div class="price-label">Csak ma</div>
+<div class="price-new">{{price}}</div>
+<p class="price-note">{{savings}} MEGTAKARÍTÁS · EGYSZERI FIZETÉS</p>
+</div>
+<div class="urgency-box" id="urgency-timer">
+<h3 class="urgency-title">Hány frizurát hagysz ki, mert nem emlékszel a helyes sorrendre?</h3>
+<p class="urgency-text">Ez a bevezető ajánlat csak korlátozott ideig érhető el ennél a látogatásnál.</p>
+<span class="urgency-subtext">Az ajánlat lejár:</span>
+<div class="urgency-timer-wrapper">
+<div class="time-box"><span class="time-number" id="minutes">15</span><span class="time-label">PERC</span></div>
+<div class="time-box"><span class="time-number" id="seconds">00</span><span class="time-label">MÁSODPERC</span></div>
+</div>
+</div>
+<div class="digital-note" style="margin-top:18px;"><span class="digital-icon">📩</span><span><strong>100%-ban digitális anyag.</strong> A fizetés beérkezése után e-mailben kapod meg. Fizikai terméket nem küldünk.</span></div>
+<a class="cta-button" href="/checkout">Kérem az Atlaszt <span class="arrow">→</span></a>
+<div class="custom-trust-badges-container">
+<fieldset class="custom-payment-box">
+<legend> <svg fill="none" height="14" stroke="#8C7C89" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><rect height="11" rx="2" ry="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Garantáltan biztonságos fizetés </legend>
+<div class="custom-payment-icons" style="flex-wrap: wrap; row-gap: 10px;">
+<div class="custom-visa">VISA</div>
+<div class="custom-cc-logo"><svg height="20" viewbox="0 0 32 20" width="32"><circle cx="11" cy="10" fill="#EB001B" r="10"></circle><circle cx="21" cy="10" fill="#F79E1B" opacity="0.9" r="10"></circle></svg> <span class="custom-cc-text">mastercard</span></div>
+<div class="custom-cc-logo"></div>
+<div class="custom-cc-logo"></div>
+</div>
+</fieldset>
+<div class="custom-trust-box">
+<div class="icon-circle">
+<svg fill="none" height="20" stroke="#E3BE72" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 3.09L19.36 6l-.82 4.18L22 13.09l-3.27 2.55L18 20l-4.18-.82L10.73 22l-2.55-3.27L4 18l.82-4.18L2 10.91l3.27-2.55L6 4l4.18.82L13.09 2z"></path><path d="M9 12l2 2 4-4" stroke="#E3BE72"></path></svg>
+</div>
+<div>
+<h3>100% biztonságos vásárlás</h3>
+<p>Az adataid és a fizetésed mindig védve vannak.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="dark-section">
+<div class="container reveal">
+<span class="eyebrow center on-dark">Csak ma</span>
+<h2>5 Exkluzív Bónusz</h2>
+<div class="section-divider on-dark"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+<div class="bonus-card">
+<img alt="1. bónusz - Frufru Vizuális Útmutató" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/bono-1.jpg" style="width:92px; height:92px; object-fit:cover; border-radius:14px; display:block; flex-shrink:0;"/>
+<div class="bonus-card-text">
+<span class="bonus-tag">1. bónusz</span>
+<h3>Frufru Vizuális Útmutató</h3>
+<p>Külön útmutató a legfontosabb frufrutípusok vágásához és testreszabásához.</p>
+<div class="bonus-price"><span>Érték: 5.490 Ft</span> <strong>Ma ingyenes</strong></div>
+</div>
+</div>
+<div class="bonus-card">
+<img alt="2. bónusz - Vágási Hibák Vizuális Diagnózisa" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/bono-2.jpg" style="width:92px; height:92px; object-fit:cover; border-radius:14px; display:block; flex-shrink:0;"/>
+<div class="bonus-card-text">
+<span class="bonus-tag">2. bónusz</span>
+<h3>Vágási Hibák Vizuális Diagnózisa</h3>
+<p>Vizuális anyag a hibák felismeréséhez, az okok azonosításához és elkerüléséhez.</p>
+<div class="bonus-price"><span>Érték: 4.790 Ft</span> <strong>Ma ingyenes</strong></div>
+</div>
+</div>
+<div class="bonus-card">
+<img alt="3. bónusz - Ollók és Eszközök Vizuális Útmutató" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/bono-3.jpg" style="width:92px; height:92px; object-fit:cover; border-radius:14px; display:block; flex-shrink:0;"/>
+<div class="bonus-card-text">
+<span class="bonus-tag">3. bónusz</span>
+<h3>Ollók és Eszközök Vizuális Útmutató</h3>
+<p>Gyors útmutató a legfontosabb eszközökről és arról, mit érsz el velük.</p>
+<div class="bonus-price"><span>Érték: 6.590 Ft</span> <strong>Ma ingyenes</strong></div>
+</div>
+</div>
+<div class="bonus-card">
+<img alt="4. bónusz - Lágy Rétegezés Vizuális Útmutató" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/bono-4.jpg" style="width:92px; height:92px; object-fit:cover; border-radius:14px; display:block; flex-shrink:0;"/>
+<div class="bonus-card-text">
+<span class="bonus-tag">4. bónusz</span>
+<h3>Lágy Rétegezés Vizuális Útmutató</h3>
+<p>Vizuális útmutató könnyed, összefüggő és kiegyensúlyozott rétegekhez.</p>
+<div class="bonus-price"><span>Érték: 5.490 Ft</span> <strong>Ma ingyenes</strong></div>
+</div>
+</div>
+<div class="bonus-card">
+<img alt="5. bónusz - Arcformához Illő Frizurák Vizuális Útmutató" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/bono-5.jpg" style="width:92px; height:92px; object-fit:cover; border-radius:14px; display:block; flex-shrink:0;"/>
+<div class="bonus-card-text">
+<span class="bonus-tag">5. bónusz</span>
+<h3>Arcformához Illő Frizurák Vizuális Útmutató</h3>
+<p>Ismerd fel az arcformát, és válaszd ki a hozzá leginkább illő frizurát.</p>
+<div class="bonus-price"><span>Érték: 6.990 Ft</span> <strong>Ma ingyenes</strong></div>
+</div>
+</div>
+<a class="cta-button" href="#planos" style="margin-top: 20px;">Kérem az Atlaszt ↓</a>
+</div>
+</section>
+<section style="background: linear-gradient(180deg, var(--primary) 0%, var(--primary-soft) 100%); overflow: hidden; position: relative;">
+<div class="container reveal">
+<div style="position: relative;">
+<svg style="position: absolute; top: -34px; left: 50%; transform: translateX(-50%); width: 68px; height: 68px; z-index: 2;" viewbox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+<circle cx="34" cy="34" fill="var(--primary)" r="32" stroke="#E3BE72" stroke-width="1.5"></circle>
+<circle cx="34" cy="34" fill="none" opacity="0.6" r="26" stroke="#E3BE72" stroke-width="0.75"></circle>
+<g fill="none" stroke="#E3BE72" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" transform="translate(20,20) scale(0.95)">
+<circle cx="6" cy="6" r="3"></circle>
+<circle cx="6" cy="18" r="3"></circle>
+<line x1="20" x2="8.12" y1="4" y2="15.88"></line>
+<line x1="14.47" x2="20" y1="14.48" y2="20"></line>
+<line x1="8.12" x2="12" y1="8.12" y2="12"></line>
+</g>
+</svg>
+<div class="guarantee-badge" style="padding-top: 46px;">
+<div>
+<h2 style="margin-bottom: 12px; font-size: 24px;">7 Napos Garancia — Kockázat Nélkül</h2>
+<p style="font-size: 14.5px; color: var(--dark-gray); margin-bottom: 16px;">Ha úgy érzed, hogy az atlasz nem illik a mindennapi munkádhoz, kérd a visszatérítést, és kész.</p>
+<div style="background: var(--cream); padding: 11px 20px; border-radius: 10px; font-weight: 700; font-size: 13px; color: var(--primary);">Hosszú ügyintézés nélkül. Rejtett feltételek nélkül.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="sec-bloom-white">
+<div class="container reveal">
+<h2 style="text-align: center; font-size: 26px;">Minden, amit ma megkapsz</h2>
+<img alt="A Női Hajvágások Vizuális Atlasza - teljes csomag" src="https://recursos-pdf-hub.github.io/entregas/cortes-hu/landing-img/todo-juntos-sf.jpg" style="width:100%; max-width:380px; height:auto; display:block; margin: 14px auto 22px;"/>
+<div class="summary-list">
+<div style="font-weight: 700; border-bottom: 2px solid var(--border-soft); padding-bottom: 16px; margin-bottom: 12px; font-size: 14.5px;">A Női Hajvágások Vizuális Atlasza <span style="text-decoration: line-through; color: var(--muted);">{{original_price}}</span></div>
+<div style="color: var(--pink); font-weight: 800; margin: 10px 0; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em;">5 exkluzív bónusz benne van</div>
+<ul>
+<li><span>1. bónusz — Frufru Vizuális Útmutató</span> <span class="free-tag">Ingyenes</span></li>
+<li><span>2. bónusz — Vágási Hibák Vizuális Diagnózisa</span> <span class="free-tag">Ingyenes</span></li>
+<li><span>3. bónusz — Ollók és Eszközök Vizuális Útmutató</span> <span class="free-tag">Ingyenes</span></li>
+<li><span>4. bónusz — Lágy Rétegezés Vizuális Útmutató</span> <span class="free-tag">Ingyenes</span></li>
+<li><span>5. bónusz — Arcformához Illő Frizurák Vizuális Útmutató</span> <span class="free-tag">Ingyenes</span></li>
+</ul>
+</div>
+<div style="text-align: center; background: var(--primary); border: 1px solid rgba(var(--secondary-rgb),0.55); padding: 26px 20px; border-radius: 20px; margin-bottom: 22px;">
+<div style="font-weight: 700; color: #C7B4C5; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.05em;">Teljes érték <span style="text-decoration: line-through;">64.990 Ft</span></div>
+<div style="font-weight: 600; color: var(--white); margin: 10px 0 4px; font-size: 14px;">Ma mindezt csak ennyiért kapod meg:</div>
+<div style="font-size: 44px; font-weight: 900; color: var(--secondary-light); font-family: 'Playfair Display', serif; line-height: 1;">{{price}}</div>
+<div style="font-size: 11.5px; font-weight: 700; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: #C7B4C5;">Egyszeri fizetés · Nincs havidíj</div>
+</div>
+<a class="cta-button" href="#planos">Kérem a teljes csomagot ↓</a>
+<div class="trust-line">🔒 100% biztonságos fizetés <span class="dot">·</span> 🛡️ 7 napos garancia <span class="dot">·</span> 📩 Azonnali hozzáférés</div>
+</div>
+</section>
+<section class="dark-section">
+<div class="container reveal">
+<span class="eyebrow center on-dark">Lépésről lépésre</span>
+<h2 style="color: var(--white);">Így kapod meg</h2>
+<div class="section-divider on-dark"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+<p style="text-align: center; color: #D8C5D6; font-size: 15px; font-weight: 500; margin: -14px 0 28px;">Kinyitod, megnézed a térképet, és vágod. Ilyen egyszerű. Mindössze 3 perc.</p>
+<div class="feature-card">
+<div class="feature-icon"><span class="step-num">1</span></div>
+<div class="feature-text"><h4>Fejezd be a vásárlást</h4><p>A hozzáférés automatikusan aktiválódik, és e-mailben érkezik. Nézd meg a spam vagy a promóciók mappát is.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><span class="step-num">2</span></div>
+<div class="feature-text"><h4>Töltsd le</h4><p>Mentsd el a telefonodra, hogy bármikor megnézhesd, vagy nyomtasd ki, ha úgy kényelmesebb.</p></div>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><span class="step-num">3</span></div>
+<div class="feature-text"><h4>Használd a következő vendégednél</h4><p>Kövesd lépésről lépésre a térképet, és már az első vágásnál érezni fogod a különbséget.</p></div>
+</div>
+</div>
+</section>
+<section class="sec-bloom-rose faq-section">
+<div class="container reveal">
+<span class="eyebrow center">Gyakori kérdések</span>
+<h2>Gyakran Ismételt Kérdések</h2>
+<div class="section-divider"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
+<div class="faq-item">
+<div class="faq-question">Hogyan kapom meg a hozzáférést fizetés után?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">Amint a fizetés beérkezik, megkapod a hozzáférést e-mailben (arra a címre, amelyet a vásárláskor megadsz). Még aznap elkezdheted telefonon vagy számítógépen. Ha nem látod, nézd meg a spam vagy a promóciók mappát is.</div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Tényleg egyszeri a fizetés?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">Igen. Egyszer fizetsz, és e-mailben megkapod az anyagot. Nincs tagság és nincsenek rejtett költségek.</div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Kell hozzá előzetes tapasztalat?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">Nem. A térképek lépésről lépésre megmutatják a felosztást, a szöget és a sorrendet, így akkor is követheted őket, ha először vágod az adott frizurát.</div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Használhatom telefonon vagy tableten?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">Igen, a fájlok e-mailben érkeznek, és megnyithatod őket telefonon, számítógépen és tableten, sőt ki is nyomtathatod.</div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Fizikai vagy digitális termék?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">100%-ban digitális. Semmit nem küldünk postán: a teljes anyag a fizetés után e-mailben érkezik.</div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">És ha mégsem nekem való?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">7 napos garanciád van. Ha nem győz meg, hosszú ügyintézés nélkül kérheted a visszatérítést.</div>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question">Milyen frizurák vannak benne?</div>
+<div class="faq-answer">
+<div class="faq-answer-content">Az atlasz tartalmazza az alapelveket, az alapformákat, a rövid, félhosszú és hosszú frizurákat, valamint a textúra és a mozgás technikáit, például pixie, bob, long bob, butterfly cut, shag és wolf cut.</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container">
+<p>Hajvágás Atlasz</p>
+<p style="margin-bottom: 5px;">© Minden jog fenntartva 2026</p>
+<p>Digitális termék, azonnali hozzáféréssel a fizetés után. E-mailben érkezik.</p>
+</div>
+</footer>
+</div><script>
+
+  (function(f){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',f);else f();})(function() {
+
+    document.querySelectorAll('#landing-mapa-visual .faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = question.classList.contains('active');
+
+        document.querySelectorAll('#landing-mapa-visual .faq-question').forEach(q => {
+          q.classList.remove('active');
+          if (q.nextElementSibling) q.nextElementSibling.style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          question.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('#landing-mapa-visual .reveal').forEach(el => io.observe(el));
+
+  });
+
+  (function() {
+    var el = document.getElementById("fecha-oferta");
+    if (!el) return;
+    var d = new Date();
+    var dd = String(d.getDate()).padStart(2, "0");
+    var mm = String(d.getMonth() + 1).padStart(2, "0");
+    el.textContent = dd + "/" + mm + "/" + d.getFullYear();
+  })();
+
+  (function() {
+    var root = document.getElementById("urgency-timer");
+    if (!root) return;
+
+    var totalSeconds = 15 * 60;
+
+    function tick() {
+      var min = Math.floor(totalSeconds / 60);
+      var sec = totalSeconds % 60;
+
+      var minutesEl = root.querySelector("#minutes");
+      var secondsEl = root.querySelector("#seconds");
+
+      if (minutesEl) minutesEl.textContent = String(min).padStart(2, "0");
+      if (secondsEl) secondsEl.textContent = String(sec).padStart(2, "0");
+
+      if (totalSeconds > 0) {
+        totalSeconds--;
+      }
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+
+(function(){function show(){try{document.querySelectorAll('#landing-mapa-visual .reveal').forEach(function(e){e.classList.add('is-visible')})}catch(e){}}
+setTimeout(show,2500);if(!('IntersectionObserver' in window))show();})();
+</script>
