@@ -1,31 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>Erişiminiz</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Radyoloğun Başucu Kitabı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  html, body { margin:0; background:#EEF3F8; color:#0B1E36; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:560px; margin:0 auto; padding:64px 20px; text-align:center; }
-  .badge { display:inline-block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; background:#FBF1E0; color:#8A5A10; border:1px solid #EBCB8B; padding:6px 12px; border-radius:99px; }
-  h1 { font-size:26px; line-height:1.25; margin:18px 0 10px; }
-  p { font-size:17px; line-height:1.55; color:#5A6B80; }
-  .card { background:#fff; border:1px solid #D6E0EB; border-radius:16px; padding:24px 20px; margin-top:28px; }
-  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#2F7D5B; margin-right:8px; animation:p 1.6s infinite; }
-  @keyframes p { 50% { opacity:.3; } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation:none; } }
+/* HUB DE ENTREGA: la única URL que recibe el comprador. Sin OTOs, sin contactos, noindex. */
+:root{--bg:#EEF3F8;--paper:#FFFFFF;--ink:#0B1E36;--ink-soft:#4A5D75;--accent:#D9962B;--accent-dark:#2F5F8F;--line:#C9DAEC}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:'IBM Plex Sans',-apple-system,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.hero{background:linear-gradient(160deg,var(--accent-dark),var(--accent));color:var(--paper);padding:48px 0 64px;text-align:center}
+.hero .kicker{display:inline-block;border:1px solid rgba(255,255,255,.5);border-radius:99px;padding:5px 14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6vw,48px);margin-bottom:10px}
+.hero p{font-size:18px;opacity:.93;max-width:640px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.stats span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:8px 16px;font-weight:700;font-size:15px}
+.core{position:relative;margin:-36px auto 36px;background:var(--paper);border:2px solid var(--accent);border-radius:20px;padding:26px;display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.10)}
+.core img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.18);display:block}
+.core .ph{aspect-ratio:2/3;border-radius:10px;background:linear-gradient(160deg,var(--accent),var(--accent-dark))}
+.tag{display:inline-block;background:var(--accent);color:var(--paper);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.core h2{font-size:clamp(22px,4vw,32px);margin-bottom:8px}
+.core p{color:var(--ink-soft);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 26px;border-radius:12px;background:var(--accent);color:var(--paper);font-weight:800;font-size:17px;text-decoration:none;box-shadow:0 4px 0 var(--accent-dark)}
+.btn:hover{filter:brightness(1.05)}
+.sec{margin:0 0 40px}
+.sec h2{font-size:clamp(22px,4vw,30px);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none;transition:transform .12s,border-color .12s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.card .n{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.card h3{font-size:19px}
+.card p{color:var(--ink-soft);font-size:15px;flex:1}
+.card .go{font-weight:800;color:var(--accent-dark)}
+.pasos{counter-reset:p;list-style:none;display:grid;gap:10px}
+.pasos li{counter-increment:p;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 58px;position:relative}
+.pasos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--paper);font-weight:800;display:flex;align-items:center;justify-content:center}
+.foot{text-align:center;color:var(--ink-soft);font-size:13px;padding:10px 0 40px}
+@media (max-width:640px){.core{grid-template-columns:1fr;text-align:center;padding:20px}.core img,.core .ph{max-width:170px;margin:0 auto}.btn{width:100%}}
 </style>
 </head>
 <body>
+<header class="hero">
   <div class="wrap">
-    <span class="badge">Satın alma onaylandı</span>
-    <h1>Radyoloğun Başucu Kitabı · 6 Ciltte Röntgen, BT, MR ve USG Okuma Sistematiği + 5 Hediye Nöbet Aracı</h1>
-    <p>Teşekkür ederiz! Materyalinizi hazırlamayı bitiriyoruz. Bu sayfa, tüm dosyalarınızla birlikte güncellenecek.</p>
-    <div class="card">
-      <p><span class="dot"></span><strong>Bu bağlantıyı kaydedin</strong></p>
-      <p>Ömür boyu erişiminiz budur. Birkaç saat sonra tekrar girdiğinizde 6 cildi ve Nöbet Kiti'nin 5 hediyesini burada bulacaksınız.</p>
-    </div>
+    <span class="kicker">Hoş geldiniz: Radyoloğun Başucu Kitabı</span>
+    <h1>Radyoloğun Başucu Kitabı</h1>
+    <p>Röntgen, BT, MR ve USG için sistematiğiniz: 6 cilt + Nöbet Kiti. Telefonda, tablette ve bilgisayarda açılır.</p>
+    <div class="stats"><span>6 Cilt</span><span>5 Hediye</span><span>100 Pratik Vaka</span></div>
   </div>
+</header>
+<main class="wrap">
+  
+  <section class="sec"><h2>6 Cilt + Nöbet Kiti (5 Hediye)</h2><div class="grid"><a class="card" href="../../radiologo-tr/cilt-01/dcdbj36jih/" target="_blank" rel="noopener"><span class="n">Cilt 01</span><h3>Cilt 01 · Görüntünün Fiziksel Alfabesi</h3><p>Her gri tonun anlamı (dansite, HU, sinyal, ekojenite) ve 4 modalitede ortak okuma sırası.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/cilt-02/5lr3tok94p/" target="_blank" rel="noopener"><span class="n">Cilt 02</span><h3>Cilt 02 · Sistematik Röntgen</h3><p>Teknik kalite kontrolü ve toraks, batın, kemik grafilerinin eksiksiz taranması.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/cilt-03/qb44bojzy6/" target="_blank" rel="noopener"><span class="n">Cilt 03</span><h3>Cilt 03 · Bilgisayarlı Tomografi (BT)</h3><p>HU, pencereler, kontrast fazları ve nöbette kaybolmadan BT okuma.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/cilt-04/wwidpf2w3q/" target="_blank" rel="noopener"><span class="n">Cilt 04</span><h3>Cilt 04 · Manyetik Rezonans (MR)</h3><p>Hangi sekansa baktığınızı tanıyın: T1, T2, FLAIR, DAG, kontrast ve her sinyalin anlamı.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/cilt-05/qd1rg3t9v6/" target="_blank" rel="noopener"><span class="n">Cilt 05</span><h3>Cilt 05 · Ultrasonografi ve POCUS</h3><p>Transdüserler, ekojenite, Doppler ve nöbet protokolleri (eFAST, akciğer, DVT).</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/cilt-06/94yrt8i5l5/" target="_blank" rel="noopener"><span class="n">Cilt 06</span><h3>Cilt 06 · Çoklu Modalite Vakaları</h3><p>18 çoklu modalite vakası: örnek tanım ve tipik hata ile normalden patolojiye.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/hediye-1-bulgular-atlasi/dasws7djmz/" target="_blank" rel="noopener"><span class="n">Hediye 1</span><h3>En Sık Bulgular Atlası</h3><p>40 sık bulgu, normal görünümüyle yan yana ve doğru tanımlama biçimiyle.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/hediye-2-yorumlama-rehberi/utkt3m8evg/" target="_blank" rel="noopener"><span class="n">Hediye 2</span><h3>Görüntü Yorumlama Rehberi</h3><p>24 tetkik, tetkik başına tek sayfa: önce, sonra, kapatmadan önce.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/hediye-3-100-pratik-vaka/g23to50k3v/" target="_blank" rel="noopener"><span class="n">Hediye 3</span><h3>100 Pratik Vaka</h3><p>Zorluğa göre 100 vaka: önce siz tanımlayın, sonra model tanımla karşılaştırın.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/hediye-4-goruntunun-alfabesi/6tgsg1jmfl/" target="_blank" rel="noopener"><span class="n">Hediye 4</span><h3>Görüntünün Alfabesi: Rapor Terimleri ve Kısaltmaları</h3><p>232 rapor terimi ve kısaltma, modaliteye göre ve tek satırda.</p><span class="go">Aç →</span></a><a class="card" href="../../radiologo-tr/hediye-5-pratik-defteri/vsx431noib/" target="_blank" rel="noopener"><span class="n">Hediye 5</span><h3>Pratik Defteri: Bulgudan Rapora</h3><p>16 rapor şablonu, 40 alıştırma ve boş pratik sayfaları.</p><span class="go">Aç →</span></a></div></section>
+  <section class="sec"><h2>Nereden başlamalı</h2><ol class="pasos"><li>Cilt 01 ile başlayın: 4 adımlı metodu (Hazırla · Tara · Tanımla · Özetle) bir kez okuyun.</li><li>Rotasyonunuzun modalitesine ait cildi açın (Röntgen, BT, MR veya USG).</li><li>Nöbette Görüntü Yorumlama Rehberi&#x27;ni telefonunuzda açık tutun: tetkik başına tek sayfa.</li><li>Her gün birkaç vaka çözün (100 Pratik Vaka) ve hatalarınızı not edin.</li></ol></section>
+  <p class="foot">Yalnızca kişisel kullanım içindir. Yeniden satış ve dağıtım yasaktır.</p>
+</main>
 </body>
 </html>
