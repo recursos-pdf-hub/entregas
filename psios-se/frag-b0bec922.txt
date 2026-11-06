@@ -580,7 +580,7 @@ html{scroll-behavior:smooth;background:#fff}
 </button></h3>
 <div aria-labelledby="ps-sumb-09" class="ps-acc__panel" id="ps-sum-09" role="region">
 <div class="ps-acc__inner"><ol class="ps-maps">
-<li><b>81</b>Att förstå sorg</li><li><b>82</b>Förskottsorg</li><li><b>83</b>Oklara förluster</li><li><b>84</b>Slutet på en relation</li><li><b>85</b>Förlust av en närstående</li><li><b>86</b>Förlust av arbete</li><li><b>87</b>Byte av stad eller miljö</li><li><b>88</b>Livsövergångar</li><li><b>89</b>Triggers i sorgen</li><li><b>90</b>Återuppbyggnad av mening efter en förlust</li>
+<li><b>81</b>Att förstå sorg</li><li><b>82</b>Förskottssorg</li><li><b>83</b>Oklara förluster</li><li><b>84</b>Slutet på en relation</li><li><b>85</b>Förlust av en närstående</li><li><b>86</b>Förlust av arbete</li><li><b>87</b>Byte av stad eller miljö</li><li><b>88</b>Livsövergångar</li><li><b>89</b>Triggers i sorgen</li><li><b>90</b>Återuppbyggnad av mening efter en förlust</li>
 </ol></div>
 </div>
 </div>
